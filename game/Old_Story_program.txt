@@ -1,0 +1,1031 @@
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Chapter 1                                  ███  ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+scene bg office
+    with fade
+
+    blank "I was sitting at my father's desk, engrossed in a book about HTML programming. The book is very confusing, but every page is very fascinating."
+
+    POV "Wow, so this is my father's job."
+
+    blank "I said, scanning the book."
+
+    blank "*Dave Enter's Room*"
+    
+    show dad smile
+    
+
+    blank "My father's name is Dave. He has a kind heart and the unwavering love he had for us. His Job is a (freelancer) programmer. To be precise, a website developer. He said he creates and maintains websites, like we use in internet browsing. "
+
+    POV "Dad, can you teach me about programming? "
+
+    show dad crossarm smile
+
+    Dad "Why do you want me to teach you?"
+
+    POV "I want to be like you someday. I want to create websites that captivate, inform, and inspire others."
+    show dad happy
+
+    Dad "I see, then sure, but let's start with the basics first."
+
+    hide dad happy
+
+    blank "We spend hours together exploring the wonders of programming. I was so captivated by every word that Father said."
+
+    stop music fadeout 1.0
+
+    play music "audio/sa_kusina.mp3" volume 0.5
+    
+    scene bg_dining_table with fade
+
+    blank "One morning, my family was having breakfast, and they told me some good news."
+
+    show dad smile
+
+    Dad "[POV] We have good news for you."
+
+    show mom close smile at right
+
+    Mom "Your dad told me that you have an interest in programming, so we enrolled you in a school that has a programming subject."
+
+    POV "really? Thank you, Mom! Dad!"
+
+
+
+    Mom "Have fun in your class [POV] "
+
+    hide dad smile
+    hide mom close smile
+
+    stop music fadeout 1.0
+    play music "audio/sa_school.mp3" volume 0.5
+
+    scene bg classroom
+    with fade
+
+    blank "After a week, the school had just started"
+
+    blank "While entering the classroom, my heart is pounding with excitement."
+    
+    show teacher smile
+
+    blank "Mrs. Rodriguez, the programming teacher, she welcomes me warmly."
+
+    Tech "Good day, class! Ready to dive into the world of programming?"
+
+    POVclass "Yes, Mrs. Rodriguez! "
+
+    blank "I eagerly take my seat, surrounded by classmates with the same passion."
+
+    hide teacher smile
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Lesson 01                                   ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+#    stop music fadeout 1.0
+#    play music "audio/sa_tech.mp3" volume 0.5
+
+#    $ lesson_one_finish = False
+    jump lesson_one
+
+    label pagtapos_ng_lesson_one:
+
+    
+
+    scene bg classroom with fade
+
+    show teacher smile 
+
+    Tech "Now that we finish the lesson lets start the quiz 1"
+
+    hide teacher smile
+    # hide bg classroom
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Quiz 01                                     ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+    stop music fadeout 1.0
+    
+    play music "audio/quiz.mp3" volume 0.5
+
+    jump start_quiz_00
+
+    label pagtapos_ng_quiz_0:
+
+    stop music fadeout 1.0
+    play music "audio/sa_school.mp3" volume 0.5
+
+    $ final_test_undertaken = True
+
+    scene bg classroom
+    with fade
+
+    show teacher smile 
+
+    Tech "Now that we finish the the quiz lets finish our class here"
+
+    Tech "Good bye class"
+
+    POVclass "Good bye Mrs. Rodriguez "
+    
+    hide teacher smile
+
+
+    blank "After class, I hurried home to tell Mom and Dad what happened at school."
+
+    stop music fadeout 1.0
+
+    play music "audio/sa_kusina.mp3" volume 0.5
+    
+    scene bg kit with fade
+
+    POV "Mom! Dad! I'm home"
+
+    show mom smile
+
+    Mom "Welcome back [POV]"
+
+    show dad smile at right
+
+    Dad "Welcome back, How was the school? [POV]"
+
+    #Papalitan pa to since di ko pa nalalagay yung mga topics lesson and quiz
+
+    POV " It was fun! I learned about (Topics that he learned)"
+
+    show dad happy at right
+
+    Dad "That's good! I'm glad that you have fun."
+
+    blank "And we happily talk about my day in class."
+  
+
+    stop music fadeout 1.0
+
+    scene bg_1 
+
+    
+
+    blank "End of chapter 1"
+
+    ##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Chapter 2                                  ███  ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+    play music "audio/sa_room.mp3" volume 0.5
+
+    scene bg room with fade
+
+    POV "Good morning~!"
+
+    blank "I wake up early because I'm so excited to go to school."
+
+    blank "I fixed my bed first, and then I left the room to have breakfast."
+
+    stop music fadeout 1.0
+
+    play music "audio/sa_kusina.mp3" volume 0.5
+
+    scene bg kit with fade
+    
+    show mom smile
+
+    Mom "Good morning [POV], are you ready for school?"
+
+    POV "Yes! I'm so excited."
+
+    Mom " I see. Eat your breakfast now so you can go to school now. "
+
+    hide mom smile 
+
+    blank "I ate my breakfast, and after that, I prepared myself to go to school. "
+    blank "After preparing, I'm ready for school"
+
+    show mom smile 
+
+    POV "Mom! Where's Dad? "
+
+    Mom "As usual, He's still sleeping"
+
+    POV "I see, I'm going now!"
+
+    show mom close smile
+
+    Mom "Ok, Take care!"
+
+    hide mom close smile 
+
+    stop music fadeout 1.0
+
+    play music "audio/sa_school.mp3" volume 0.5
+
+    scene bg classroom with fade
+
+    
+
+    blank "While entering the classroom, my heart is still pounding with excitement even though it's our second class"
+
+    show teacher smile
+
+    Tech "Good morning class"
+
+    POVclass"Good morning, Mrs. Rodriguez!"
+
+    Tech "Good morning, Mrs. Rodriguez"
+
+    hide teacher smile
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Lesson 02                                   ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+    stop music fadeout 1.0
+
+    play music "audio/sa_tech.mp3" volume 0.5
+
+    #jump lesson_two
+
+    #label pagtapos_ng_lesson_two:
+
+    scene bg classroom with fade
+
+    show teacher smile 
+
+    Tech "Now that we finish the lesson lets start the quiz 2"
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Quiz 02                                     ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+    stop music fadeout 1.0
+
+    play music "audio/quiz.mp3" volume 0.5
+    
+    jump start_quiz_01
+
+    label pagtapos_ng_quiz_1:
+
+    stop music fadeout 1.0
+
+    play music "audio/sa_school.mp3" volume 0.5
+
+    scene bg classroom
+    with fade
+
+    show teacher smile 
+
+    Tech "Now that we finish the the quiz lets finish our class here"
+
+    Tech "Good bye class"
+
+    POVclass "Good bye Mrs. Rodriguez "
+    
+    hide teacher smile
+    hide bg classroom
+    
+    show black
+
+    "*After class*"
+
+    hide black
+    scene bg classroom
+    
+    blank "After class, I packed my things and hurriedly left the classroom to go home."
+
+    blank "I want to tell my parents about what I've learned in school."
+
+    stop music fadeout 1.0
+
+    play music "audio/sa_kusina.mp3" volume 0.5
+
+    scene bg kit with fade
+
+    POV " I'm home"
+
+    show mom smile 
+
+    Mom"Welcome back [POV]. How's school?"
+
+    POV "It's great, Mom! We learned about (topics of the lesson)"
+    
+    show mom close smile
+
+    Mom "I'm glad that you enjoyed your class."
+
+    POV "*giggles*"
+
+    POV "By the way mom, where's dad?"
+
+    show mom smile
+
+    Mom "He is upstairs Working on his new project."
+
+    POV "really? *amaze*"
+
+    hide mom smile
+    hide bg kit
+
+    #Dat pinto lang yung bg dito 
+
+    stop music fadeout 1.0
+
+    
+
+    blank "I ran upstairs and went to my father's workroom."
+
+    POV "*knocked on the door*"
+
+    POV "Dad, it's me. Can I come in?"
+
+    Dad "Sure"
+
+    play music "audio/sa_office.mp3" volume 0.5
+
+    scene bg office with fade
+
+    blank "I entered the room and saw my dad sitting on his chair and typing on his computer. "
+
+    hide bg office
+
+    #BG ng mga codes
+
+    blank "The lines of code dancing across the screen are like magic."
+
+    blank "I want to learn that someday."
+
+    scene bg office with fade
+
+    show dad happy
+
+    Dad "So why is my little programmer here? "
+
+    POV "Ohh, I want to tell you what I've learned in school."
+
+    hide dad happy
+    hide bg office 
+
+    blank"We talked about what I've learned in school, and my dad is so happy."
+
+    scene bg office with fade
+
+    show dad happy
+
+    Dad " I see that you are learning in school. That's great. "
+
+    POV "By the way, Dad, can I see your web project?"
+
+    Dad "Sure"
+
+    hide dad happy
+    hide bg office
+
+    blank "*shown an incomplete website*"
+
+    Dad "It's still in process, and it will take time to complete this."
+
+    POV "Wow! Dad, can you show me that when it's complete? And also, can I watch you working?"
+
+    scene bg office with fade
+
+    show dad happy
+
+    Dad "Sure, no problem, but first, change your clothes, and let's eat downstairs. I'm sure your mom is waiting for us."
+
+    POV "Ok!"
+
+    blank "After changing my clothes, we ate our food, and I watched my dad working on his new project."
+
+    hide bg office
+    hide dad happy
+
+    stop music fadeout 1.0
+
+    scene bg_2
+
+    "End of Chapter 2"
+
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Chapter 3                                  ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+    play music "audio/sa_room.mp3" volume 0.5
+
+    scene bg room with fade
+
+    POV "Good Morning!"
+
+    blank "I fixed my bed first, and then I left the room to have breakfast."
+
+    stop music fadeout 1.0
+
+    play music "audio/sa_kusina.mp3" volume 0.5
+
+    scene bg kit with fade
+
+    POV "Good morning, Mom! Is Dad still sleeping?"
+
+    show mom smile 
+
+    Mom "Good Morning [POV], your dad is sleeping as usual when he has a project. He always works until midnight. By the way, eat your breakfast now."
+
+    POV "Ok"
+
+    hide mom smile
+
+    blank "I noticed that Dad always works until midnight when he does his job. Oh, I'll just ask him later."
+
+    blank "After eating and preparing myself, I rushed to go to school."
+
+    stop music fadeout 1.0
+
+    play music "audio/sa_school.mp3" volume 0.5
+
+    scene bg classroom with fade
+
+    "I entered the room and immediately sat in my chair."
+
+    show teacher smile 
+
+    Tech "Good morning class lets start the lesson now"
+
+    hide teacher smile
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Lesson 03                                   ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+    stop music fadeout 1.0
+
+    play music "audio/sa_tech.mp3" volume 0.5
+
+    jump lesson_three
+    
+    label pagtapos_ng_lesson_three:
+
+    Tech "Now that we finish the lesson lets start the quiz 3"
+
+    stop music fadeout 1.0
+
+    
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Quiz 03                                     ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+    play music "audio/quiz.mp3" volume 0.5
+
+    jump start_quiz_02
+
+    label pagtapos_ng_quiz_2:
+
+    stop music fadeout 1.0
+
+    play music "audio/sa_school.mp3" volume 0.5
+
+    scene bg classroom with fade
+
+    show teacher smile 
+
+    Tech "Now that we finish the the quiz lets finish our class here"
+
+    Tech "Good bye class"
+
+    POVclass "Good bye Mrs. Rodriguez "
+
+
+    blank "I feel great after class. The lesson is so great."
+
+    blank "I want to go home now and brag about this to my dad."
+
+    Someone "Hello"
+
+    blank "I turned to see who called me."
+
+    show Maria shy 
+
+    blank "It turns out to be my classmate. My seatmate, to be exact, but I haven't talked to her yet because I'm busy listening and I'm excited to go home to tell my parents what happened in school."
+
+    POV "Hmmm? Hi?"
+
+    blank "What is her name again?"
+
+    show Maria Happy 
+
+    Classmate " I see you are passionate in this class. You always raise your hand when Mrs. Rodriguez asks questions."
+
+    POV "Yes, I love this class, and the lesson is so interesting; Mrs. Rodriguez is an excellent teacher."
+
+    show Maria Closeeye Happy 
+
+    Classmate "By the way my name is Maria Pante."
+
+    POV "My name is [POV]. Nice to meet you. Maria" 
+
+    show Maria shy
+
+    Maria "To be honest, I envy you. I'm having a hard time learning codes."
+
+    POV "Don't be envious. I can help you with that! We can learn this all together."
+
+    show Maria Closeeye Happy
+
+    Maria "Really?! Yey, thank you [POV]."
+
+    POV "No problem, you can ask me anytime if you have questions."
+
+    show Maria Happy
+
+    Maria "Ok!"
+
+    blank "We took some time, and we decided to go home."
+
+    hide bg classroom
+    hide Maria Happy
+
+    scene bg raining with fade
+
+    play sound "audio/rain.mp3" volume 0.5
+
+    blank "Oh no, it's raining. I don't have an umbrella with me."
+
+    blank "Hmm. I'll just run to go home."
+
+    blank "I want to go home to tell Mom and Dad what happened in school."
+
+    stop sound
+
+    stop music fadeout 1.0
+
+    play music "audio/sa_kusina.mp3" volume 0.5
+
+    scene bg kit with fade
+
+    POV "I'm home"
+
+    show dad smile
+    show mom close smile at right
+
+    MomAndDad "Welcome back [POV]."
+
+    POV "Dad! Did you finish your project now?"
+
+    show dad crossarm smile
+
+    Dad "Not yet, hahaha. I just woke up."
+
+    show mom smile
+
+    Mom "Change your clothes first [POV], and let's eat."
+
+    show dad smile
+    show mom close smile
+
+    blank "I Change my clothes and eat with my family."
+
+    blank "As usual, I tell them about what I've learned today and tell them about my new friend Maria. "
+
+    stop music fadeout 1.0
+    hide bg kit
+    hide dad smile
+    hide mom smile
+
+    scene bg_3
+
+    "End of chapter 3"
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Chapter 4                                  ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+
+    Someone "[POV] Wake up. It's time for school."
+
+    
+    show mom worry
+
+    blank "I heard someone calling me. I think it was mom."
+
+    blank "*Touch*"
+
+    show mom sad
+
+    Someone "Oh no! You're burning up. Let me get the thermometer."
+
+    hide mom sad
+
+    blank "I can't answer her. I don't even have the energy to open my eyes. It is not great. I think I might be running a fever."
+
+    blank "I need to get up. What about school?"
+
+    hide bg room
+    hide mom smile
+
+    "*Blackout*"
+
+    stop music fadeout 1.0
+
+    play music "audio/sa_room.mp3" volume 0.5
+
+    scene bg room with fade
+
+    blank "I wake up shivering even though I am in blankets. Every breath feels like a struggle. My throat is so scratchy."
+
+    POV "Oh no! I'm late to school!."
+
+    blank "I try to sit up, but my body rebels, weighing me down."
+
+    blank "I don't want to miss any school lessons."
+
+    show mom worry
+
+    Mom " [POV] You awake. How are you feeling? You are running a fever."
+
+    blank "It's Mom's voice. She hovers at the doorway, concern etched on her face."
+
+    POV "Mom, I need to go to school."
+
+    show mom sad
+
+    Mom " No, You cannot, dear. I also called your school and said you can't go now because you are sick."
+
+    blank "She gives me water and tea to drink."
+
+    blank "I take a sip, the warmth trickling down, easing the ache."
+
+    show mom smile
+
+    Mom "Rest now so you can get well soon and attend school."
+
+    POV "But what about the programming lessons?"
+
+    show mom smile close 
+
+    Mom "Your teacher said she will provide some notes of your lesson and some worksheets so you can catch the class."
+
+    show mom smile
+
+    Mom "For now, just rest, ok?"
+
+    POV "Ok, mom. "
+
+    hide mom smile
+    hide bg room with fade
+
+    stop music fadeout 1.0
+
+    
+
+    blank "I close my eyes again and let myself rest."
+
+    blank "I hope my fever gets better."
+
+    scene bg room with fade 
+
+    blank "I open my eyes and try to summon the energy to sit up. "
+
+    blank "I looked at the clock, and it was already 11:00 AM"
+
+    POV "Hays, I'm really absent from school."
+
+    Someone "[POV] How is your feeling? I heard you have a fever." 
+
+    "It's Dad's voice. He entered my room and brought some food with him."
+
+    show dad saddest
+
+    Dad "You're still running a fever. Get some rest for now."
+
+    POV "Dad, I want to attend some of the programming lectures in school."
+
+    show dad sad
+
+    Dad "Sorry dear, you need to rest."
+
+    show dad close happy 
+    
+    Dad "But your mom said your teacher would provide some notes from your lesson. I can help you with your studies to catch up with your classmates."
+
+    POV "Really, Dad? Yey, thank you! You're the best."
+
+    show dad crossarm smile
+
+    Dad "Yes, but first, eat your food and drink your medicine so you can get better quickly."
+
+    POV "Ok!"
+
+    hide dad saddest
+
+    blank "I eat my food and drink my medicine." 
+
+    blank "My dad is on my side, Typing on his laptop. Well, he's still working while keeping an eye on me."
+
+    blank "I still want to watch him, but my eyes are getting heavy, and I'm already sleepy."
+
+    blank "I closed my eyes, and I could only hear the sound of Dad typing on his laptop."
+
+    blank "I hope to get well soon."
+
+    hide bg room
+
+    scene bg room with fade
+
+    blank "I wake up, and I feel much better than earlier."
+
+    blank "I looked at the clock, and it was already 4:00 PM."
+
+    show dad smile
+
+    Dad "You awake. How are you feeling?"
+
+    POV " I'm good now, dad."
+
+    show dad happy termo
+
+    blank "Dad took the thermometer and placed it under my armpit to find out my temperature."
+    show dad down termo
+
+    blank "After 3 minutes, he removed the thermometer from my armpit and got my temperature."
+
+    show dad sad termo
+
+    Dad "37.8 C. You still have a fever. You still won't be able to go to school tomorrow if you're still sick."
+
+    blank "I felt nauseous after hearing that. I want to go to school."
+    show dad happy termo
+
+    Dad "Don't worry, I can teach you your lessons for today. Your teacher already sent your lesson and worksheet notes to Maria."
+
+    POV " Maria? She came here?"
+
+    show dad happy termo
+
+    Dad "Yes, you were asleep. We didn't wake you up when she came, but it looks like she will come again tomorrow to bring you more notes."
+
+    POV "I see. So, Dad, can you teach me now?"
+
+    show dad smile
+
+    Dad "Sure. Are you ready?"
+
+    POV "Yes!."
+
+    blank "Dad gets his laptop and gives me the notes Mrs. Rodriguez prepared."
+
+    
+
+    Dad "So lets start your lesson."
+
+    hide dad smile
+    hide room
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Lesson 04                                   ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+    jump lesson_four
+    
+    label pagtapos_ng_lesson_four:
+
+    scene bg room with fade
+
+    show dad smile
+
+    Dad "Now that you learned about (topic), I'm confident you can answer your worksheets now."
+
+    POV "Yes, Dad. Thank you!"
+
+    blank "I sit in my chair and go my worksheets"
+
+    hide dad smile
+    hide bg room
+    
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Quiz 04                                     ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+    jump start_quiz_03
+
+    label pagtapos_ng_quiz_3:
+
+    show room night with fade
+
+    blank "After taking the worksheets. I stretched my arms and yawn "
+
+    POV "oh, It's already night "
+
+    POV "I am tired"
+
+    blank "After saying that I lay in my bed and sleep. "
+
+
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Chapter 5                                  ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Lesson 05                                   ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+    jump lesson_five
+    
+    label pagtapos_ng_lesson_five:
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Quiz 05                                     ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+    jump start_quiz_04
+
+    label pagtapos_ng_quiz_4:
+
+    "Tapos na muna"
+
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Chapter 6                                  ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Lesson 06                                   ███ ║
+##  ╚══════════════════════════════════════════════════════╝
+
+    jump lesson_six
+    
+    label pagtapos_ng_lesson_six:
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Quiz 06                                     ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+    stop music fadeout 1.0
+    
+    play music "audio/quiz.mp3" volume 0.5
+
+    jump start_quiz_05
+
+    label pagtapos_ng_quiz_5:
+
+    stop music fadeout 1.0
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Chapter 7                                  ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Lesson 07                                   ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+    jump lesson_seven
+    
+    label pagtapos_ng_lesson_seven:
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Quiz 07                                     ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+    stop music fadeout 1.0
+    
+    play music "audio/quiz.mp3" volume 0.5
+
+    jump start_quiz_06
+
+    label pagtapos_ng_quiz_6:
+
+    stop music fadeout 1.0
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Chapter 8                                  ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Lesson 08                                   ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+    jump lesson_eight
+    
+    label pagtapos_ng_lesson_eight:
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Quiz 08                                     ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+
+ #   stop music fadeout 1.0
+    
+  #  play music "audio/quiz.mp3" volume 0.5
+
+ #   jump start_quiz_07
+
+  #  label pagtapos_ng_quiz_7:
+
+ #   stop music fadeout 1.0
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Chapter 9                                   ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Lesson 09                                   ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Quiz 09                                     ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+    #stop music fadeout 1.0
+    
+    #play music "audio/quiz.mp3" volume 0.5
+
+    #jump start_quiz_08
+
+    #label pagtapos_ng_quiz_8:
+
+    #stop music fadeout 1.0
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Chapter 10                                  ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Lesson 10                                   ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+##  ╔══════════════════════════════════════════════════════╗
+##  ║ ███  Quiz 10                                     ███ ║
+##  ╚══════════════════════════════════════════════════════╝ 
+
+    #stop music fadeout 1.0
+    
+    #play music "audio/quiz.mp3" volume 0.5
+
+    #jump start_quiz_09
+
+    #label pagtapos_ng_quiz_9:
+
+   # stop music fadeout 1.0
+
+
+
+
+
+    label lesson_choices:
+
+        menu:
+            "Start Lesson":
+                call screen lesson_ui
+            "Start Final Test":
+                jump start_final_test
+    
+    label start_final_test:
+        call screen final_screen
+
+        label congrats:
+            call screen final_browser
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    return

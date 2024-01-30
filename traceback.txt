@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 294, in script
+    blank "Lesson 1 Weighted Score: [lesson_1_weighted_score]%"
+ValueError: incomplete format
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 294, in script
+    blank "Lesson 1 Weighted Score: [lesson_1_weighted_score]%"
+  File "D:\installedApps\Ren'py\renpy-8.1.3-sdk\renpy\ast.py", line 930, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "D:\installedApps\Ren'py\renpy-8.1.3-sdk\renpy\exports.py", line 1463, in say
+    what = what % tag_quoting_dict
+ValueError: incomplete format
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.1.3.23091805
+CodeDreams 1.0
+Wed Jan 31 06:35:12 2024
