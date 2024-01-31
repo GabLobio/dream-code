@@ -306,6 +306,44 @@ label start:
     blank "Overall Grade: [overall_grade]"
 
 
+        # Lesson 1 
+    $ lesson_4_quiz4 = 8  # Written Works 20%
+    $ lesson_4_act4 = 8  # Performance Task 20%
+
+    # Lesson 2 
+    $ lesson_5_quiz5 = 8  # Written Works 10%
+    $ lesson_5_act5 = 8  # Performance Task 10%
+
+    # Lesson 3 
+    $ lesson_6_quiz6 = 8  # Written Works 10%
+    $ lesson_6_act6 = 8  # Performance Task 10%
+
+    $ exam_2_score = 8 # Exam 20%
+
+    # Calculate weighted scores for each lesson
+    $ lesson_4_weighted_score = (lesson_4_quiz4/10 * 0.2) + (lesson_4_act4/10 * 0.2)
+    $ lesson_5_weighted_score = (lesson_5_quiz5/10 * 0.1) + (lesson_5_act5/10 * 0.1)
+    $ lesson_6_weighted_score = (lesson_6_quiz6/10 * 0.1) + (lesson_6_act6/10 * 0.1)
+
+    $ lesson_4_weighted_score = lesson_4_weighted_score * 100
+    $ lesson_5_weighted_score = lesson_5_weighted_score * 100
+    $ lesson_6_weighted_score = lesson_6_weighted_score * 100
+
+    $ exam_2_weighted_score = (exam_2_score/10 * 0.2)
+    $ exam_2_weighted_score = exam_2_weighted_score * 100
+
+    # Calculate overall grade
+    $ overall_2_grade = int(lesson_4_weighted_score + lesson_5_weighted_score + lesson_6_weighted_score + exam_2_weighted_score)
+    
+
+    # Display the results
+    blank "Lesson 1 Weighted Score: [lesson_4_weighted_score]"
+    blank "Lesson 2 Weighted Score: [lesson_5_weighted_score]"
+    blank "Lesson 3 Weighted Score: [lesson_6_weighted_score]"
+    blank "Exam Weighted Score: [exam_2_weighted_score]"
+    blank "Overall Grade: [overall_2_grade]"
+
+
     jump chapter_1_01
 
 

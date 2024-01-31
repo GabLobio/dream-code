@@ -18,7 +18,7 @@ label start_hitting_teach:
         "Let's go!":
             pass
         "Refuse":
-            jump l1Int
+            jump l1Int1
     call begin_hunt from _call_begin_hunt
     
     
