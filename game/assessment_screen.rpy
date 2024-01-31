@@ -112,6 +112,7 @@ screen ls_five_asses:
 
 
 screen q1_assesment():
+    
     image "images/qtrly_assessment_bg.png"
     # Written Works
     image Solid("#006eff") xsize(persistent.written_works * 70) ysize(45) xpos 80 ypos 162

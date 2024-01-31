@@ -306,15 +306,15 @@ label start:
     blank "Overall Grade: [overall_grade]"
 
 
-        # Lesson 1 
+    # Lesson 4 
     $ lesson_4_quiz4 = 8  # Written Works 20%
     $ lesson_4_act4 = 8  # Performance Task 20%
 
-    # Lesson 2 
+    # Lesson 5 
     $ lesson_5_quiz5 = 8  # Written Works 10%
     $ lesson_5_act5 = 8  # Performance Task 10%
 
-    # Lesson 3 
+    # Lesson 6 
     $ lesson_6_quiz6 = 8  # Written Works 10%
     $ lesson_6_act6 = 8  # Performance Task 10%
 
@@ -337,10 +337,42 @@ label start:
     
 
     # Display the results
-    blank "Lesson 1 Weighted Score: [lesson_4_weighted_score]"
-    blank "Lesson 2 Weighted Score: [lesson_5_weighted_score]"
-    blank "Lesson 3 Weighted Score: [lesson_6_weighted_score]"
-    blank "Exam Weighted Score: [exam_2_weighted_score]"
+    blank "Lesson 4 Weighted Score: [lesson_4_weighted_score]"
+    blank "Lesson 5 Weighted Score: [lesson_5_weighted_score]"
+    blank "Lesson 6 Weighted Score: [lesson_6_weighted_score]"
+    blank "Exam 2 Weighted Score: [exam_2_weighted_score]"
+    blank "2nd Overall Grade: [overall_2_grade]"
+
+
+    # Rudeness and Kindness scores initialization
+    $ persistent.ast1_kindness = 10
+    $ persistent.ast1_rudeness = 50
+    $ persistent.ast1_recitation = 30
+    $ persistent.ast1_participation = 30
+    $ persistent.ast1_accuracy = 30
+
+    # Calculate behavior score
+    $ behavior_score = persistent.ast1_recitation + persistent.ast1_participation + persistent.ast1_accuracy + persistent.ast1_kindness - persistent.ast1_rudeness
+
+    # Initialize additional grade
+    $ additional_grade = 0
+
+    # Determine if the player gets an additional grade based on Rudeness and Kindness
+    if persistent.ast1_kindness > persistent.ast1_rudeness:
+        blank "Your kindness surpasses your rudeness. You receive an additional 8 grade!"
+        $ additional_grade = 0.08
+    elif persistent.ast1_rudeness > persistent.ast1_kindness:
+        blank "Work on improving your kindness. Unfortunately, you don't receive an additional grade, and 3 is deducted from your total grade."
+        $ additional_grade = 0.03
+    else:
+        blank "No Additional grade"
+
+    # Calculate overall grade with additional behavior score
+    $ additional_grade = additional_grade * 100
+    $ overall_2_grade -= additional_grade
+    # Display the results
+    blank "Behavior Score: [behavior_score]"
+    blank "Additional Grade: [additional_grade]"
     blank "Overall Grade: [overall_2_grade]"
 
 
