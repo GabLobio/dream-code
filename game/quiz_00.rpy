@@ -451,17 +451,17 @@ screen quiz_00_question_01_imagemap:
     ## Place quiz 00 question 01 answer 02 here
     text _p("""
         {b}Analyze data {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 01 answer 03 here
     text _p("""
         {b}Build and structure web pages{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 01 answer 04 here
     text _p("""
         {b} None of the above{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -560,17 +560,17 @@ screen quiz_00_question_02_imagemap:
     ## Place quiz 00 question 02 answer 02 here
     text _p("""
         {b}Greater than symbol \" > \"  {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 02 answer 03 here
     text _p("""
         {b}Less than symbol \" < \" {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 02 answer 04 here
     text _p("""
         {b} Asterisk \" * \"  {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -671,17 +671,17 @@ screen quiz_00_question_03_imagemap:
     ## Place quiz 00 question 03 answer 02 here
     text _p("""
         {b} Greater than symbol \" > \" {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 03 answer 03 here
     text _p("""
         {b} Less than symbol \" < \" {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 03 answer 04 here
     text _p("""
         {b} Asterisk \" * \" {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -782,17 +782,17 @@ screen quiz_00_question_04_imagemap:
     ## Place quiz 00 question 04 answer 02 here
     text _p("""
         {b} Greater than symbol \" > \" {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 04 answer 03 here
     text _p("""
         {b} Less than symbol \" < \" {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 04 answer 04 here
     text _p("""
         {b} Asterisk \" * \" {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -894,17 +894,17 @@ screen quiz_00_question_05_imagemap:
     ## Place quiz 00 question 05 answer 02 here
     text _p("""
         {b} Image {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 05 answer 03 here
     text _p("""
         {b}Text Paragraph {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 05 answer 04 here
     text _p("""
         {b} Table {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -1005,17 +1005,17 @@ screen quiz_00_question_06_imagemap:
     ## Place quiz 00 question 06 answer 02 here
     text _p("""
         {b} Image {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 06 answer 03 here
     text _p("""
         {b}Text Paragraph {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 06 answer 04 here
     text _p("""
         {b}Table {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -1115,17 +1115,17 @@ screen quiz_00_question_07_imagemap:
     ## Place quiz 00 question 07 answer 02 here
     text _p("""
         {b} HTML {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 07 answer 03 here
     text _p("""
         {b} JavaScript {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 07 answer 04 here
     text _p("""
         {b}Python{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -1225,17 +1225,17 @@ screen quiz_00_question_08_imagemap:
     ## Place quiz 00 question 08 answer 02 here
     text _p("""
         {b} HTML {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 08 answer 03 here
     text _p("""
         {b} JavaScript {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 08 answer 04 here
     text _p("""
         {b} Python {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -1335,17 +1335,17 @@ screen quiz_00_question_09_imagemap:
     ## Place quiz 00 question 09 answer 02 here
     text _p("""
         {b} HTML {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 09 answer 03 here
     text _p("""
         {b} JavaScript {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 09 answer 04 here
     text _p("""
         {b} Python {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -1445,17 +1445,17 @@ screen quiz_00_question_10_imagemap:
     ## Place quiz 00 question 10 answer 02 here
     text _p("""
         {b} Wium Lie {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 10 answer 03 here
     text _p("""
         {b} James Gosling {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 10 answer 04 here
     text _p("""
         {b} Guido van Rossum {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -1554,17 +1554,17 @@ screen quiz_00_question_11_imagemap:
     ## Place quiz 00 question 11 answer 02 here
     text _p("""
         {b} 1985 {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 11 answer 03 here
     text _p("""
         {b} 1991 {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 11 answer 04 here
     text _p("""
         {b} 2000 {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -1665,17 +1665,17 @@ screen quiz_00_question_12_imagemap:
     ## Place quiz 00 question 12 answer 02 here
     text _p("""
         {b} Static {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 12 answer 03 here
     text _p("""
         {b} Styling {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 12 answer 04 here
     text _p("""
         {b} Complex {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -1887,17 +1887,17 @@ screen quiz_00_question_14_imagemap:
     ## Place quiz 00 question 14 answer 02 here
     text _p("""
         {b} Graphical User Integrated {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 14 answer 03 here
     text _p("""
         {b} Graphical User Interface {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 14 answer 04 here
     text _p("""
         {b} Game User Important {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -1997,17 +1997,17 @@ screen quiz_00_question_15_imagemap:
     ## Place quiz 00 question 15 answer 02 here
     text _p("""
         {b} Dislike {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 15 answer 03 here
     text _p("""
         {b} Heart {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 15 answer 04 here
     text _p("""
         {b} Click {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -2108,17 +2108,17 @@ screen quiz_00_question_16_imagemap:
     ## Place quiz 00 question 16 answer 02 here
     text _p("""
         {b} </button> {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 16 answer 03 here
     text _p("""
         {b} <img> {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 16 answer 04 here
     text _p("""
         {b} Like {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -2219,17 +2219,17 @@ screen quiz_00_question_17_imagemap:
     ## Place quiz 00 question 17 answer 02 here
     text _p("""
         {b} \" </b> \" {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 17 answer 03 here
     text _p("""
         {b}\" </p> \"{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 17 answer 04 here
     text _p("""
         {b} \" <b> \" {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -2329,17 +2329,17 @@ screen quiz_00_question_18_imagemap:
     ## Place quiz 00 question 18 answer 02 here
     text _p("""
         {b} \" <p> Text </p> \" {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 18 answer 03 here
     text _p("""
         {b} \" <b> Text </b> \" {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 18 answer 04 here
     text _p("""
         {b} \" <p> Text  \" {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -2444,17 +2444,17 @@ screen quiz_00_question_19_imagemap:
     ## Place quiz 00 question 19 answer 02 here
     text _p("""
         {b} A table and a button {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 19 answer 03 here
     text _p("""
         {b} A paragraph text and a button {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 00 question 19 answer 04 here
     text _p("""
         {b} An image and a paragraph {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 

@@ -1,11 +1,24 @@
+##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
+##  ║ ███  INITIALIATION / LOOP CHECKER                                       ███ ║ 
+##  ║ ███  This is the section responsible for going inside the               ███ ║ 
+##  ║ ███  quiz, dictating the loop as well aswhen the quiz qill end.         ███ ║  
+##  ╚═════════════════════════════════════════════════════════════════════════════╝ 
 
-##  ╔═════════════════════════════════════════════════════════════════════════════╗
-##  ║ ███  INIT SECTION                                                       ███ ║
-##  ║ ███  This is the section responsible for initializing things            ███ ║
-##  ║ ███  that need to be tracked as well as specific quiz resources.        ███ ║
-##  ╚═════════════════════════════════════════════════════════════════════════════╝
+default persistent_quiz_02_q_counter_correct_previous_answer = 0
+default persistent_quiz_02_q_counter_correct_answer = 0
 
-init:
+label start_quiz_02_initialization:
+    if whole_quiz_02_seen == True:
+        jump start_quiz_02
+    else:
+        $ persistent_quiz_02_q_counter_correct_previous_answer = 0
+        $ persistent_quiz_02_q_counter_correct_answer = 0
+
+# You place any dialogue or declare image here before quiz starts
+label start_quiz_02:
+    ## ╔════════════════════════╗
+    ## ║ temporary please erase ║
+    ## ╚════════════════════════╝ 
     $ persistent_quiz_02_q_01_seen = False
     $ persistent_quiz_02_q_02_seen = False
     $ persistent_quiz_02_q_03_seen = False
@@ -27,31 +40,136 @@ init:
     $ persistent_quiz_02_q_19_seen = False
     $ persistent_quiz_02_q_20_seen = False
 
-    # This keeps track of the questions encountered in quiz 0
     $ persistent_quiz_02_q_counter = 0
 
-    # This keeps track of the correct answers in quiz 0
-    $ persistent_quiz_02_q_counter_correct_answer = 0
+    jump start_quiz_02_first_check
 
-    
+label start_quiz_02_first_check:
+    if whole_quiz_02_seen == True:
+        jump start_quiz_02_second_check
+    else:    
+        jump start_quiz_02_second_check    
+
+label start_quiz_02_second_check:
+    if persistent_quiz_02_q_counter_correct_previous_answer == 0:
+        jump start_quiz_02_third_check
+
+    elif persistent_quiz_02_q_counter_correct_previous_answer == 1:
+        $ persistent_quiz_02_q_counter_correct_previous_answer -= 1
+        jump start_quiz_02_third_check
+
+    elif persistent_quiz_02_q_counter_correct_previous_answer == 2:
+        $ persistent_quiz_02_q_counter_correct_previous_answer -= 2
+        jump start_quiz_02_third_check
+
+    elif persistent_quiz_02_q_counter_correct_previous_answer == 3:
+        $ persistent_quiz_02_q_counter_correct_previous_answer -= 3
+        jump start_quiz_02_third_check
+
+    elif persistent_quiz_02_q_counter_correct_previous_answer == 4:
+        $ persistent_quiz_02_q_counter_correct_previous_answer -= 4
+        jump start_quiz_02_third_check
+
+    elif persistent_quiz_02_q_counter_correct_previous_answer == 5:
+        $ persistent_quiz_02_q_counter_correct_previous_answer -= 5
+        jump start_quiz_02_third_check
+
+    elif persistent_quiz_02_q_counter_correct_previous_answer == 6:
+        $ persistent_quiz_02_q_counter_correct_previous_answer -= 6
+        jump start_quiz_02_third_check
+
+    elif persistent_quiz_02_q_counter_correct_previous_answer == 7:
+        $ persistent_quiz_02_q_counter_correct_previous_answer -= 7
+        jump start_quiz_02_third_check
+
+    elif persistent_quiz_02_q_counter_correct_previous_answer == 8:
+        $ persistent_quiz_02_q_counter_correct_previous_answer -= 8
+        jump start_quiz_02_third_check
+
+    elif persistent_quiz_02_q_counter_correct_previous_answer == 9:
+        $ persistent_quiz_02_q_counter_correct_previous_answer -= 9
+        jump start_quiz_02_third_check
+
+    elif persistent_quiz_02_q_counter_correct_previous_answer == 10:
+        $ persistent_quiz_02_q_counter_correct_previous_answer -= 10
+        jump start_quiz_02_third_check
+
+label start_quiz_02_third_check:
+
+    if whole_quiz_02_seen == True:
+        e "Repeat exam again?"
+        e "OK, let's proceed..."
+        if persistent_quiz_02_q_counter_correct_answer == 0:
+            jump start_quiz_02_resume
+
+        elif persistent_quiz_02_q_counter_correct_answer == 1:
+            $ persistent_quiz_02_q_counter_correct_previous_answer += 1 
+            $ persistent_quiz_02_q_counter_correct_answer -= 1
+            $ persistent_quiz_total_points_counter_correct_answer -= 1 
+            jump start_quiz_02_resume 
+
+        elif persistent_quiz_02_q_counter_correct_answer == 2:
+            $ persistent_quiz_02_q_counter_correct_previous_answer += 2 
+            $ persistent_quiz_02_q_counter_correct_answer -= 2
+            $ persistent_quiz_total_points_counter_correct_answer -= 2 
+            jump start_quiz_02_resume
+
+        elif persistent_quiz_02_q_counter_correct_answer == 3: 
+            $ persistent_quiz_02_q_counter_correct_previous_answer += 3
+            $ persistent_quiz_02_q_counter_correct_answer -= 3
+            $ persistent_quiz_total_points_counter_correct_answer -= 3
+            jump start_quiz_02_resume
+
+        elif persistent_quiz_02_q_counter_correct_answer == 4: 
+            $ persistent_quiz_02_q_counter_correct_previous_answer += 4
+            $ persistent_quiz_02_q_counter_correct_answer -= 4 
+            $ persistent_quiz_total_points_counter_correct_answer -= 4
+            jump start_quiz_02_resume
+
+        elif persistent_quiz_02_q_counter_correct_answer == 5:
+            $ persistent_quiz_02_q_counter_correct_previous_answer += 5
+            $ persistent_quiz_02_q_counter_correct_answer -= 5  
+            $ persistent_quiz_total_points_counter_correct_answer -= 5
+            jump start_quiz_02_resume
+
+        elif persistent_quiz_02_q_counter_correct_answer == 6: 
+            $ persistent_quiz_02_q_counter_correct_previous_answer += 6
+            $ persistent_quiz_02_q_counter_correct_answer -= 6 
+            $ persistent_quiz_total_points_counter_correct_answer -= 6
+            jump start_quiz_02_resume
+
+        elif persistent_quiz_02_q_counter_correct_answer == 7: 
+            $ persistent_quiz_02_q_counter_correct_previous_answer += 7
+            $ persistent_quiz_02_q_counter_correct_answer -= 7 
+            $ persistent_quiz_total_points_counter_correct_answer -= 7
+            jump start_quiz_02_resume
+
+        elif persistent_quiz_02_q_counter_correct_answer == 8:  
+            $ persistent_quiz_02_q_counter_correct_previous_answer += 8
+            $ persistent_quiz_02_q_counter_correct_answer -= 8
+            $ persistent_quiz_total_points_counter_correct_answer -= 8
+            jump start_quiz_02_resume
+
+        elif persistent_quiz_02_q_counter_correct_answer == 9:  
+            $ persistent_quiz_02_q_counter_correct_previous_answer += 9
+            $ persistent_quiz_02_q_counter_correct_answer -= 9
+            $ persistent_quiz_total_points_counter_correct_answer -= 9
+            jump start_quiz_02_resume
+
+        elif persistent_quiz_02_q_counter_correct_answer == 10: 
+            $ persistent_quiz_02_q_counter_correct_previous_answer += 10 
+            $ persistent_quiz_02_q_counter_correct_answer -= 10
+            $ persistent_quiz_total_points_counter_correct_answer -= 10
+            jump start_quiz_02_resume
+
+    jump start_quiz_02_resume         
 
 
 
 
 
 
-
-
-
-
-##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
-##  ║ ███  INITIALIATION / LOOP CHECKER                                       ███ ║ 
-##  ║ ███  This is the section responsible for going inside the               ███ ║ 
-##  ║ ███  quiz, dictating the loop as well aswhen the quiz qill end.         ███ ║  
-##  ╚═════════════════════════════════════════════════════════════════════════════╝ 
-
-# You place any dialogue or declare image here before quiz starts
-label start_quiz_02:
+label start_quiz_02_resume:
     $ renpy.block_rollback()
     $ whole_quiz_02_seen = True
     #"Insert Dialogue Here"
@@ -110,7 +228,7 @@ label quiz_02_base_checker_timeout:
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝ 
 
 label quiz_02_randomizer:
-    $ choice = renpy.random.choice(['q01', 'q02', 'q03', 'q04', 'q05', 'q06', 'q07', 'q08', 'q09', 'q10', 'q11', 'q12', 'q13', 'q14', 'q18', 'q18', 'q18', 'q18', 'q19', 'q20'])
+    $ choice = renpy.random.choice(['q01', 'q02', 'q03', 'q04', 'q05', 'q06', 'q07', 'q08', 'q09', 'q10', 'q11', 'q12', 'q13', 'q14', 'q15', 'q16', 'q17', 'q18', 'q19', 'q20'])
 
     if choice == 'q01': # quiz_01_q_01_checker
         if persistent_quiz_02_q_01_seen == True:
@@ -278,9 +396,6 @@ label quiz_02_randomizer:
 
 
 
-
-
-
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  QUESTION 02 - QUESTION 01  ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝ 
@@ -328,22 +443,22 @@ screen quiz_02_question_01_imagemap:
     ## Place quiz 02 question 01 answer 01 here
     text _p("""
         {b}The tail container{/b}
-        """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
+        """) xpos 138 ypos 411 size 40 xsize 800 color "#333333" 
 
     ## Place quiz 02 question 01 answer 02 here
     text _p("""
         {b}The head container{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 01 answer 03 here
     text _p("""
         {b} The body container{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 01 answer 04 here
     text _p("""
         {b} The end container{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -437,22 +552,22 @@ screen quiz_02_question_02_imagemap:
     ## Place quiz 02 question 02 answer 01 here
     text _p("""
         {b} \"<!--\" , \"-->\" {/b}
-        """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
+        """) xpos 138 ypos 411 size 40 xsize 800 color "#333333" 
 
     ## Place quiz 02 question 02 answer 02 here
     text _p("""
         {b} \" <!-- \"  {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 02 answer 03 here
     text _p("""
         {b}\" "--> \" {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 02 answer 04 here
     text _p("""
         {b} None of the above {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -546,22 +661,22 @@ screen quiz_02_question_03_imagemap:
     ## Place quiz 02 question 03 answer 01 here
     text _p("""
         {b}The tail container{/b}
-        """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
+        """) xpos 138 ypos 411 size 40 xsize 800 color "#333333" 
 
     ## Place quiz 02 question 03 answer 02 here
     text _p("""
         {b}The head container{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 03 answer 03 here
     text _p("""
         {b} The body container{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 03 answer 04 here
     text _p("""
         {b}The end container{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -658,17 +773,17 @@ screen quiz_02_question_04_imagemap:
     ## Place quiz 02 question 04 answer 01 here
     text _p("""
         {b}It uses multiple \"<p>\" tagsm {/b}
-        """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
+        """) xpos 138 ypos 411 size 40 xsize 800 color "#333333" 
 
     ## Place quiz 02 question 04 answer 02 here
     text _p("""
         {b} It uses multiple \"</p>\" tags{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 04 answer 03 here
     text _p("""
         {b}It uses multiple \"<h1>\" tags{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 04 answer 04 here
     text _p("""
@@ -770,22 +885,22 @@ screen quiz_02_question_05_imagemap:
     ## Place quiz 02 question 05 answer 01 here
     text _p("""
         {b}\" < \"  {/b}
-        """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
+        """) xpos 138 ypos 411 size 40 xsize 800 color "#333333" 
 
     ## Place quiz 02 question 05 answer 02 here
     text _p("""
         {b} \" > \"{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 05 answer 03 here
     text _p("""
         {b} \" = \"{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 05 answer 04 here
     text _p("""
         {b} \" * \" {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -881,22 +996,22 @@ screen quiz_02_question_06_imagemap:
     ## Place quiz 02 question 06 answer 01 here
     text _p("""
         {b} \" < \" {/b}
-        """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
+        """) xpos 138 ypos 411 size 40 xsize 800 color "#333333" 
 
     ## Place quiz 02 question 06 answer 02 here
     text _p("""
         {b} \" > \"{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 06 answer 03 here
     text _p("""
         {b} \" = \" {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 06 answer 04 here
     text _p("""
         {b} \" * \"{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -991,22 +1106,22 @@ screen quiz_02_question_07_imagemap:
     ## Place quiz 02 question 07 answer 01 here
     text _p("""
         {b}\" Web server \"{/b}
-        """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
+        """) xpos 138 ypos 411 size 40 xsize 800 color "#333333" 
 
     ## Place quiz 02 question 07 answer 02 here
     text _p("""
         {b}\" Web browser \"{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 07 answer 03 here
     text _p("""
         {b} \" Website \"{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 07 answer 04 here
     text _p("""
         {b} None of the above {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -1101,22 +1216,22 @@ screen quiz_02_question_08_imagemap:
     ## Place quiz 02 question 08 answer 01 here
     text _p("""
         {b} \"Web server \" {/b}
-        """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
+        """) xpos 138 ypos 411 size 40 xsize 800 color "#333333" 
 
     ## Place quiz 02 question 08 answer 02 here
     text _p("""
         {b} \" Web browser \"{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 08 answer 03 here
     text _p("""
         {b} \" Website \" {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 08 answer 04 here
     text _p("""
         {b} None of the above {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -1212,22 +1327,22 @@ screen quiz_02_question_09_imagemap:
     ## Place quiz 02 question 09 answer 01 here
     text _p("""
         {b} 1 line {/b}
-        """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
+        """) xpos 138 ypos 411 size 40 xsize 800 color "#333333" 
 
     ## Place quiz 02 question 09 answer 02 here
     text _p("""
         {b} 2 lines {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 09 answer 03 here
     text _p("""
         {b} 3 lines {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 09 answer 04 here
     text _p("""
         {b} 4 lines {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -1323,22 +1438,22 @@ screen quiz_02_question_10_imagemap:
     ## Place quiz 02 question 10 answer 01 here
     text _p("""
         {b} 1 line {/b}
-        """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
+        """) xpos 138 ypos 411 size 40 xsize 800 color "#333333" 
 
     ## Place quiz 02 question 10 answer 02 here
     text _p("""
         {b} 2 lines {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 10 answer 03 here
     text _p("""
         {b} 3 lines {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 10 answer 04 here
     text _p("""
         {b} 4 lines {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -1434,22 +1549,22 @@ screen quiz_02_question_11_imagemap:
     ## Place quiz 02 question 11 answer 01 here
     text _p("""
         {b} 1 line {/b}
-        """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
+        """) xpos 138 ypos 411 size 40 xsize 800 color "#333333" 
 
     ## Place quiz 02 question 11 answer 02 here
     text _p("""
         {b} 2 lines {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 11 answer 03 here
     text _p("""
         {b} 3 lines  {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 11 answer 04 here
     text _p("""
         {b}4 lines{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -1544,22 +1659,22 @@ screen quiz_02_question_12_imagemap:
     ## Place quiz 02 question 12 answer 01 here
     text _p("""
         {b} \"h1 \"  , \" /h1 \"{/b}
-        """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
+        """) xpos 138 ypos 411 size 40 xsize 800 color "#333333" 
 
     ## Place quiz 02 question 12 answer 02 here
     text _p("""
         {b} \"p \" ,  \" /p \"{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 12 answer 03 here
     text _p("""
         {b} \"<!-- \" , \"<-->\" {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 12 answer 04 here
     text _p("""
         {b} \" <img> \"{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -1657,22 +1772,22 @@ screen quiz_02_question_13_imagemap:
     ## Place quiz 02 question 13 answer 01 here
     text _p("""
         {b} \" <!-- \" , \" p \" {/b}
-        """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
+        """) xpos 138 ypos 411 size 40 xsize 800 color "#333333" 
 
     ## Place quiz 02 question 13 answer 02 here
     text _p("""
         {b} \" /h2 \" , \" p \"  {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 13 answer 03 here
     text _p("""
         {b} \" /h1 \" , \" p \"  {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 13 answer 04 here
     text _p("""
         {b} \" /h1 \" , \" !--> \" {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -1768,22 +1883,22 @@ screen quiz_02_question_14_imagemap:
     ## Place quiz 02 question 14 answer 01 here
     text _p("""
         {b} \" # \" {/b}
-        """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
+        """) xpos 138 ypos 411 size 40 xsize 800 color "#333333" 
 
     ## Place quiz 02 question 14 answer 02 here
     text _p("""
         {b}\" <!-- \" {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 14 answer 03 here
     text _p("""
         {b}\" --> \"{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 14 answer 04 here
     text _p("""
         {b}\" --!> \"{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -1879,22 +1994,22 @@ screen quiz_02_question_15_imagemap:
     ## Place quiz 02 question 15 answer 01 here
     text _p("""
         {b} \"<!--\" , \"button\"{/b}
-        """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
+        """) xpos 138 ypos 411 size 40 xsize 800 color "#333333" 
 
     ## Place quiz 02 question 15 answer 02 here
     text _p("""
         {b} \"/h1\" , \"/button\"{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 15 answer 03 here
     text _p("""
         {b} \"-->\" , \"/button\"{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 15 answer 04 here
     text _p("""
         {b} \"/p\" , \"-->\"{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -1989,22 +2104,22 @@ screen quiz_02_question_16_imagemap:
     ## Place quiz 02 question 16 answer 01 here
     text _p("""
         {b} \"collaboration\" {/b}
-        """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
+        """) xpos 138 ypos 411 size 40 xsize 800 color "#333333" 
 
     ## Place quiz 02 question 16 answer 02 here
     text _p("""
         {b} \"compatible\" {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 16 answer 03 here
     text _p("""
         {b} \"cooperation\" {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 16 answer 04 here
     text _p("""
         {b} None of the above {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -2100,22 +2215,22 @@ screen quiz_02_question_17_imagemap:
     ## Place quiz 02 question 17 answer 01 here
     text _p("""
         {b}\"collaboration\"{/b}
-        """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
+        """) xpos 138 ypos 411 size 40 xsize 800 color "#333333" 
 
     ## Place quiz 02 question 17 answer 02 here
     text _p("""
         {b}\"compatible\"{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 17 answer 03 here
     text _p("""
         {b}\"cooperation\"{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 17 answer 04 here
     text _p("""
         {b}None of the above{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -2209,22 +2324,22 @@ screen quiz_02_question_18_imagemap:
     ## Place quiz 02 question 18 answer 01 here
     text _p("""
         {b}Feathering{/b}
-        """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
+        """) xpos 138 ypos 411 size 40 xsize 800 color "#333333" 
 
     ## Place quiz 02 question 18 answer 02 here
     text _p("""
         {b}Egging{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 18 answer 03 here
     text _p("""
         {b}Nesting{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 18 answer 04 here
     text _p("""
         {b}None of the above{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -2323,22 +2438,22 @@ screen quiz_02_question_19_imagemap:
     ## Place quiz 02 question 19 answer 01 here
     text _p("""
         {b}\"</head>\" ,  \"<head>\"{/b}
-        """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
+        """) xpos 138 ypos 411 size 40 xsize 800 color "#333333" 
 
     ## Place quiz 02 question 19 answer 02 here
     text _p("""
         {b} \"<head>\" , \"</head>\"{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 19 answer 03 here
     text _p("""
         {b}\"<p>\" , \"</p>\"{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 19 answer 04 here
     text _p("""
         {b} \"feet\" , \"/feet\"{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -2432,22 +2547,22 @@ screen quiz_02_question_20_imagemap:
     ## Place quiz 02 question 20 answer 01 here
     text _p("""
         {b}Indented code{/b}
-        """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
+        """) xpos 138 ypos 411 size 40 xsize 800 color "#333333" 
 
     ## Place quiz 02 question 20 answer 02 here
     text _p("""
         {b}All code contained in one long line{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 411 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 20 answer 03 here
     text _p("""
         {b}Code organized into different lines{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 138 ypos 738 size 40 xsize 800  color "#333333" 
 
     ## Place quiz 02 question 20 answer 04 here
     text _p("""
         {b}a and c are correct answers{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        """) xpos 1038 ypos 738 size 40 xsize 800  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
@@ -2494,6 +2609,7 @@ label quiz_02_q_20_time_up:
 
 
 
+
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗
 ##  ║ ███  RESULTS                                                            ███ ║
 ##  ║ ███  This is the section responsible for showing your results in a      ███ ║
@@ -2502,13 +2618,14 @@ label quiz_02_q_20_time_up:
 
 label quiz_02_conclusion:
     if persistent_quiz_02_q_counter_correct_answer == 0:
-        scene pie_00
+        scene pie_02
         hide blank_question_windows with moveoutright
         e"Oh no?! Your score is 0 please study more"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()
-        jump pagtapos_ng_quiz_2 
+        $ whole_quiz_02_seen == True
+        jump pagtapos_ng_quiz_2
+
 
     elif persistent_quiz_02_q_counter_correct_answer == 1:
         scene pie_01 
@@ -2516,7 +2633,7 @@ label quiz_02_conclusion:
         e"Your score is 1 please study more"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()
+        $ whole_quiz_02_seen == True
         jump pagtapos_ng_quiz_2
 
 
@@ -2527,6 +2644,7 @@ label quiz_02_conclusion:
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
         #$ renpy.quit() 
+        $ whole_quiz_02_seen == True
         jump pagtapos_ng_quiz_2
 
 
@@ -2536,7 +2654,7 @@ label quiz_02_conclusion:
         e"Your score is 3 better luck next time"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()  
+        $ whole_quiz_02_seen == True
         jump pagtapos_ng_quiz_2
         
 
@@ -2546,16 +2664,16 @@ label quiz_02_conclusion:
         e"Your score is 4 better luck next time"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()  
+        $ whole_quiz_02_seen == True
         jump pagtapos_ng_quiz_2
 
     elif persistent_quiz_02_q_counter_correct_answer == 5:
         scene pie_05
-        hide blank_question_windows with moveoutright
+        hide blank_question_windows with moveoutright      
         e"Your score is 5 better luck next time"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()  
+        $ whole_quiz_02_seen == True
         jump pagtapos_ng_quiz_2
 
     elif persistent_quiz_02_q_counter_correct_answer == 6:
@@ -2564,41 +2682,94 @@ label quiz_02_conclusion:
         e"Your score is 6 not bad"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()  
+        $ whole_quiz_02_seen == True
         jump pagtapos_ng_quiz_2
 
     elif persistent_quiz_02_q_counter_correct_answer == 7:
         scene pie_07
         hide blank_question_windows with moveoutright
-        e"Your score is 7 not bad"
+        e "Your score is 7 not bad"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()  
+        $ whole_quiz_02_seen == True
         jump pagtapos_ng_quiz_2
 
     elif persistent_quiz_02_q_counter_correct_answer == 8:
         scene pie_08 
         hide blank_question_windows with moveoutright
-        e"Whoa! your score is 8 not bad"
+        e "Whoa! your score is 8 not bad"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()   
+        $ whole_quiz_02_seen == True
         jump pagtapos_ng_quiz_2
 
     elif persistent_quiz_02_q_counter_correct_answer == 9:
         scene pie_09
         hide blank_question_windows with moveoutright
-        e"Whoa! your score is 9. Congrats"
+        e "Whoa! your score is 9. Congrats"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()  
+        $ whole_quiz_02_seen == True
         jump pagtapos_ng_quiz_2
 
     elif persistent_quiz_02_q_counter_correct_answer == 10:
         scene pie_10
         hide blank_question_windows with moveoutright
-        e"Whoa! You got perfect score Congrats"
+        e "Whoa! You got perfect score Congrats"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit() 
+        $ whole_quiz_02_seen == True
         jump pagtapos_ng_quiz_2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#label before_pagtapos_ng_quiz_2:
+    
+    ## ╔════════════════════════╗
+    ## ║ temporary please erase ║
+    ## ╚════════════════════════╝
+    #"First time mo take itong quiz"
+    #call screen chp_one_assessment()
+    #return 
+    ## ╔════════════════════════╗
+    ## ║ temporary please erase ║
+    ## ╚════════════════════════╝ 
+    #$ renpy.quit() 
+
+#label quiz_02_repeat_landing_label_seen:
+    #put label kung saan mo gusto ilaghay
+    ## ╔════════════════════════╗
+    ## ║ temporary please erase ║
+    ## ╚════════════════════════╝
+    #"Inulit mo itong quiz"
+    #call screen chp_one_assessment()
+    #return 
+    ## ╔════════════════════════╗
+    ## ║ temporary please erase ║
+    ## ╚════════════════════════╝ 
+    #$ renpy.quit()  
+
+    #$ renpy.quit() 
+

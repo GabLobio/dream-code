@@ -1,11 +1,24 @@
+##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
+##  ║ ███  INITIALIATION / LOOP CHECKER                                       ███ ║ 
+##  ║ ███  This is the section responsible for going inside the               ███ ║ 
+##  ║ ███  quiz, dictating the loop as well aswhen the quiz qill end.         ███ ║  
+##  ╚═════════════════════════════════════════════════════════════════════════════╝ 
 
-##  ╔═════════════════════════════════════════════════════════════════════════════╗
-##  ║ ███  INIT SECTION                                                       ███ ║
-##  ║ ███  This is the section responsible for initializing things            ███ ║
-##  ║ ███  that need to be tracked as well as specific quiz resources.        ███ ║
-##  ╚═════════════════════════════════════════════════════════════════════════════╝
+default persistent_quiz_09_q_counter_correct_previous_answer = 0
+default persistent_quiz_09_q_counter_correct_answer = 0
 
-init:
+label start_quiz_09_initialization:
+    if whole_quiz_09_seen == True:
+        jump start_quiz_09
+    else:
+        $ persistent_quiz_09_q_counter_correct_previous_answer = 0
+        $ persistent_quiz_09_q_counter_correct_answer = 0
+
+# You place any dialogue or declare image here before quiz starts
+label start_quiz_09:
+    ## ╔════════════════════════╗
+    ## ║ temporary please erase ║
+    ## ╚════════════════════════╝ 
     $ persistent_quiz_09_q_01_seen = False
     $ persistent_quiz_09_q_02_seen = False
     $ persistent_quiz_09_q_03_seen = False
@@ -27,37 +40,136 @@ init:
     $ persistent_quiz_09_q_19_seen = False
     $ persistent_quiz_09_q_20_seen = False
 
-    image quiz_window_blank = "assets_quiz/quiz_window_blank.jpg"
-    image quiz_next_question = "assets_quiz/next_question.png"
-    image quiz_start = "assets_quiz/quiz_start.png"
-    image blank_question_windows = "assets_quiz/blank_question_windows.png"
-    image times_up = "assets_quiz/times_up.png"
-
-    # This keeps track of the questions encountered in quiz 0
     $ persistent_quiz_09_q_counter = 0
 
-    # This keeps track of the correct answers in quiz 0
-    $ persistent_quiz_09_q_counter_correct_answer = 0
+    jump start_quiz_09_first_check
 
-    
+label start_quiz_09_first_check:
+    if whole_quiz_09_seen == True:
+        jump start_quiz_09_second_check
+    else:    
+        jump start_quiz_09_second_check    
+
+label start_quiz_09_second_check:
+    if persistent_quiz_09_q_counter_correct_previous_answer == 0:
+        jump start_quiz_09_third_check
+
+    elif persistent_quiz_09_q_counter_correct_previous_answer == 1:
+        $ persistent_quiz_09_q_counter_correct_previous_answer -= 1
+        jump start_quiz_09_third_check
+
+    elif persistent_quiz_09_q_counter_correct_previous_answer == 2:
+        $ persistent_quiz_09_q_counter_correct_previous_answer -= 2
+        jump start_quiz_09_third_check
+
+    elif persistent_quiz_09_q_counter_correct_previous_answer == 3:
+        $ persistent_quiz_09_q_counter_correct_previous_answer -= 3
+        jump start_quiz_09_third_check
+
+    elif persistent_quiz_09_q_counter_correct_previous_answer == 4:
+        $ persistent_quiz_09_q_counter_correct_previous_answer -= 4
+        jump start_quiz_09_third_check
+
+    elif persistent_quiz_09_q_counter_correct_previous_answer == 5:
+        $ persistent_quiz_09_q_counter_correct_previous_answer -= 5
+        jump start_quiz_09_third_check
+
+    elif persistent_quiz_09_q_counter_correct_previous_answer == 6:
+        $ persistent_quiz_09_q_counter_correct_previous_answer -= 6
+        jump start_quiz_09_third_check
+
+    elif persistent_quiz_09_q_counter_correct_previous_answer == 7:
+        $ persistent_quiz_09_q_counter_correct_previous_answer -= 7
+        jump start_quiz_09_third_check
+
+    elif persistent_quiz_09_q_counter_correct_previous_answer == 8:
+        $ persistent_quiz_09_q_counter_correct_previous_answer -= 8
+        jump start_quiz_09_third_check
+
+    elif persistent_quiz_09_q_counter_correct_previous_answer == 9:
+        $ persistent_quiz_09_q_counter_correct_previous_answer -= 9
+        jump start_quiz_09_third_check
+
+    elif persistent_quiz_09_q_counter_correct_previous_answer == 10:
+        $ persistent_quiz_09_q_counter_correct_previous_answer -= 10
+        jump start_quiz_09_third_check
+
+label start_quiz_09_third_check:
+
+    if whole_quiz_09_seen == True:
+        e "Repeat exam again?"
+        e "OK, let's proceed..."
+        if persistent_quiz_09_q_counter_correct_answer == 0:
+            jump start_quiz_09_resume
+
+        elif persistent_quiz_09_q_counter_correct_answer == 1:
+            $ persistent_quiz_09_q_counter_correct_previous_answer += 1 
+            $ persistent_quiz_09_q_counter_correct_answer -= 1
+            $ persistent_quiz_total_points_counter_correct_answer -= 1 
+            jump start_quiz_09_resume 
+
+        elif persistent_quiz_09_q_counter_correct_answer == 2:
+            $ persistent_quiz_09_q_counter_correct_previous_answer += 2 
+            $ persistent_quiz_09_q_counter_correct_answer -= 2
+            $ persistent_quiz_total_points_counter_correct_answer -= 2 
+            jump start_quiz_09_resume
+
+        elif persistent_quiz_09_q_counter_correct_answer == 3: 
+            $ persistent_quiz_09_q_counter_correct_previous_answer += 3
+            $ persistent_quiz_09_q_counter_correct_answer -= 3
+            $ persistent_quiz_total_points_counter_correct_answer -= 3
+            jump start_quiz_09_resume
+
+        elif persistent_quiz_09_q_counter_correct_answer == 4: 
+            $ persistent_quiz_09_q_counter_correct_previous_answer += 4
+            $ persistent_quiz_09_q_counter_correct_answer -= 4 
+            $ persistent_quiz_total_points_counter_correct_answer -= 4
+            jump start_quiz_09_resume
+
+        elif persistent_quiz_09_q_counter_correct_answer == 5:
+            $ persistent_quiz_09_q_counter_correct_previous_answer += 5
+            $ persistent_quiz_09_q_counter_correct_answer -= 5  
+            $ persistent_quiz_total_points_counter_correct_answer -= 5
+            jump start_quiz_09_resume
+
+        elif persistent_quiz_09_q_counter_correct_answer == 6: 
+            $ persistent_quiz_09_q_counter_correct_previous_answer += 6
+            $ persistent_quiz_09_q_counter_correct_answer -= 6 
+            $ persistent_quiz_total_points_counter_correct_answer -= 6
+            jump start_quiz_09_resume
+
+        elif persistent_quiz_09_q_counter_correct_answer == 7: 
+            $ persistent_quiz_09_q_counter_correct_previous_answer += 7
+            $ persistent_quiz_09_q_counter_correct_answer -= 7 
+            $ persistent_quiz_total_points_counter_correct_answer -= 7
+            jump start_quiz_09_resume
+
+        elif persistent_quiz_09_q_counter_correct_answer == 8:  
+            $ persistent_quiz_09_q_counter_correct_previous_answer += 8
+            $ persistent_quiz_09_q_counter_correct_answer -= 8
+            $ persistent_quiz_total_points_counter_correct_answer -= 8
+            jump start_quiz_09_resume
+
+        elif persistent_quiz_09_q_counter_correct_answer == 9:  
+            $ persistent_quiz_09_q_counter_correct_previous_answer += 9
+            $ persistent_quiz_09_q_counter_correct_answer -= 9
+            $ persistent_quiz_total_points_counter_correct_answer -= 9
+            jump start_quiz_09_resume
+
+        elif persistent_quiz_09_q_counter_correct_answer == 10: 
+            $ persistent_quiz_09_q_counter_correct_previous_answer += 10 
+            $ persistent_quiz_09_q_counter_correct_answer -= 10
+            $ persistent_quiz_total_points_counter_correct_answer -= 10
+            jump start_quiz_09_resume
+
+    jump start_quiz_09_resume         
 
 
 
 
 
 
-
-
-
-
-##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
-##  ║ ███  INITIALIATION / LOOP CHECKER                                       ███ ║ 
-##  ║ ███  This is the section responsible for going inside the               ███ ║ 
-##  ║ ███  quiz, dictating the loop as well aswhen the quiz qill end.         ███ ║  
-##  ╚═════════════════════════════════════════════════════════════════════════════╝ 
-
-# You place any dialogue or declare image here before quiz starts
-label start_quiz_09:
+label start_quiz_09_resume:
     $ renpy.block_rollback()
     $ whole_quiz_09_seen = True
     #"Insert Dialogue Here"
@@ -116,7 +228,7 @@ label quiz_09_base_checker_timeout:
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝ 
 
 label quiz_09_randomizer:
-    $ choice = renpy.random.choice(['q01', 'q02', 'q03', 'q04', 'q05', 'q06', 'q07', 'q08', 'q09', 'q10', 'q11', 'q12', 'q13', 'q14', 'q18', 'q18', 'q18', 'q18', 'q19', 'q20'])
+    $ choice = renpy.random.choice(['q01', 'q02', 'q03', 'q04', 'q05', 'q06', 'q07', 'q08', 'q09', 'q10', 'q11', 'q12', 'q13', 'q14', 'q15', 'q16', 'q17', 'q18', 'q19', 'q20'])
 
     if choice == 'q01': # quiz_01_q_01_checker
         if persistent_quiz_09_q_01_seen == True:
@@ -277,8 +389,6 @@ label quiz_09_randomizer:
             $ persistent_quiz_09_q_20_seen = True
             $ persistent_quiz_09_q_counter +=1
             jump quiz_09_question_20
-
-
 
 
 
@@ -2472,7 +2582,6 @@ label quiz_09_q_20_time_up:
 
 
 
-
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗
 ##  ║ ███  RESULTS                                                            ███ ║
 ##  ║ ███  This is the section responsible for showing your results in a      ███ ║
@@ -2481,13 +2590,14 @@ label quiz_09_q_20_time_up:
 
 label quiz_09_conclusion:
     if persistent_quiz_09_q_counter_correct_answer == 0:
-        scene pie_00
+        scene pie_09
         hide blank_question_windows with moveoutright
         e"Oh no?! Your score is 0 please study more"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()
-        jump pagtapos_ng_quiz_9 
+        $ whole_quiz_09_seen == True
+        jump pagtapos_ng_quiz_9
+
 
     elif persistent_quiz_09_q_counter_correct_answer == 1:
         scene pie_01 
@@ -2495,7 +2605,7 @@ label quiz_09_conclusion:
         e"Your score is 1 please study more"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()
+        $ whole_quiz_09_seen == True
         jump pagtapos_ng_quiz_9
 
 
@@ -2506,6 +2616,7 @@ label quiz_09_conclusion:
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
         #$ renpy.quit() 
+        $ whole_quiz_09_seen == True
         jump pagtapos_ng_quiz_9
 
 
@@ -2515,7 +2626,7 @@ label quiz_09_conclusion:
         e"Your score is 3 better luck next time"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()  
+        $ whole_quiz_09_seen == True
         jump pagtapos_ng_quiz_9
         
 
@@ -2525,16 +2636,16 @@ label quiz_09_conclusion:
         e"Your score is 4 better luck next time"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()  
+        $ whole_quiz_09_seen == True
         jump pagtapos_ng_quiz_9
 
     elif persistent_quiz_09_q_counter_correct_answer == 5:
         scene pie_05
-        hide blank_question_windows with moveoutright
+        hide blank_question_windows with moveoutright      
         e"Your score is 5 better luck next time"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()  
+        $ whole_quiz_09_seen == True
         jump pagtapos_ng_quiz_9
 
     elif persistent_quiz_09_q_counter_correct_answer == 6:
@@ -2543,41 +2654,94 @@ label quiz_09_conclusion:
         e"Your score is 6 not bad"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()  
+        $ whole_quiz_09_seen == True
         jump pagtapos_ng_quiz_9
 
     elif persistent_quiz_09_q_counter_correct_answer == 7:
         scene pie_07
         hide blank_question_windows with moveoutright
-        e"Your score is 7 not bad"
+        e "Your score is 7 not bad"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()  
+        $ whole_quiz_09_seen == True
         jump pagtapos_ng_quiz_9
 
     elif persistent_quiz_09_q_counter_correct_answer == 8:
         scene pie_08 
         hide blank_question_windows with moveoutright
-        e"Whoa! your score is 8 not bad"
+        e "Whoa! your score is 8 not bad"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()   
+        $ whole_quiz_09_seen == True
         jump pagtapos_ng_quiz_9
 
     elif persistent_quiz_09_q_counter_correct_answer == 9:
         scene pie_09
         hide blank_question_windows with moveoutright
-        e"Whoa! your score is 9. Congrats"
+        e "Whoa! your score is 9. Congrats"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()  
+        $ whole_quiz_09_seen == True
         jump pagtapos_ng_quiz_9
 
     elif persistent_quiz_09_q_counter_correct_answer == 10:
         scene pie_10
         hide blank_question_windows with moveoutright
-        e"Whoa! You got perfect score Congrats"
+        e "Whoa! You got perfect score Congrats"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit() 
+        $ whole_quiz_09_seen == True
         jump pagtapos_ng_quiz_9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#label before_pagtapos_ng_quiz_9:
+    
+    ## ╔════════════════════════╗
+    ## ║ temporary please erase ║
+    ## ╚════════════════════════╝
+    #"First time mo take itong quiz"
+    #call screen chp_one_assessment()
+    #return 
+    ## ╔════════════════════════╗
+    ## ║ temporary please erase ║
+    ## ╚════════════════════════╝ 
+    #$ renpy.quit() 
+
+#label quiz_09_repeat_landing_label_seen:
+    #put label kung saan mo gusto ilaghay
+    ## ╔════════════════════════╗
+    ## ║ temporary please erase ║
+    ## ╚════════════════════════╝
+    #"Inulit mo itong quiz"
+    #call screen chp_one_assessment()
+    #return 
+    ## ╔════════════════════════╗
+    ## ║ temporary please erase ║
+    ## ╚════════════════════════╝ 
+    #$ renpy.quit()  
+
+    #$ renpy.quit() 
+

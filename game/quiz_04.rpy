@@ -1,11 +1,24 @@
+##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
+##  ║ ███  INITIALIATION / LOOP CHECKER                                       ███ ║ 
+##  ║ ███  This is the section responsible for going inside the               ███ ║ 
+##  ║ ███  quiz, dictating the loop as well aswhen the quiz qill end.         ███ ║  
+##  ╚═════════════════════════════════════════════════════════════════════════════╝ 
 
-##  ╔═════════════════════════════════════════════════════════════════════════════╗
-##  ║ ███  INIT SECTION                                                       ███ ║
-##  ║ ███  This is the section responsible for initializing things            ███ ║
-##  ║ ███  that need to be tracked as well as specific quiz resources.        ███ ║
-##  ╚═════════════════════════════════════════════════════════════════════════════╝
+default persistent_quiz_04_q_counter_correct_previous_answer = 0
+default persistent_quiz_04_q_counter_correct_answer = 0
 
-init:
+label start_quiz_04_initialization:
+    if whole_quiz_04_seen == True:
+        jump start_quiz_04
+    else:
+        $ persistent_quiz_04_q_counter_correct_previous_answer = 0
+        $ persistent_quiz_04_q_counter_correct_answer = 0
+
+# You place any dialogue or declare image here before quiz starts
+label start_quiz_04:
+    ## ╔════════════════════════╗
+    ## ║ temporary please erase ║
+    ## ╚════════════════════════╝ 
     $ persistent_quiz_04_q_01_seen = False
     $ persistent_quiz_04_q_02_seen = False
     $ persistent_quiz_04_q_03_seen = False
@@ -27,31 +40,136 @@ init:
     $ persistent_quiz_04_q_19_seen = False
     $ persistent_quiz_04_q_20_seen = False
 
-    # This keeps track of the questions encountered in quiz 0
     $ persistent_quiz_04_q_counter = 0
 
-    # This keeps track of the correct answers in quiz 0
-    $ persistent_quiz_04_q_counter_correct_answer = 0
+    jump start_quiz_04_first_check
 
-    
+label start_quiz_04_first_check:
+    if whole_quiz_04_seen == True:
+        jump start_quiz_04_second_check
+    else:    
+        jump start_quiz_04_second_check    
+
+label start_quiz_04_second_check:
+    if persistent_quiz_04_q_counter_correct_previous_answer == 0:
+        jump start_quiz_04_third_check
+
+    elif persistent_quiz_04_q_counter_correct_previous_answer == 1:
+        $ persistent_quiz_04_q_counter_correct_previous_answer -= 1
+        jump start_quiz_04_third_check
+
+    elif persistent_quiz_04_q_counter_correct_previous_answer == 2:
+        $ persistent_quiz_04_q_counter_correct_previous_answer -= 2
+        jump start_quiz_04_third_check
+
+    elif persistent_quiz_04_q_counter_correct_previous_answer == 3:
+        $ persistent_quiz_04_q_counter_correct_previous_answer -= 3
+        jump start_quiz_04_third_check
+
+    elif persistent_quiz_04_q_counter_correct_previous_answer == 4:
+        $ persistent_quiz_04_q_counter_correct_previous_answer -= 4
+        jump start_quiz_04_third_check
+
+    elif persistent_quiz_04_q_counter_correct_previous_answer == 5:
+        $ persistent_quiz_04_q_counter_correct_previous_answer -= 5
+        jump start_quiz_04_third_check
+
+    elif persistent_quiz_04_q_counter_correct_previous_answer == 6:
+        $ persistent_quiz_04_q_counter_correct_previous_answer -= 6
+        jump start_quiz_04_third_check
+
+    elif persistent_quiz_04_q_counter_correct_previous_answer == 7:
+        $ persistent_quiz_04_q_counter_correct_previous_answer -= 7
+        jump start_quiz_04_third_check
+
+    elif persistent_quiz_04_q_counter_correct_previous_answer == 8:
+        $ persistent_quiz_04_q_counter_correct_previous_answer -= 8
+        jump start_quiz_04_third_check
+
+    elif persistent_quiz_04_q_counter_correct_previous_answer == 9:
+        $ persistent_quiz_04_q_counter_correct_previous_answer -= 9
+        jump start_quiz_04_third_check
+
+    elif persistent_quiz_04_q_counter_correct_previous_answer == 10:
+        $ persistent_quiz_04_q_counter_correct_previous_answer -= 10
+        jump start_quiz_04_third_check
+
+label start_quiz_04_third_check:
+
+    if whole_quiz_04_seen == True:
+        e "Repeat exam again?"
+        e "OK, let's proceed..."
+        if persistent_quiz_04_q_counter_correct_answer == 0:
+            jump start_quiz_04_resume
+
+        elif persistent_quiz_04_q_counter_correct_answer == 1:
+            $ persistent_quiz_04_q_counter_correct_previous_answer += 1 
+            $ persistent_quiz_04_q_counter_correct_answer -= 1
+            $ persistent_quiz_total_points_counter_correct_answer -= 1 
+            jump start_quiz_04_resume 
+
+        elif persistent_quiz_04_q_counter_correct_answer == 2:
+            $ persistent_quiz_04_q_counter_correct_previous_answer += 2 
+            $ persistent_quiz_04_q_counter_correct_answer -= 2
+            $ persistent_quiz_total_points_counter_correct_answer -= 2 
+            jump start_quiz_04_resume
+
+        elif persistent_quiz_04_q_counter_correct_answer == 3: 
+            $ persistent_quiz_04_q_counter_correct_previous_answer += 3
+            $ persistent_quiz_04_q_counter_correct_answer -= 3
+            $ persistent_quiz_total_points_counter_correct_answer -= 3
+            jump start_quiz_04_resume
+
+        elif persistent_quiz_04_q_counter_correct_answer == 4: 
+            $ persistent_quiz_04_q_counter_correct_previous_answer += 4
+            $ persistent_quiz_04_q_counter_correct_answer -= 4 
+            $ persistent_quiz_total_points_counter_correct_answer -= 4
+            jump start_quiz_04_resume
+
+        elif persistent_quiz_04_q_counter_correct_answer == 5:
+            $ persistent_quiz_04_q_counter_correct_previous_answer += 5
+            $ persistent_quiz_04_q_counter_correct_answer -= 5  
+            $ persistent_quiz_total_points_counter_correct_answer -= 5
+            jump start_quiz_04_resume
+
+        elif persistent_quiz_04_q_counter_correct_answer == 6: 
+            $ persistent_quiz_04_q_counter_correct_previous_answer += 6
+            $ persistent_quiz_04_q_counter_correct_answer -= 6 
+            $ persistent_quiz_total_points_counter_correct_answer -= 6
+            jump start_quiz_04_resume
+
+        elif persistent_quiz_04_q_counter_correct_answer == 7: 
+            $ persistent_quiz_04_q_counter_correct_previous_answer += 7
+            $ persistent_quiz_04_q_counter_correct_answer -= 7 
+            $ persistent_quiz_total_points_counter_correct_answer -= 7
+            jump start_quiz_04_resume
+
+        elif persistent_quiz_04_q_counter_correct_answer == 8:  
+            $ persistent_quiz_04_q_counter_correct_previous_answer += 8
+            $ persistent_quiz_04_q_counter_correct_answer -= 8
+            $ persistent_quiz_total_points_counter_correct_answer -= 8
+            jump start_quiz_04_resume
+
+        elif persistent_quiz_04_q_counter_correct_answer == 9:  
+            $ persistent_quiz_04_q_counter_correct_previous_answer += 9
+            $ persistent_quiz_04_q_counter_correct_answer -= 9
+            $ persistent_quiz_total_points_counter_correct_answer -= 9
+            jump start_quiz_04_resume
+
+        elif persistent_quiz_04_q_counter_correct_answer == 10: 
+            $ persistent_quiz_04_q_counter_correct_previous_answer += 10 
+            $ persistent_quiz_04_q_counter_correct_answer -= 10
+            $ persistent_quiz_total_points_counter_correct_answer -= 10
+            jump start_quiz_04_resume
+
+    jump start_quiz_04_resume         
 
 
 
 
 
 
-
-
-
-
-##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
-##  ║ ███  INITIALIATION / LOOP CHECKER                                       ███ ║ 
-##  ║ ███  This is the section responsible for going inside the               ███ ║ 
-##  ║ ███  quiz, dictating the loop as well aswhen the quiz qill end.         ███ ║  
-##  ╚═════════════════════════════════════════════════════════════════════════════╝ 
-
-# You place any dialogue or declare image here before quiz starts
-label start_quiz_04:
+label start_quiz_04_resume:
     $ renpy.block_rollback()
     $ whole_quiz_04_seen = True
     #"Insert Dialogue Here"
@@ -110,7 +228,7 @@ label quiz_04_base_checker_timeout:
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝ 
 
 label quiz_04_randomizer:
-    $ choice = renpy.random.choice(['q01', 'q02', 'q03', 'q04', 'q05', 'q06', 'q07', 'q08', 'q09', 'q10', 'q11', 'q12', 'q13', 'q14', 'q18', 'q18', 'q18', 'q18', 'q19', 'q20'])
+    $ choice = renpy.random.choice(['q01', 'q02', 'q03', 'q04', 'q05', 'q06', 'q07', 'q08', 'q09', 'q10', 'q11', 'q12', 'q13', 'q14', 'q15', 'q16', 'q17', 'q18', 'q19', 'q20'])
 
     if choice == 'q01': # quiz_01_q_01_checker
         if persistent_quiz_04_q_01_seen == True:
@@ -322,40 +440,40 @@ screen quiz_04_question_01_imagemap:
 
     ## Place quiz 04 question 01 here
     text _p("""
-        {b}href (in the anchor tag) and src (in the image tag) are examples of ________? {/b}
-        """) xpos 138 ypos 128 size 40 xsize 1504 color "#333333" 
+        {b} HTML code is used to ?{/b}
+        """) xpos 138 ypos 128 size 40 xsize 1550 color "#333333" 
 
     ## Place quiz 04 question 01 answer 01 here
     text _p("""
-        {b}attributes{/b}
+        {b}program robots{/b}
         """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
 
     ## Place quiz 04 question 01 answer 02 here
     text _p("""
-        {b}values{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        {b}Analyze data {/b}
+        """) xpos 1038 ypos 411 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 01 answer 03 here
     text _p("""
-        {b}properties{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        {b}Build and structure web pages{/b}
+        """) xpos 138 ypos 738 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 01 answer 04 here
     text _p("""
-        {b}none of the above{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} None of the above{/b}
+        """) xpos 1038 ypos 738 size 40 xsize 840  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    #text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
 
     timer 30.0 action Jump("quiz_04_q_01_time_up")   
 
 label quiz_04_q_01_s01:
     # Uncomment below is the correct answer for quiz
-    $ persistent_quiz_04_q_counter_correct_answer +=1
-    $ persistent_quiz_total_points_counter_correct_answer +=1
+    #$ persistent_quiz_04_q_counter_correct_answer +=1
+    #$ persistent_quiz_total_points_counter_correct_answer +=1
     jump quiz_04_base_checker
 
 label quiz_04_q_01_s02:
@@ -366,8 +484,8 @@ label quiz_04_q_01_s02:
 
 label quiz_04_q_01_s03:
     # Uncomment below is the correct answer for quiz
-    #$ persistent_quiz_04_q_counter_correct_answer +=1 
-    #$ persistent_quiz_total_points_counter_correct_answer +=1 
+    $ persistent_quiz_04_q_counter_correct_answer +=1 
+    $ persistent_quiz_total_points_counter_correct_answer +=1 
     jump quiz_04_base_checker
 
 label quiz_04_q_01_s04:
@@ -430,40 +548,41 @@ screen quiz_04_question_02_imagemap:
 
     ## Place quiz 04 question 02 here
     text _p("""
-        {b}In container tags, attributes always go…{/b}
-        """) xpos 138 ypos 128 size 40 xsize 1604 color "#333333" 
+        {b} Complete the button element tag : \n 
+            ____ button >{/b}
+        """) xpos 138 ypos 128 size 40 xsize 1550 color "#333333" 
 
     ## Place quiz 04 question 02 answer 01 here
     text _p("""
-        {b}in the closing tag{/b}
+        {b} Hashtag \" # \"  {/b}
         """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
 
     ## Place quiz 04 question 02 answer 02 here
     text _p("""
-        {b}in the opening tag{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        {b}Greater than symbol \" > \"  {/b}
+        """) xpos 1038 ypos 411 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 02 answer 03 here
     text _p("""
-        {b}in the openin tag and closing tag are both correct{/b}
-        """) xpos 138 ypos 738 size 40 xsize 780  color "#333333" 
+        {b}Less than symbol \" < \" {/b}
+        """) xpos 138 ypos 738 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 02 answer 04 here
     text _p("""
-        {b}None of the above{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} Asterisk \" * \"  {/b}
+        """) xpos 1038 ypos 738 size 40 xsize 840  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    #text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
 
     timer 30.0 action Jump("quiz_04_q_02_time_up")    
 
 label quiz_04_q_02_s01:
     # Uncomment below is the correct answer for quiz
-    $ persistent_quiz_04_q_counter_correct_answer +=1
-    $ persistent_quiz_total_points_counter_correct_answer +=1
+    #$ persistent_quiz_04_q_counter_correct_answer +=1
+    #$ persistent_quiz_total_points_counter_correct_answer +=1
     jump quiz_04_base_checker
 
 label quiz_04_q_02_s02:
@@ -474,8 +593,9 @@ label quiz_04_q_02_s02:
 
 label quiz_04_q_02_s03:
     # Uncomment below is the correct answer for quiz
-    #$ persistent_quiz_04_q_counter_correct_answer +=1 
-    #$ persistent_quiz_total_points_counter_correct_answer +=1 
+    $ persistent_quiz_04_q_counter_correct_answer +=1 
+    $ persistent_quiz_total_points_counter_correct_answer +=1 
+    
     jump quiz_04_base_checker
 
 label quiz_04_q_02_s04:
@@ -539,33 +659,34 @@ screen quiz_04_question_03_imagemap:
 
     ## Place quiz 04 question 03 here
     text _p("""
-        {b}\"     <img src="img_boy.jpg" _____="Boy in a hat">   \"{/b}
-        """) xpos 138 ypos 128 size 40 xsize 1804 color "#333333" 
+        {b}  Complete the button element tag : \n 
+            < button _____{/b}
+        """) xpos 138 ypos 128 size 50 xsize 1704 color "#333333" 
 
     ## Place quiz 04 question 03 answer 01 here
     text _p("""
-        {b}decs{/b}
+        {b} Hashtag \" # \"  {/b}
         """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
 
     ## Place quiz 04 question 03 answer 02 here
     text _p("""
-        {b}alt{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        {b} Greater than symbol \" > \" {/b}
+        """) xpos 1038 ypos 411 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 03 answer 03 here
     text _p("""
-        {b}ctrl{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} Less than symbol \" < \" {/b}
+        """) xpos 138 ypos 738 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 03 answer 04 here
     text _p("""
-        {b}None of the above{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} Asterisk \" * \" {/b}
+        """) xpos 1038 ypos 738 size 40 xsize 840  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    #text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
 
     timer 30.0 action Jump("quiz_04_q_03_time_up")    
 
@@ -579,6 +700,7 @@ label quiz_04_q_03_s02:
     # Uncomment below is the correct answer for quiz
     $ persistent_quiz_04_q_counter_correct_answer +=1 
     $ persistent_quiz_total_points_counter_correct_answer +=1
+    
     jump quiz_04_base_checker
 
 label quiz_04_q_03_s03:
@@ -648,47 +770,48 @@ screen quiz_04_question_04_imagemap:
 
     ## Place quiz 04 question 04 here
     text _p("""
-        {b}True or False? \n
-            Adding alternative text to images makes your page more accessible.{/b}
-        """) xpos 138 ypos 128 size 40 xsize 1604 color "#333333" 
+        {b}  Complete the image tag : 
+        \n < img ___{/b}
+        """) xpos 138 ypos 128 size 40 xsize 1550 color "#333333" 
 
     ## Place quiz 04 question 04 answer 01 here
     text _p("""
-        {b}True{/b}
+        {b} Hashtag \" # \" {/b}
         """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
 
     ## Place quiz 04 question 04 answer 02 here
     text _p("""
-        {b}False{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        {b} Greater than symbol \" > \" {/b}
+        """) xpos 1038 ypos 411 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 04 answer 03 here
     text _p("""
-        {b}True and False are both correct {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} Less than symbol \" < \" {/b}
+        """) xpos 138 ypos 738 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 04 answer 04 here
     text _p("""
-        {b}None of the above{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} Asterisk \" * \" {/b}
+        """) xpos 1038 ypos 738 size 40 xsize 840  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    #text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
 
     timer 30.0 action Jump("quiz_04_q_04_time_up")    
 
 label quiz_04_q_04_s01:
     # Uncomment below is the correct answer for quiz
-    $ persistent_quiz_04_q_counter_correct_answer +=1
-    $ persistent_quiz_total_points_counter_correct_answer +=1
+    #$ persistent_quiz_04_q_counter_correct_answer +=1
+    #$ persistent_quiz_total_points_counter_correct_answer +=1
     jump quiz_04_base_checker
 
 label quiz_04_q_04_s02:
     # Uncomment below is the correct answer for quiz
-    #$ persistent_quiz_04_q_counter_correct_answer +=1 
-    #$ persistent_quiz_total_points_counter_correct_answer +=1
+    $ persistent_quiz_04_q_counter_correct_answer +=1 
+    $ persistent_quiz_total_points_counter_correct_answer +=1
+    
     jump quiz_04_base_checker
 
 label quiz_04_q_04_s03:
@@ -760,48 +883,48 @@ screen quiz_04_question_05_imagemap:
 
     ## Place quiz 04 question 05 here
     text _p("""
-        {b}Match the attribute \n
-        Attribute name: _____{/b}
-        """) xpos 138 ypos 128 size 40 xsize 1604 color "#333333" 
+        {b}  For HTML tag is <img> ? {/b}
+        """) xpos 138 ypos 128 size 40 xsize 1550 color "#333333" 
 
     ## Place quiz 04 question 05 answer 01 here
     text _p("""
-        {b}\"src\"{/b}
+        {b} Button {/b}
         """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
 
     ## Place quiz 04 question 05 answer 02 here
     text _p("""
-        {b}\"http://www.image.png\"{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        {b} Image {/b}
+        """) xpos 1038 ypos 411 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 05 answer 03 here
     text _p("""
-        {b} alt{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        {b}Text Paragraph {/b}
+        """) xpos 138 ypos 738 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 05 answer 04 here
     text _p("""
-        {b} None of the above{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} Table {/b}
+        """) xpos 1038 ypos 738 size 40 xsize 840  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    #text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
 
     timer 30.0 action Jump("quiz_04_q_05_time_up")    
 
 
 label quiz_04_q_05_s01:
     # Uncomment below is the correct answer for quiz
-    $ persistent_quiz_04_q_counter_correct_answer +=1
-    $ persistent_quiz_total_points_counter_correct_answer +=1
+    #$ persistent_quiz_04_q_counter_correct_answer +=1
+    #$ persistent_quiz_total_points_counter_correct_answer +=1
     jump quiz_04_base_checker
 
 label quiz_04_q_05_s02:
     # Uncomment below is the correct answer for quiz
-    #$ persistent_quiz_04_q_counter_correct_answer +=1 
-    #$ persistent_quiz_total_points_counter_correct_answer +=1
+    $ persistent_quiz_04_q_counter_correct_answer +=1 
+    $ persistent_quiz_total_points_counter_correct_answer +=1
+    
     jump quiz_04_base_checker
 
 label quiz_04_q_05_s03:
@@ -870,35 +993,34 @@ screen quiz_04_question_06_imagemap:
         action Jump("quiz_04_q_06_s04")
 
     ## Place quiz 04 question 06 here
-    text _p("""
-        {b}Match the attribute \n
-        Attribute value: _______{/b}
-        """) xpos 138 ypos 128 size 40 xsize 1604 color "#333333" 
+    text _p("""*
+        {b}  For HTML tag is \" <p> \" ? {/b}
+        """) xpos 138 ypos 128 size 40 xsize 1550 color "#333333" 
 
     ## Place quiz 04 question 06 answer 01 here
     text _p("""
-        {b}\"src\"{/b}
+        {b} Button {/b}
         """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
 
     ## Place quiz 04 question 06 answer 02 here
     text _p("""
-        {b}\"http://www.image.png\"{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        {b} Image {/b}
+        """) xpos 1038 ypos 411 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 06 answer 03 here
     text _p("""
-        {b}alt{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        {b}Text Paragraph {/b}
+        """) xpos 138 ypos 738 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 06 answer 04 here
     text _p("""
-        {b}None of the above{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        {b}Table {/b}
+        """) xpos 1038 ypos 738 size 40 xsize 840  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    #text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
 
     timer 30.0 action Jump("quiz_04_q_06_time_up")    
 
@@ -910,14 +1032,15 @@ label quiz_04_q_06_s01:
 
 label quiz_04_q_06_s02:
     # Uncomment below is the correct answer for quiz
-    $ persistent_quiz_04_q_counter_correct_answer +=1 
-    $ persistent_quiz_total_points_counter_correct_answer +=1
+    #$ persistent_quiz_04_q_counter_correct_answer +=1 
+    #$ persistent_quiz_total_points_counter_correct_answer +=1
     jump quiz_04_base_checker
 
 label quiz_04_q_06_s03:
     # Uncomment below is the correct answer for quiz
-    #$ persistent_quiz_04_q_counter_correct_answer +=1 
-    #$ persistent_quiz_total_points_counter_correct_answer +=1 
+    $ persistent_quiz_04_q_counter_correct_answer +=1 
+    $ persistent_quiz_total_points_counter_correct_answer +=1 
+    
     jump quiz_04_base_checker
 
 label quiz_04_q_06_s04:
@@ -981,34 +1104,33 @@ screen quiz_04_question_07_imagemap:
 
     ## Place quiz 04 question 07 here
     text _p("""
-        {b}Label the name that controls the horizontal dimension of an image
-        \" name: _______ \"{/b}
-        """) xpos 138 ypos 128 size 40 xsize 1604 color "#333333" 
+        {b} It controls the structure of a web page  {/b}
+        """) xpos 138 ypos 128 size 40 xsize 1550 color "#333333" 
 
     ## Place quiz 04 question 07 answer 01 here
     text _p("""
-        {b}\"alt\"{/b}
+        {b} CSS {/b}
         """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
 
     ## Place quiz 04 question 07 answer 02 here
     text _p("""
-        {b}\"width\"{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        {b} HTML {/b}
+        """) xpos 1038 ypos 411 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 07 answer 03 here
     text _p("""
-        {b}300{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} JavaScript {/b}
+        """) xpos 138 ypos 738 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 07 answer 04 here
     text _p("""
-        {b}None of the above{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        {b}Python{/b}
+        """) xpos 1038 ypos 738 size 40 xsize 840  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    #text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
 
     timer 30.0 action Jump("quiz_04_q_07_time_up")    
 
@@ -1022,6 +1144,7 @@ label quiz_04_q_07_s02:
     # Uncomment below is the correct answer for quiz
     $ persistent_quiz_04_q_counter_correct_answer +=1 
     $ persistent_quiz_total_points_counter_correct_answer +=1
+    
     jump quiz_04_base_checker
 
 label quiz_04_q_07_s03:
@@ -1091,41 +1214,41 @@ screen quiz_04_question_08_imagemap:
 
     ## Place quiz 04 question 08 here
     text _p("""
-        {b}Label the possible value for the attribute that controls the horizontal dimension of an image \n
-            \"  image: __________     \"{/b}
-        """) xpos 138 ypos 128 size 40 xsize 1604 color "#333333" 
+        {b}  It controls the presentation of a web. {/b}
+        """) xpos 138 ypos 128 size 50 xsize 1704 color "#333333" 
 
     ## Place quiz 04 question 08 answer 01 here
     text _p("""
-        {b}\"alt\"{/b}
+        {b} CSS {/b}
         """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
 
     ## Place quiz 04 question 08 answer 02 here
     text _p("""
-        {b}\"width\"{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        {b} HTML {/b}
+        """) xpos 1038 ypos 411 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 08 answer 03 here
     text _p("""
-        {b}300{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} JavaScript {/b}
+        """) xpos 138 ypos 738 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 08 answer 04 here
     text _p("""
-        {b}None of the above{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} Python {/b}
+        """) xpos 1038 ypos 738 size 40 xsize 840  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    #text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
 
     timer 30.0 action Jump("quiz_04_q_08_time_up")    
 
 label quiz_04_q_08_s01:
     # Uncomment below is the correct answer for quiz
-    #$ persistent_quiz_04_q_counter_correct_answer +=1
-    #$ persistent_quiz_total_points_counter_correct_answer +=1
+    $ persistent_quiz_04_q_counter_correct_answer +=1
+    $ persistent_quiz_total_points_counter_correct_answer +=1
+    
     jump quiz_04_base_checker
 
 label quiz_04_q_08_s02:
@@ -1136,8 +1259,8 @@ label quiz_04_q_08_s02:
 
 label quiz_04_q_08_s03:
     # Uncomment below is the correct answer for quiz
-    $ persistent_quiz_04_q_counter_correct_answer +=1 
-    $ persistent_quiz_total_points_counter_correct_answer +=1 
+    #$ persistent_quiz_04_q_counter_correct_answer +=1 
+    #$ persistent_quiz_total_points_counter_correct_answer +=1 
     jump quiz_04_base_checker
 
 label quiz_04_q_08_s04:
@@ -1201,41 +1324,40 @@ screen quiz_04_question_09_imagemap:
 
     ## Place quiz 04 question 09 here
     text _p("""
-        {b}True or False? \n
-            The aspect ratio of an image determines its rectangular shape.{/b}
-        """) xpos 138 ypos 128 size 40 xsize 1604 color "#333333" 
+        {b} It controls the behavior of a web page {/b}
+        """) xpos 138 ypos 128 size 50 xsize 1704 color "#333333" 
 
     ## Place quiz 04 question 09 answer 01 here
     text _p("""
-        {b}True {/b}
+        {b} CSS {/b}
         """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
 
     ## Place quiz 04 question 09 answer 02 here
     text _p("""
-        {b}False {/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        {b} HTML {/b}
+        """) xpos 1038 ypos 411 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 09 answer 03 here
     text _p("""
-        {b}True and False are both correct {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} JavaScript {/b}
+        """) xpos 138 ypos 738 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 09 answer 04 here
     text _p("""
-        {b}None of the above {/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} Python {/b}
+        """) xpos 1038 ypos 738 size 40 xsize 840  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    #text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
 
     timer 30.0 action Jump("quiz_04_q_09_time_up")    
 
 label quiz_04_q_09_s01:
     # Uncomment below is the correct answer for quiz
-    $ persistent_quiz_04_q_counter_correct_answer +=1
-    $ persistent_quiz_total_points_counter_correct_answer +=1
+    #$ persistent_quiz_04_q_counter_correct_answer +=1
+    #$ persistent_quiz_total_points_counter_correct_answer +=1
     jump quiz_04_base_checker
 
 label quiz_04_q_09_s02:
@@ -1246,8 +1368,9 @@ label quiz_04_q_09_s02:
 
 label quiz_04_q_09_s03:
     # Uncomment below is the correct answer for quiz
-    #$ persistent_quiz_04_q_counter_correct_answer +=1 
-    #$ persistent_quiz_total_points_counter_correct_answer +=1 
+    $ persistent_quiz_04_q_counter_correct_answer +=1 
+    $ persistent_quiz_total_points_counter_correct_answer +=1 
+    
     jump quiz_04_base_checker
 
 label quiz_04_q_09_s04:
@@ -1311,46 +1434,46 @@ screen quiz_04_question_10_imagemap:
 
     ## Place quiz 04 question 10 here
     text _p("""
-        {b}Changing the aspect ratio will result in images that are ________.{/b}
-        """) xpos 138 ypos 128 size 40 xsize 1604 color "#333333" 
+        {b}  Who is the founder of HTML? {/b}
+        """) xpos 138 ypos 128 size 40 xsize 1550 color "#333333" 
 
     ## Place quiz 04 question 10 answer 01 here
     text _p("""
-        {b}black and white{/b}
+        {b} Tim Berners-Lee  {/b}
         """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
 
     ## Place quiz 04 question 10 answer 02 here
     text _p("""
-        {b}stretched or squeezed{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        {b} Wium Lie {/b}
+        """) xpos 1038 ypos 411 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 10 answer 03 here
     text _p("""
-        {b} Changes {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} James Gosling {/b}
+        """) xpos 138 ypos 738 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 10 answer 04 here
     text _p("""
-        {b}None of the above{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} Guido van Rossum {/b}
+        """) xpos 1038 ypos 738 size 40 xsize 840  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    #text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
 
     timer 30.0 action Jump("quiz_04_q_10_time_up")    
 
 label quiz_04_q_10_s01:
     # Uncomment below is the correct answer for quiz
-    #$ persistent_quiz_04_q_counter_correct_answer +=1
-    #$ persistent_quiz_total_points_counter_correct_answer +=1
+    $ persistent_quiz_04_q_counter_correct_answer +=1
+    $ persistent_quiz_total_points_counter_correct_answer +=1
     jump quiz_04_base_checker
 
 label quiz_04_q_10_s02:
     # Uncomment below is the correct answer for quiz
-    $ persistent_quiz_04_q_counter_correct_answer +=1 
-    $ persistent_quiz_total_points_counter_correct_answer +=1
+    #$ persistent_quiz_04_q_counter_correct_answer +=1 
+    #$ persistent_quiz_total_points_counter_correct_answer +=1
     jump quiz_04_base_checker
 
 label quiz_04_q_10_s03:
@@ -1420,33 +1543,33 @@ screen quiz_04_question_11_imagemap:
 
     ## Place quiz 04 question 11 here
     text _p("""
-        {b}What do you think is the file extension for an HTML document?{/b}
-        """) xpos 138 ypos 128 size 40 xsize 1604 color "#333333" 
+        {b}  When was HTML developed? {/b}
+        """) xpos 138 ypos 128 size 40 xsize 1550 color "#333333" 
 
     ## Place quiz 04 question 11 answer 01 here
     text _p("""
-        {b}.pdf{/b}
+        {b} 1981 {/b}
         """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
 
     ## Place quiz 04 question 11 answer 02 here
     text _p("""
-        {b}.html{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        {b} 1985 {/b}
+        """) xpos 1038 ypos 411 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 11 answer 03 here
     text _p("""
-        {b}.css{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} 1991 {/b}
+        """) xpos 138 ypos 738 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 11 answer 04 here
     text _p("""
-        {b}.rpy{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} 2040 {/b}
+        """) xpos 1038 ypos 738 size 40 xsize 840  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    #text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
 
     timer 30.0 action Jump("quiz_04_q_11_time_up")    
 
@@ -1458,14 +1581,15 @@ label quiz_04_q_11_s01:
 
 label quiz_04_q_11_s02:
     # Uncomment below is the correct answer for quiz
-    $ persistent_quiz_04_q_counter_correct_answer +=1 
-    $ persistent_quiz_total_points_counter_correct_answer +=1
+    #$ persistent_quiz_04_q_counter_correct_answer +=1 
+    #$ persistent_quiz_total_points_counter_correct_answer +=1
     jump quiz_04_base_checker
 
 label quiz_04_q_11_s03:
     # Uncomment below is the correct answer for quiz
-    #$ persistent_quiz_04_q_counter_correct_answer +=1 
-    #$ persistent_quiz_total_points_counter_correct_answer +=1 
+    $ persistent_quiz_04_q_counter_correct_answer +=1 
+    $ persistent_quiz_total_points_counter_correct_answer +=1 
+    
     jump quiz_04_base_checker
 
 label quiz_04_q_11_s04:
@@ -1529,46 +1653,48 @@ screen quiz_04_question_12_imagemap:
 
     ## Place quiz 04 question 12 here
     text _p("""
-        {b}How many HTML documents (or files) will the project of a single-page website contain?{/b}
-        """) xpos 138 ypos 128 size 40 xsize 1530 color "#333333" 
+        {b} Fill thae black: HTML can be used only to develop \n
+            _____ Webpages {/b}
+        """) xpos 138 ypos 128 size 40 xsize 1550 color "#333333" 
 
     ## Place quiz 04 question 12 answer 01 here
     text _p("""
-        {b}1{/b}
+        {b} Lack of security {/b}
         """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
 
     ## Place quiz 04 question 12 answer 02 here
     text _p("""
-        {b}2{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        {b} Static {/b}
+        """) xpos 1038 ypos 411 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 12 answer 03 here
     text _p("""
-        {b}3{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} Styling {/b}
+        """) xpos 138 ypos 738 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 12 answer 04 here
     text _p("""
-        {b}As many files as the number of sections{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 780  color "#333333" 
+        {b} Complex {/b}
+        """) xpos 1038 ypos 738 size 40 xsize 840  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    #text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
 
     timer 30.0 action Jump("quiz_04_q_12_time_up")    
 
 label quiz_04_q_12_s01:
     # Uncomment below is the correct answer for quiz
-    $ persistent_quiz_04_q_counter_correct_answer +=1
-    $ persistent_quiz_total_points_counter_correct_answer +=1
+    #$ persistent_quiz_04_q_counter_correct_answer +=1
+    #$ persistent_quiz_total_points_counter_correct_answer +=1
     jump quiz_04_base_checker
 
 label quiz_04_q_12_s02:
     # Uncomment below is the correct answer for quiz
-    #$ persistent_quiz_04_q_counter_correct_answer +=1 
-    #$ persistent_quiz_total_points_counter_correct_answer +=1
+    $ persistent_quiz_04_q_counter_correct_answer +=1 
+    $ persistent_quiz_total_points_counter_correct_answer +=1
+    
     jump quiz_04_base_checker
 
 label quiz_04_q_12_s03:
@@ -1640,47 +1766,47 @@ screen quiz_04_question_13_imagemap:
 
     ## Place quiz 04 question 13 here
     text _p("""
-        {b}Complete the line of code to mark the heading element with an id 
-        \"  <h2 _____ ="section-1">Section 1</h2> \"{/b}
-        """) xpos 138 ypos 128 size 40 xsize 1604 color "#333333" 
+        {b}  What is IDE? {/b}
+        """) xpos 138 ypos 128 size 40 xsize 1550 color "#333333" 
 
     ## Place quiz 04 question 13 answer 01 here
     text _p("""
-        {b}\"jump\"  {/b}
-        """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
+        {b} Integrated Development Environment {/b}
+        """) xpos 138 ypos 411 size 40 xsize 740 color "#333333" 
 
     ## Place quiz 04 question 13 answer 02 here
     text _p("""
-        {b}\"id\"{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        {b} Interactive Development Environment {/b}
+        """) xpos 1038 ypos 411 size 40 xsize 740  color "#333333" 
 
     ## Place quiz 04 question 13 answer 03 here
     text _p("""
-        {b}\"show\"{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} Interaction Debugging Environment {/b}
+        """) xpos 138 ypos 738 size 40 xsize 740  color "#333333" 
 
     ## Place quiz 04 question 13 answer 04 here
     text _p("""
-        {b}None of the above{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} Integrated Debugging Environment {/b}
+        """) xpos 1038 ypos 738 size 40 xsize 740  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+   # text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
 
     timer 30.0 action Jump("quiz_04_q_13_time_up")    
 
 label quiz_04_q_13_s01:
     # Uncomment below is the correct answer for quiz
-    #$ persistent_quiz_04_q_counter_correct_answer +=1
-    #$ persistent_quiz_total_points_counter_correct_answer +=1
+    $ persistent_quiz_04_q_counter_correct_answer +=1
+    $ persistent_quiz_total_points_counter_correct_answer +=1
+    
     jump quiz_04_base_checker
 
 label quiz_04_q_13_s02:
     # Uncomment below is the correct answer for quiz
-    $ persistent_quiz_04_q_counter_correct_answer +=1 
-    $ persistent_quiz_total_points_counter_correct_answer +=1
+    #$ persistent_quiz_04_q_counter_correct_answer +=1 
+    #$ persistent_quiz_total_points_counter_correct_answer +=1
     jump quiz_04_base_checker
 
 label quiz_04_q_13_s03:
@@ -1750,40 +1876,40 @@ screen quiz_04_question_14_imagemap:
 
     ## Place quiz 04 question 14 here
     text _p("""
-        {b}Whats the attribute used to add the URL that the anchor tag links to?{/b}
-        """) xpos 138 ypos 128 size 40 xsize 1554 color "#333333" 
+        {b}  What is the mening of GUI? {/b}
+        """) xpos 138 ypos 128 size 40 xsize 1550 color "#333333" 
 
     ## Place quiz 04 question 14 answer 01 here
     text _p("""
-        {b} href{/b}
+        {b}Game User Involve  {/b}
         """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
 
     ## Place quiz 04 question 14 answer 02 here
     text _p("""
-        {b} alt{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        {b} Graphical User Integrated {/b}
+        """) xpos 1038 ypos 411 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 14 answer 03 here
     text _p("""
-        {b} title{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} Graphical User Interface {/b}
+        """) xpos 138 ypos 738 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 14 answer 04 here
     text _p("""
-        {b} src{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} Game User Important {/b}
+        """) xpos 1038 ypos 738 size 40 xsize 840  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    #text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
 
     timer 30.0 action Jump("quiz_04_q_14_time_up")    
 
 label quiz_04_q_14_s01:
     # Uncomment below is the correct answer for quiz
-    $ persistent_quiz_04_q_counter_correct_answer +=1
-    $ persistent_quiz_total_points_counter_correct_answer +=1
+    #$ persistent_quiz_04_q_counter_correct_answer +=1
+    #$ persistent_quiz_total_points_counter_correct_answer +=1
     jump quiz_04_base_checker
 
 label quiz_04_q_14_s02:
@@ -1794,8 +1920,8 @@ label quiz_04_q_14_s02:
 
 label quiz_04_q_14_s03:
     # Uncomment below is the correct answer for quiz
-    #$ persistent_quiz_04_q_counter_correct_answer +=1 
-    #$ persistent_quiz_total_points_counter_correct_answer +=1 
+    $ persistent_quiz_04_q_counter_correct_answer +=1 
+    $ persistent_quiz_total_points_counter_correct_answer +=1 
     jump quiz_04_base_checker
 
 label quiz_04_q_14_s04:
@@ -1859,46 +1985,48 @@ screen quiz_04_question_15_imagemap:
 
     ## Place quiz 04 question 15 here
     text _p("""
-        {b} \"<nav>\" is _____.{/b}
-        """) xpos 138 ypos 128 size 80 xsize 1804 color "#333333" 
+        {b} Complete the line to code a "Like" button \n
+            <button>______ </button>{/b}
+        """) xpos 138 ypos 128 size 50 xsize 1604 color "#333333" 
 
     ## Place quiz 04 question 15 answer 01 here
     text _p("""
-        {b}an empty tag{/b}
+        {b} Like {/b}
         """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
 
     ## Place quiz 04 question 15 answer 02 here
     text _p("""
-        {b}a container tag{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        {b} Dislike {/b}
+        """) xpos 1038 ypos 411 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 15 answer 03 here
     text _p("""
-        {b}mixed tag{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} Heart {/b}
+        """) xpos 138 ypos 738 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 15 answer 04 here
     text _p("""
-        {b}none of the above{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} Click {/b}
+        """) xpos 1038 ypos 738 size 40 xsize 840  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+   #text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
 
     timer 30.0 action Jump("quiz_04_q_15_time_up")    
 
 label quiz_04_q_15_s01:
     # Uncomment below is the correct answer for quiz
-    #$ persistent_quiz_04_q_counter_correct_answer +=1
-    #$ persistent_quiz_total_points_counter_correct_answer +=1
+    $ persistent_quiz_04_q_counter_correct_answer +=1
+    $ persistent_quiz_total_points_counter_correct_answer +=1
+    
     jump quiz_04_base_checker
 
 label quiz_04_q_15_s02:
     # Uncomment below is the correct answer for quiz
-    $ persistent_quiz_04_q_counter_correct_answer +=1 
-    $ persistent_quiz_total_points_counter_correct_answer +=1
+    #$ persistent_quiz_04_q_counter_correct_answer +=1 
+    #$ persistent_quiz_total_points_counter_correct_answer +=1
     jump quiz_04_base_checker
 
 label quiz_04_q_15_s03:
@@ -1968,36 +2096,34 @@ screen quiz_04_question_16_imagemap:
 
     ## Place quiz 04 question 16 here
     text _p("""
-        {b}True or False? \n
-        Multiple elements can have the same id attribute in HTML
-    {/b}
-        """) xpos 138 ypos 128 size 40 xsize 1604 color "#333333" 
+        {b} Complete the code for the button \n
+            <button> Like ________{/b}
+        """) xpos 138 ypos 128 size 50 xsize 1604 color "#333333" 
 
     ## Place quiz 04 question 16 answer 01 here
     text _p("""
-        {b}True{/b}
+        {b} <button>  {/b}
         """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
 
     ## Place quiz 04 question 16 answer 02 here
     text _p("""
-        {b}False{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        {b} </button> {/b}
+        """) xpos 1038 ypos 411 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 16 answer 03 here
     text _p("""
-        {b}True and False are both correct {/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} <img> {/b}
+        """) xpos 138 ypos 738 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 16 answer 04 here
     text _p("""
-        {b}None of the above
-{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} Like {/b}
+        """) xpos 1038 ypos 738 size 40 xsize 840  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+   # text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
 
     timer 30.0 action Jump("quiz_04_q_16_time_up")    
 
@@ -2011,6 +2137,7 @@ label quiz_04_q_16_s02:
     # Uncomment below is the correct answer for quiz
     $ persistent_quiz_04_q_counter_correct_answer +=1 
     $ persistent_quiz_total_points_counter_correct_answer +=1
+    
     jump quiz_04_base_checker
 
 label quiz_04_q_16_s03:
@@ -2080,41 +2207,41 @@ screen quiz_04_question_17_imagemap:
 
     ## Place quiz 04 question 17 here
     text _p("""
-        {b}True or False? \n
-        Correctly connecting labels and form fields will increase hit area and improve accessibility.{/b}
-        """) xpos 138 ypos 128 size 40 xsize 1604 color "#333333" 
+        {b} Complete the code for a valid paragraph text \n
+            <p> TEXT ______{/b}
+        """) xpos 138 ypos 128 size 50 xsize 1604 color "#333333" 
 
     ## Place quiz 04 question 17 answer 01 here
     text _p("""
-        {b}True{/b}
+        {b} \" <p> \" {/b}
         """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
 
     ## Place quiz 04 question 17 answer 02 here
     text _p("""
-        {b}False{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        {b} \" </b> \" {/b}
+        """) xpos 1038 ypos 411 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 17 answer 03 here
     text _p("""
-        {b}a and b are correct the answer{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        {b}\" </p> \"{/b}
+        """) xpos 138 ypos 738 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 17 answer 04 here
     text _p("""
-        {b}None of the above{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} \" <b> \" {/b}
+        """) xpos 1038 ypos 738 size 40 xsize 840  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    #text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
 
     timer 30.0 action Jump("quiz_04_q_17_time_up")    
 
 label quiz_04_q_17_s01:
     # Uncomment below is the correct answer for quiz
-    $ persistent_quiz_04_q_counter_correct_answer +=1
-    $ persistent_quiz_total_points_counter_correct_answer +=1
+    #$ persistent_quiz_04_q_counter_correct_answer +=1
+    #$ persistent_quiz_total_points_counter_correct_answer +=1
     jump quiz_04_base_checker
 
 label quiz_04_q_17_s02:
@@ -2125,8 +2252,9 @@ label quiz_04_q_17_s02:
 
 label quiz_04_q_17_s03:
     # Uncomment below is the correct answer for quiz
-    #$ persistent_quiz_04_q_counter_correct_answer +=1 
-    #$ persistent_quiz_total_points_counter_correct_answer +=1 
+    $ persistent_quiz_04_q_counter_correct_answer +=1 
+    $ persistent_quiz_total_points_counter_correct_answer +=1 
+    
     jump quiz_04_base_checker
 
 label quiz_04_q_17_s04:
@@ -2190,34 +2318,33 @@ screen quiz_04_question_18_imagemap:
 
     ## Place quiz 04 question 18 here
     text _p("""
-        {b} True or False? \n
-        You can give multiple elements the same id in one HTML document.{/b}
-        """) xpos 138 ypos 128 size 40 xsize 1604 color "#333333" 
+        {b}  What’s the correct way to code a paragraph text? {/b}
+        """) xpos 138 ypos 128 size 50 xsize 1604 color "#333333" 
 
     ## Place quiz 04 question 18 answer 01 here
     text _p("""
-        {b}True{/b}
+        {b} \" <p> Text <p> \" {/b}
         """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
 
     ## Place quiz 04 question 18 answer 02 here
     text _p("""
-        {b}False{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 880  color "#333333" 
+        {b} \" <p> Text </p> \" {/b}
+        """) xpos 1038 ypos 411 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 18 answer 03 here
     text _p("""
-        {b}a and b are correct the answer{/b}
-        """) xpos 138 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} \" <b> Text </b> \" {/b}
+        """) xpos 138 ypos 738 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 18 answer 04 here
     text _p("""
-        {b}None of the above{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        {b} \" <p> Text  \" {/b}
+        """) xpos 1038 ypos 738 size 40 xsize 840  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    #text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
 
     timer 30.0 action Jump("quiz_04_q_18_time_up")    
 
@@ -2231,6 +2358,7 @@ label quiz_04_q_18_s02:
     # Uncomment below is the correct answer for quiz
     $ persistent_quiz_04_q_counter_correct_answer +=1 
     $ persistent_quiz_total_points_counter_correct_answer +=1
+    
     jump quiz_04_base_checker
 
 label quiz_04_q_18_s03:
@@ -2302,33 +2430,36 @@ screen quiz_04_question_19_imagemap:
 
     ## Place quiz 04 question 19 here
     text _p("""
-        {b} When labels and form fields are correctly connected…{/b}
-        """) xpos 138 ypos 128 size 40 xsize 1604 color "#333333" 
+        {b} What’s the content of this web page? \n
+        <p>This product is awesome</p> \n
+        <button>Buy</button> \n
+        {/b}
+        """) xpos 138 ypos 128 size 30 xsize 1604 color "#333333" 
 
     ## Place quiz 04 question 19 answer 01 here
     text _p("""
-        {b}label and form fields are displayed on the same line{/b}
-        """) xpos 138 ypos 411 size 40 xsize 740 color "#333333" 
+        {b} An image and a button{/b}
+        """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
 
     ## Place quiz 04 question 19 answer 02 here
     text _p("""
-        {b} label and form fields are displayed in the same color{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 780  color "#333333" 
+        {b} A table and a button {/b}
+        """) xpos 1038 ypos 411 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 19 answer 03 here
     text _p("""
-        {b}hitting the label selects the form field{/b}
-        """) xpos 138 ypos 738 size 40 xsize 780  color "#333333" 
+        {b} A paragraph text and a button {/b}
+        """) xpos 138 ypos 738 size 40 xsize 840  color "#333333" 
 
     ## Place quiz 04 question 19 answer 04 here
     text _p("""
-        {b}None of the above{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 780  color "#333333" 
+        {b} An image and a paragraph {/b}
+        """) xpos 1038 ypos 738 size 40 xsize 840  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    #text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
 
     timer 30.0 action Jump("quiz_04_q_19_time_up")    
 
@@ -2348,6 +2479,7 @@ label quiz_04_q_19_s03:
     # Uncomment below is the correct answer for quiz
     $ persistent_quiz_04_q_counter_correct_answer +=1 
     $ persistent_quiz_total_points_counter_correct_answer +=1 
+    
     jump quiz_04_base_checker
 
 label quiz_04_q_19_s04:
@@ -2411,33 +2543,33 @@ screen quiz_04_question_20_imagemap:
 
     ## Place quiz 04 question 20 here
     text _p("""
-        {b}Choose the only incorrect statement about the id attribute{/b}
-        """) xpos 138 ypos 128 size 45 xsize 1554 color "#333333" 
+        {b}  A web browser is _____. {/b}
+        """) xpos 138 ypos 128 size 40 xsize 1550 color "#333333" 
 
     ## Place quiz 04 question 20 answer 01 here
     text _p("""
-        {b}You cannot have more than one element with the same id in an HTML document{/b}
-        """) xpos 138 ypos 411 size 40 xsize 740 color "#333333" 
+        {b} Requires the user to understand HTML code {/b}
+        """) xpos 138 ypos 411 size 40 xsize 840 color "#333333" 
 
     ## Place quiz 04 question 20 answer 02 here
     text _p("""
-        {b}It's used to give a unique id to an HTML element{/b}
-        """) xpos 1038 ypos 411 size 40 xsize 780  color "#333333" 
+        {b} Provides a graphical user interface that translates HTML code {/b}
+        """) xpos 1038 ypos 411 size 40 xsize 704  color "#333333" 
 
     ## Place quiz 04 question 20 answer 03 here
     text _p("""
-        {b}You can use the same id multiple times in an HTML document{/b}
-        """) xpos 138 ypos 738 size 40 xsize 780  color "#333333" 
+        {b} A multi-platform language that can be used as a platform in itself.{/b}
+        """) xpos 138 ypos 738 size 40 xsize 704  color "#333333" 
 
     ## Place quiz 04 question 20 answer 04 here
     text _p("""
-        {b}None of the above{/b}
-        """) xpos 1038 ypos 738 size 40 xsize 880  color "#333333" 
+        {b}  High-level programming language with dynamic semantics {/b}
+        """) xpos 1038 ypos 738 size 40 xsize 704  color "#333333" 
 
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+   # text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_04_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_04_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
 
     timer 30.0 action Jump("quiz_04_q_20_time_up")    
 
@@ -2449,14 +2581,15 @@ label quiz_04_q_20_s01:
 
 label quiz_04_q_20_s02:
     # Uncomment below is the correct answer for quiz
-    #$ persistent_quiz_04_q_counter_correct_answer +=1 
-    #$ persistent_quiz_total_points_counter_correct_answer +=1
+    $ persistent_quiz_04_q_counter_correct_answer +=1 
+    $ persistent_quiz_total_points_counter_correct_answer +=1
+    
     jump quiz_04_base_checker
 
 label quiz_04_q_20_s03:
     # Uncomment below is the correct answer for quiz
-    $ persistent_quiz_04_q_counter_correct_answer +=1 
-    $ persistent_quiz_total_points_counter_correct_answer +=1 
+    #$ persistent_quiz_04_q_counter_correct_answer +=1 
+    #$ persistent_quiz_total_points_counter_correct_answer +=1 
     jump quiz_04_base_checker
 
 label quiz_04_q_20_s04:
@@ -2487,13 +2620,14 @@ label quiz_04_q_20_time_up:
 
 label quiz_04_conclusion:
     if persistent_quiz_04_q_counter_correct_answer == 0:
-        scene pie_00
+        scene pie_04
         hide blank_question_windows with moveoutright
         e"Oh no?! Your score is 0 please study more"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()
-        jump pagtapos_ng_quiz_4 
+        $ whole_quiz_04_seen == True
+        jump pagtapos_ng_quiz_4
+
 
     elif persistent_quiz_04_q_counter_correct_answer == 1:
         scene pie_01 
@@ -2501,7 +2635,7 @@ label quiz_04_conclusion:
         e"Your score is 1 please study more"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()
+        $ whole_quiz_04_seen == True
         jump pagtapos_ng_quiz_4
 
 
@@ -2512,6 +2646,7 @@ label quiz_04_conclusion:
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
         #$ renpy.quit() 
+        $ whole_quiz_04_seen == True
         jump pagtapos_ng_quiz_4
 
 
@@ -2521,7 +2656,7 @@ label quiz_04_conclusion:
         e"Your score is 3 better luck next time"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()  
+        $ whole_quiz_04_seen == True
         jump pagtapos_ng_quiz_4
         
 
@@ -2531,16 +2666,16 @@ label quiz_04_conclusion:
         e"Your score is 4 better luck next time"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()  
+        $ whole_quiz_04_seen == True
         jump pagtapos_ng_quiz_4
 
     elif persistent_quiz_04_q_counter_correct_answer == 5:
         scene pie_05
-        hide blank_question_windows with moveoutright
+        hide blank_question_windows with moveoutright      
         e"Your score is 5 better luck next time"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()  
+        $ whole_quiz_04_seen == True
         jump pagtapos_ng_quiz_4
 
     elif persistent_quiz_04_q_counter_correct_answer == 6:
@@ -2549,41 +2684,94 @@ label quiz_04_conclusion:
         e"Your score is 6 not bad"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()  
+        $ whole_quiz_04_seen == True
         jump pagtapos_ng_quiz_4
 
     elif persistent_quiz_04_q_counter_correct_answer == 7:
         scene pie_07
         hide blank_question_windows with moveoutright
-        e"Your score is 7 not bad"
+        e "Your score is 7 not bad"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()  
+        $ whole_quiz_04_seen == True
         jump pagtapos_ng_quiz_4
 
     elif persistent_quiz_04_q_counter_correct_answer == 8:
         scene pie_08 
         hide blank_question_windows with moveoutright
-        e"Whoa! your score is 8 not bad"
+        e "Whoa! your score is 8 not bad"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()   
+        $ whole_quiz_04_seen == True
         jump pagtapos_ng_quiz_4
 
     elif persistent_quiz_04_q_counter_correct_answer == 9:
         scene pie_09
         hide blank_question_windows with moveoutright
-        e"Whoa! your score is 9. Congrats"
+        e "Whoa! your score is 9. Congrats"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit()  
+        $ whole_quiz_04_seen == True
         jump pagtapos_ng_quiz_4
 
     elif persistent_quiz_04_q_counter_correct_answer == 10:
         scene pie_10
         hide blank_question_windows with moveoutright
-        e"Whoa! You got perfect score Congrats"
+        e "Whoa! You got perfect score Congrats"
         scene quiz_window_blank with dissolve
         $ renpy.pause(1.0)
-        #$ renpy.quit() 
+        $ whole_quiz_04_seen == True
         jump pagtapos_ng_quiz_4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#label before_pagtapos_ng_quiz_4:
+    
+    ## ╔════════════════════════╗
+    ## ║ temporary please erase ║
+    ## ╚════════════════════════╝
+    #"First time mo take itong quiz"
+    #call screen chp_one_assessment()
+    #return 
+    ## ╔════════════════════════╗
+    ## ║ temporary please erase ║
+    ## ╚════════════════════════╝ 
+    #$ renpy.quit() 
+
+#label quiz_04_repeat_landing_label_seen:
+    #put label kung saan mo gusto ilaghay
+    ## ╔════════════════════════╗
+    ## ║ temporary please erase ║
+    ## ╚════════════════════════╝
+    #"Inulit mo itong quiz"
+    #call screen chp_one_assessment()
+    #return 
+    ## ╔════════════════════════╗
+    ## ║ temporary please erase ║
+    ## ╚════════════════════════╝ 
+    #$ renpy.quit()  
+
+    #$ renpy.quit() 
+
