@@ -87,10 +87,15 @@ screen chp_one_assessment():
 
 
 label lesson_one:
-    $ ls1_numhc = 5
-    $ ls1_numc = 0
-    $ ls1_numic = 5
-    $ l1_takes += 1
+
+    $ persistent.ast1_kindness = 10
+    $ persistent.ast1_rudeness = 0
+    $ persistent.ast1_recitation = 0
+    $ persistent.ast1_participation = 0
+    $ persistent.ast1_accuracy = 0
+
+    $ persistent.lesson_1_quiz1 = 0
+    $ persistent.lesson_1_act1 = 0
     
     $ show_quick_menu = False
     play music "audio/sa_tech.mp3" volume 0.5
@@ -216,7 +221,13 @@ label lesson_one:
 
 
     label lessonOneFillOne:
+        $ rudeness1 = True
         $ ans_button_lt_dropped = False
+                    
+        scene lof1 
+        e "HTML code is based on tags like <button> tag[ls1_numhc]"
+        e "Tags use angle brackets (<>)"
+
         e "Can someone answer the first problem today?"
         label l1Int1:
             menu:
@@ -234,9 +245,7 @@ label lesson_one:
                     pass
                 "Ignore":
                     jump lessonOneFillTwo
-        scene lof1 
-        e "HTML code is based on tags like <button> tag[ls1_numhc]"
-        e "Tags use angle brackets (<>)"
+
         call screen lesson_one_fill
 
         label call_o1:
@@ -718,7 +727,9 @@ label lesson_one:
 
 
     $ persistent.ast1_participation += 50
+
     label skipped_l1:
+
     Tech "Now that we finish the lesson lets start the quiz 1"
 
     hide teacher smile
@@ -733,12 +744,16 @@ label lesson_one:
 
     label pagtapos_ng_quiz_0:
 
+
+    # Lesson 1
+    $ persistent.lesson_1_quiz1 = persistent_quiz_00_q_counter_correct_answer  # Written Works 20%
+    $ persistent.lesson_1_act1 = 6  # Performance Task 20%
+
     stop music fadeout 1.0
 
     play music "audio/sa_tech.mp3" volume 0.5
 
     scene bg_classroom
-    
     
     show teacher_crossarm_smile
     e"Well done young coders. Let's end our class here."
@@ -794,7 +809,7 @@ label lesson_one:
 
             $ lesson_one_finish = True
 
-            jump assessment_one
+            #jump assessment_one
             #jump pagtapos_ng_lesson_one
     
     call screen lesson_ui

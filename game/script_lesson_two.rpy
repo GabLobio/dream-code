@@ -42,10 +42,12 @@ label lesson_two:
     $ ls2_numic = 0
     $ l2_takes += 1
 
+    $ persistent.lesson_2_quiz2 = 0
+    $ persistent.lesson_2_act2 = 0
+
     # Start ng Time ###############
     $ save_total_run()
     $ reset_timer()
-    jump chp_two_end
     show screen timeplayedbutton
     # Start ng Time ###############
 
@@ -73,6 +75,24 @@ label lesson_two:
         $ ans_f0_was_dropped = False
         scene ltf1
         Tech "{b}Headings{/b} in HTML come in different levels. <h1> defines the most important heading"
+        
+        label l2Int2:
+            menu:
+                "Talk to classmate":
+                    jump start_hitting_teach2
+                    label opsl2_1:
+                        $ persistent.ast1_rudeness += 25
+                        jump skipped_l2
+                "Play with your classmate":
+                    jump begin_ho_mg2
+                    label opsl2_2:
+                        $ persistent.ast1_rudeness += 25
+                        jump skipped_l2
+                "Raise Hand":
+                    pass
+                "Ignore":
+                    jump lessonTwoFilltwo
+
         call screen lesson_two_ls1_fill
 
         label call_t1:
@@ -90,7 +110,16 @@ label lesson_two:
         $ ls2_numc += 1
         $ ans_ft_was_dropped = False
         scene ltf2
-        Tech "You can use up to 6 levels of headings in HTML. The tags for these heading elements are <h1>, <h2>,"     
+        Tech "You can use up to 6 levels of headings in HTML. The tags for these heading elements are <h1>, <h2>," 
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonTwoFillThree
+
         call screen lesson_two_ls2_fill
 
         label call_t2:
@@ -168,6 +197,15 @@ label lesson_two:
         $ ans_fs2_was_dropped = False
         scene ltf7
         Tech "h1 is the most important heading."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonTwoFillEight
+
         call screen lesson_two_ls7_fill
 
         label call_t7:
@@ -189,6 +227,15 @@ label lesson_two:
         $ ans_fe3_was_dropped = False
         scene ltf8
         Tech "Heading levels need to be used in the correct order (h1, h2, …h6)"
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonTwoFillNine
+
         call screen lesson_two_ls8_fill
 
         label call_t8:
@@ -239,6 +286,15 @@ label lesson_two:
         scene ltf10
         Tech "Some HTML elements can be defined with only one tag. They are called {b}empty tags{/b}."
         Tech"The image tag <img> is a good example of an empty tag, it doesn't require a closing tag"
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonHeadTakeaways
+
         call screen lesson_two_ls10_fill
 
         label call_t10:
@@ -300,6 +356,15 @@ label lesson_two:
         scene ltf12
         Tech "Images are not technically inserted into a web page, they are linked. The source ({b}src{/b}) of the image
         needs to be included in the tag."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonTwoFillThirteen
+
         call screen lesson_two_ls12_fill
 
         label call_12:
@@ -321,6 +386,15 @@ label lesson_two:
         scene ltf13
         Tech "You need to tell the browser where to find the image. The source ({b}src{/b}) is the location on the Internet
         where the image is stored."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonTwoFillFourteen
+
         call screen lesson_two_ls13_fill
 
         label call_13:
@@ -364,6 +438,15 @@ label lesson_two:
         scene ltf15
         Tech "You need to tell the browser where to find the image. The source (src) is the location on the Internet
         where the image is stored."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonTwoFillSixteen
+
         call screen lesson_two_ls15_fill
 
         label call_15:
@@ -441,9 +524,18 @@ label lesson_two:
     
     play music "audio/quiz.mp3" volume 0.5
 
+    $ persistent.ast1_participation += 25
+    label skipped_l2:
+
     jump start_quiz_01
 
     label pagtapos_ng_quiz_1:
+
+
+
+        # Lesson 2 
+    $ persistent.lesson_2_quiz2 = persistent_quiz_01_q_counter_correct_answer  # Written Works 10%
+    $ persistent.lesson_2_act2 = 4  # Performance Task 10%
 
     stop music fadeout 1.0
 
@@ -471,12 +563,12 @@ label lesson_two:
 
 
     label chp_two_end:
-        $ persistent.f_numhc += ls2_numhc
-        $ persistent.f_numc += ls2_numc
-        $ persistent.f_numic += ls2_numic
+        #$ persistent.f_numhc += ls2_numhc
+        #$ persistent.f_numc += ls2_numc
+        #$ persistent.f_numic += ls2_numic
         $ save_total_run()
         $ reset_timer()
-        call screen chp_two_assessment()
+        #call screen chp_two_assessment()
         
         
 
@@ -488,12 +580,12 @@ label lesson_two:
 
 
     stop music fadeout 1.0
-    jump behavior_two
+    #jump behavior_two
     label chp_two_ending:
-        $ persistent.chp_prev_two_time = persistent.chp_two_time
-        $ persistent.chp_two_prev_score = persistent_quiz_02_q_counter_correct_answer
-        $ persistent.chp_two_prev_date = persistent.date_today
-        jump FBA
+        #$ persistent.chp_prev_two_time = persistent.chp_two_time
+        #$ persistent.chp_two_prev_score = persistent_quiz_02_q_counter_correct_answer
+        #$ persistent.chp_two_prev_date = persistent.date_today
+        #jump FBA
         scene bg_lesson_choices
         blank "End of chapter 2"
     

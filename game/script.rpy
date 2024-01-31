@@ -164,6 +164,28 @@ default persistent.written_works = 0
 default persistent.performance_task = 0 #10 Screen 10 Problem
 default persistent.exam = 0
 
+# lesson 1
+default persistent.lesson_1_quiz1 = 0
+default persistent.lesson_1_act1 = 0
+
+# Lesson 2 
+default persistent.lesson_2_quiz2 = 0  # Written Works 10%
+default persistent.lesson_2_act2 = 0  # Performance Task 10%
+
+# Lesson 3 
+default persistent.lesson_3_quiz3 = 0  # Written Works 10%
+default persistent.lesson_3_act3 = 0  # Performance Task 10%
+
+default persistent.exam_score = 0 # Exam 20%
+
+#default persistent.lesson_1_weighted_score = 0
+#default persistent.lesson_2_weighted_score = 0
+#default persistent.lesson_3_weighted_score = 0
+
+default persistent.overall_grade = 0
+default persistent.previous_overall_grade = 0
+    
+
 ###################################### New Computation ######################################
 
 
@@ -250,60 +272,16 @@ label start:
     ## ║ temporary please erase ║
     ## ╚════════════════════════╝ 
 
-    $ persistent.ast1_kindness = 10
+    $ persistent.ast1_kindness = 0
     $ persistent.ast1_rudeness = 0
     $ persistent.ast1_recitation = 0
     $ persistent.ast1_participation = 0
     $ persistent.ast1_accuracy = 0
 
-    $ persistent.written_works = 7 
-    $ persistent.performance_task = 4 #10 Screen 10 Problem
-    $ persistent.exam = 8
 
     #jump assessment_one 
     #jump lesson_two
-
-
-
-
-
-
-    # Lesson 1 
-    $ lesson_1_quiz1 = 5  # Written Works 20%
-    $ lesson_1_act1 = 6  # Performance Task 20%
-
-    # Lesson 2 
-    $ lesson_2_quiz2 = 8  # Written Works 10%
-    $ lesson_2_act2 = 4  # Performance Task 10%
-
-    # Lesson 3 
-    $ lesson_3_quiz3 = 10  # Written Works 10%
-    $ lesson_3_act3 = 7  # Performance Task 10%
-
-    $ exam_score = 10 # Exam 20%
-
-    # Calculate weighted scores for each lesson
-    $ lesson_1_weighted_score = (lesson_1_quiz1/10 * 0.2) + (lesson_1_act1/10 * 0.2)
-    $ lesson_2_weighted_score = (lesson_2_quiz2/10 * 0.1) + (lesson_2_act2/10 * 0.1)
-    $ lesson_3_weighted_score = (lesson_3_quiz3/10 * 0.1) + (lesson_3_act3/10 * 0.1)
-
-    $ lesson_1_weighted_score = lesson_1_weighted_score * 100
-    $ lesson_2_weighted_score = lesson_2_weighted_score * 100
-    $ lesson_3_weighted_score = lesson_3_weighted_score * 100
-
-    $ exam_weighted_score = (exam_score/10 * 0.2)
-    $ exam_weighted_score = exam_weighted_score * 100
-
-    # Calculate overall grade
-    $ overall_grade = int(lesson_1_weighted_score + lesson_2_weighted_score + lesson_3_weighted_score + exam_weighted_score)
-    
-
-    # Display the results
-    blank "Lesson 1 Weighted Score: [lesson_1_weighted_score]"
-    blank "Lesson 2 Weighted Score: [lesson_2_weighted_score]"
-    blank "Lesson 3 Weighted Score: [lesson_3_weighted_score]"
-    blank "Exam Weighted Score: [exam_weighted_score]"
-    blank "Overall Grade: [overall_grade]"
+    jump chapter_1_01
 
 
     # Lesson 4 
@@ -374,6 +352,8 @@ label start:
     blank "Behavior Score: [behavior_score]"
     blank "Additional Grade: [additional_grade]"
     blank "Overall Grade: [overall_2_grade]"
+
+
 
 
     jump chapter_1_01

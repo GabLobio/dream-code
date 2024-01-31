@@ -1,5 +1,10 @@
 default ans_f0_was_dropped = False
 
+init python:
+    def IncrementRecitation2():
+        persistent.ast1_recitation += 5
+        persistent.ast1_accuracy += 5
+
 screen lesson_two_ls1_fill():
     image "images/lesson_two/Lesson 2.1.png" #blur 10.0
     
@@ -8,9 +13,9 @@ screen lesson_two_ls1_fill():
         ypos 30
         idle "images/interactive_button/next_button.png"
         hover "images/interactive_button/next_button_hover.png"
-        
+         
         if  ans_f0_was_dropped:
-            action Jump("lessonTwoFilltwo") 
+            action [lambda: IncrementRecitation2(), Jump("lessonTwoFilltwo")]
         else:
             action Jump("if_lt1_wrong")
 
@@ -208,7 +213,7 @@ screen lesson_two_ls6_fill():
         if line_one_value == "" and line_two_value == "" and line_three_value == "" and line_four_value == "" and line_five_value == "":
             action ShowMenu("error_msg")
         elif line_one_value == "</h1>" and line_two_value == "<p>" and line_three_value == "<h2>" and line_four_value == "</p>" and line_five_value == "<button>":
-            action Jump("if_lt5_correct")
+            action [lambda: IncrementRecitation2(), Jump("if_lt5_correct")]
         else:
             action ShowMenu("error_msg")
 
@@ -433,7 +438,7 @@ screen lesson_two_ls7_fill():
         if line_one_value == "" and line_two_value == "" and line_three_value == "" and line_four_value == "" and line_five_value == "":
             action ShowMenu("error_msg")
         elif line_one_value == "</h1>" and line_two_value == "<p>" and line_three_value == "<h2>" and line_four_value == "</p>" and line_five_value == "<button>":
-            action Jump("if_lt5_correct")
+            action [lambda: IncrementRecitation2(), Jump("if_lt5_correct")]
         else:
             action ShowMenu("error_msg")
     
@@ -625,7 +630,7 @@ screen lesson_two_ls7_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if  ans_fs1_was_dropped and ans_fs2_was_dropped:
-            action Jump("lessonTwoFillEight") 
+            action [lambda: IncrementRecitation2(), Jump("lessonTwoFillEight")]
         else:
             action Jump("if_lt7_wrong")
         
@@ -887,7 +892,7 @@ screen lesson_two_ls10_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if   ans_ft01_was_dropped and ans_ft02_was_dropped:
-            action Jump("lessonHeadTakeaways") 
+            action [lambda: IncrementRecitation2(), Jump("lessonHeadTakeaways")]
         else:
             action Jump("if_lt10_wrong")
 

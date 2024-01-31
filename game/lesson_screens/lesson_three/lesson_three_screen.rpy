@@ -1,3 +1,10 @@
+init python:
+    def IncrementRecitation3():
+        persistent.ast1_recitation += 5
+        persistent.ast1_accuracy += 5
+
+
+
 screen error_msg():
     image "images/transparent_bg.png"
         
@@ -103,7 +110,7 @@ screen lesson_three_ls2_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if  ans_f3t01_was_dropped and ans_f3t02_was_dropped:
-            action Jump("lessonThreeFillThree") 
+            action [lambda: IncrementRecitation3(), Jump("lessonThreeFillThree")]
         else:
             action Jump("if_lth2_wrong")
 
@@ -207,7 +214,7 @@ screen lesson_three_ls4_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if  ans_f3f01_was_dropped and ans_f3f02_was_dropped:
-            action Jump("lessonThreeFillFive") 
+            action [lambda: IncrementRecitation3(), Jump("lessonThreeFillFive")]
         else:
             action Jump("if_lth4_wrong")
 
@@ -324,7 +331,7 @@ screen lesson_three_ls8_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if  ans_f3e01_was_dropped:
-            action Jump("lessonThreeFillNine") 
+            action [lambda: IncrementRecitation3(), Jump("lessonThreeFillNine")] 
         else:
             action Jump("if_lth8_wrong")
 
@@ -418,7 +425,7 @@ screen lesson_three_ls12_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if  ans_f3tw01_was_dropped:
-            action Jump("lessonCommentTakeaways") 
+            action [lambda: IncrementRecitation3(), Jump("lessonCommentTakeaways")]
         else:
             action Jump("if_lth12_wrong")
 
@@ -656,7 +663,7 @@ screen lesson_three_ls15_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if  ans_f3fit01_was_dropped and ans_f3fit02_was_dropped:
-            action Jump("lessonThreeFillSixteen") 
+            action [lambda: IncrementRecitation3(), Jump("lessonThreeFillSixteen")]
         else:
             action Jump("if_lth15_wrong")
 

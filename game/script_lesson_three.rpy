@@ -38,6 +38,9 @@ label lesson_three:
     $ ls3_numc = 0
     $ ls3_numic = 0
     $ l3_takes += 1
+
+    $ persistent.lesson_3_quiz3 = 0
+    $ persistent.lesson_3_act3 = 0
     # Start ng Time ###############
     $ save_total_run()
     $ reset_timer()
@@ -89,6 +92,24 @@ label lesson_three:
         
         Tech"It's a good practice to use comments in your HTML code. They explain what the code does."
         hide teacher_crossarm_smile
+
+        label l3Int3:
+            menu:
+                "Talk to classmate":
+                    jump start_hitting_teach3
+                    label opsl3_1:
+                        $ persistent.ast1_rudeness += 25
+                        jump skipped_l3
+                "Play with your classmate":
+                    jump begin_ho_mg3
+                    label opsl3_2:
+                        $ persistent.ast1_rudeness += 25
+                        jump skipped_l3
+                "Raise Hand":
+                    pass
+                "Ignore":
+                    jump lessonThreeFillThree
+
         call screen lesson_three_ls2_fill
 
         label call_th2:
@@ -117,6 +138,15 @@ label lesson_three:
         show teacher_crossarm_smile
         Tech"Click the Run button to see what the web browser will display"
         hide teacher_crossarm_smile
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonThreeFillFour
+
         call screen lesson_three_ls3_fill
 
         label llt_when_run:
@@ -133,6 +163,15 @@ label lesson_three:
         scene l3f4
         Tech"You can use comments to temporarily disable part of your code so its not displayed by the browser."
         Tech"Enclose the whole tag with comment"
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonThreeFillFive
+
         call screen lesson_three_ls4_fill
 
         label call_th4:
@@ -158,6 +197,15 @@ label lesson_three:
         show teacher_crossarm_happy
         Tech"Click the Run button to see what the web browser will display"
         hide teacher_crossarm_happy
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonThreeFillSix
+
         call screen lesson_three_ls5_fill
 
         label lthf_when_run:
@@ -173,6 +221,15 @@ label lesson_three:
         Tech"The web browser will ignore white spaces and line breaks in your code. Still, its a good practice to organize your code into different lines so it's easier to read by humans."
         Tech"Click the Run button to see what the web browser will display"
         hide teacher_crossarm_smile
+        
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonThreeFillSeven
+
         call screen lesson_three_ls6_fill
 
         label lths_when_run:
@@ -204,6 +261,15 @@ label lesson_three:
         $ ans_f3e01_was_dropped = False
         scene l3f8
         Tech"If you need to create a line break you can use the <br> tag. <br> will force a line break."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonThreeFillNine
+
         call screen lesson_three_ls8_fill
 
         label call_th8:
@@ -226,6 +292,15 @@ label lesson_three:
         Tech"Elements like headings and paragraphs automatically start on a new line when you create them."
         Tech"Click the Run button to see what the web browser will display"
         hide teacher_crossarm_happy
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonThreeFillTen
+
         call screen lesson_three_ls9_fill
 
         label lthn_when_run:
@@ -261,6 +336,15 @@ label lesson_three:
         $ ls3_numc += 1
         $ ans_f3tw01_was_dropped = False
         scene l3f12
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonCommentTakeaways
+
         call screen lesson_three_ls12_fill
 
         label call_th12:
@@ -289,6 +373,15 @@ label lesson_three:
         $ ans_f3th02_was_dropped = False
         scene l3f13
         Tech"In this lesson you'll start applying some of the standards and best practices used in the web industry."
+        
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonThreeFillFourteen
+
         call screen lesson_three_ls13_fill
 
         label call_th13:
@@ -310,6 +403,15 @@ label lesson_three:
         $ ans_f3ft01_was_dropped = False
         scene l3f14
         Tech"The {b}<body> container tag{/b} is used to group everything that gets displayed on a page when loaded in a browser."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonThreeFillFifteen
+
         call screen lesson_three_ls14_fill
 
         label call_th14:
@@ -332,6 +434,15 @@ label lesson_three:
         scene l3f15
         Tech"{b}Body tags{/b} are needed for your page to be compatible with {b}all{/b} web browsers."
         Tech"A web page can contain only {b}one body element{/b}"
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonThreeFillSixteen
+
         call screen lesson_three_ls15_fill
         
         label call_th15:
@@ -355,6 +466,15 @@ label lesson_three:
         $ ans_f3sit03_was_dropped = False
         scene l3f16
         Tech"All the content elements that you need to display (like paragraphs, headings, buttons, and images) need to be inside the {b}<body> container bag{/b}."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonThreeFillSeventeen
+
         call screen lesson_three_ls16_fill
         
         label call_th16:
@@ -377,6 +497,15 @@ label lesson_three:
         $ ans_f3set01_was_dropped = False
         scene l3f17
         Tech"The <body> container tags needs to surround all the elements displayed on the page. When some HTML tags go inside others, this is called {b}nesting{/b}."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonThreeFillEighteen
+
         call screen lesson_three_ls17_fill
 
         label call_th17:
@@ -423,6 +552,15 @@ label lesson_three:
         $ ans_f3nit02_was_dropped = False
         scene l3f19
         Tech"Websites do more than just display content. The {b}<head> container tag{/b} is used to include technical information about the page."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonThreeFillTwenty
+
         call screen lesson_three_ls19_fill
         
         label call_th19:
@@ -445,6 +583,16 @@ label lesson_three:
         $ ans_f3twt02_was_dropped = False
         scene l3f20
         Tech"You can use the head to help increase visibility and traffic from search engines like Google."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonThreeFillTwentyOne
+
+
         call screen lesson_three_ls20_fill
 
         label call_th20:
@@ -467,6 +615,15 @@ label lesson_three:
         $ ans_f3twet02_was_dropped = False
         scene l3f21
         Tech"The head needs to be placed before the body."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonThreeFillTwentyTwo
+
         call screen lesson_three_ls21_fill
         
         label call_th21:
@@ -505,6 +662,15 @@ label lesson_three:
         Tech"{b}Indentation{/b} is considered a very good practice to improve code readability. Indentation is the spaces at the beginning of lines."
         Tech"To show what HTML code can be produced if indentation is used, click the Run button."
         hide teacher_crossarm_smile
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonThreeFillTwentyFour
+
         call screen lesson_three_ls23_fill
 
         label lth23_when_run:
@@ -518,6 +684,15 @@ label lesson_three:
         $ ans_f3twef02_was_dropped = False
         scene l3f24
         Tech"Select all correct answers."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessoThreeOutro
+
         call screen lesson_three_ls24_fill
 
         label call_th24:
@@ -548,10 +723,17 @@ label lesson_three:
     stop music fadeout 1.0
     
     play music "audio/quiz.mp3" volume 0.5
+    $ persistent.ast1_participation += 25
+    label skipped_l3:
 
     jump start_quiz_02
 
     label pagtapos_ng_quiz_2:
+
+    # Lesson 3 
+    $ persistent.lesson_3_quiz3 = persistent_quiz_02_q_counter_correct_answer
+    $ persistent.lesson_3_act3 = 7  # Performance Task 10%
+
 
     stop music fadeout 1.0
 
@@ -581,27 +763,28 @@ label lesson_three:
 
 
     label chp_three_end:
-        $ persistent.f_numhc += ls3_numhc
-        $ persistent.f_numc += ls3_numc
-        $ persistent.f_numic += ls3_numic
+        #$ persistent.f_numhc += ls3_numhc
+        #$ persistent.f_numc += ls3_numc
+        #$ persistent.f_numic += ls3_numic
         $ save_total_run()
         $ reset_timer()
-        call screen chp_three_assessment()
+        #call screen chp_three_assessment()
         
         
 
 
     ######### Time save ######################################
-    jump behavior_three
+    #jump behavior_three
     stop music fadeout 1.0
     label chp_three_ending:
-        $ persistent.chp_prev_three_time = persistent.chp_three_time
-        $ persistent.chp_three_prev_score = persistent_quiz_03_q_counter_correct_answer
-        $ persistent.chp_three_prev_date = persistent.date_today
+        #$ persistent.chp_prev_three_time = persistent.chp_three_time
+        #$ persistent.chp_three_prev_score = persistent_quiz_03_q_counter_correct_answer
+        #$ persistent.chp_three_prev_date = persistent.date_today
         scene bg_3
         blank "End of chapter 3"
-
+        
     $ lesson_three_finish = True
+    jump assessment_one
     call screen lesson_ui
 
     return

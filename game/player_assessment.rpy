@@ -264,11 +264,132 @@ label assessment_one:
             lines={"webs": [1, 2, 3, 4, 5, 6, 7, 8, 9]},
             visible={"base":False}
         )
-            
+
+    
+    
+    # Lesson 1 
+    #$ lesson_1_quiz1 = 5  # Written Works 20%
+    #$ lesson_1_act1 = 6  # Performance Task 20%
+
+    # Lesson 2 
+    #$ lesson_2_quiz2 = 8  # Written Works 10%
+    #$ lesson_2_act2 = 4  # Performance Task 10%
+
+    # Lesson 3 
+    #$ lesson_3_quiz3 = 10  # Written Works 10%
+    #$ lesson_3_act3 = 7  # Performance Task 10%
+
+    $ exam_score = 10 # Exam 20%
+
+
+
+    # Calculate weighted scores for each lesson #############################################################################
+
+    $ lesson_1_weighted_score = (persistent.lesson_1_quiz1/10 * 0.2) + (persistent.lesson_1_act1/10 * 0.2)
+    $ lesson_2_weighted_score = (persistent.lesson_2_quiz2/10 * 0.1) + (persistent.lesson_2_act2/10 * 0.1)
+    $ lesson_3_weighted_score = (persistent.lesson_3_quiz3/10 * 0.1) + (persistent.lesson_3_act3/10 * 0.1)
+
+    $ lesson_1_weighted_score = lesson_1_weighted_score * 100
+    $ lesson_2_weighted_score = lesson_2_weighted_score * 100
+    $ lesson_3_weighted_score = lesson_3_weighted_score * 100
+
+    $ exam_weighted_score = (exam_score/10 * 0.2)
+    $ exam_weighted_score = exam_weighted_score * 100
+
+    # Calculate weighted scores for each lesson ###############################################################################
+
+
+
+
+
+    # Calculate overall grade #################################################################################################
+
+    $ persistent.overall_grade = int(lesson_1_weighted_score + lesson_2_weighted_score + lesson_3_weighted_score + exam_weighted_score)
+
+    $ quarter_result_feedback = ""
+    # Quarter Assessment Result
+    if persistent.overall_grade >= 70 and persistent.overall_grade > persistent.previous_overall_grade:
+        $ quarter_result_feedback = "Congratulations on improving your overall result from the previous quarter!"
+
+    elif persistent.overall_grade > 70 and persistent.overall_grade < persistent.previous_overall_grade:
+        $ quarter_result_feedback = "While your overall grade is still good, it has decreased from the previous quarter. \nReflect on what might have caused this decline and consider adjustments for the \nnext quarter."
+
+    else:
+        $ quarter_result_feedback = "While your current result is commendable, strive for continuous improvement \nin the next quarter."
+
+
+    # Calculate overall grade ###################################################################################################
+
+
+
+
+
+    # For the bar graph #########################################################################################################
+
+    $ persistent.written_works = (persistent.lesson_1_quiz1 + persistent.lesson_2_quiz2 + persistent.lesson_3_quiz3)/30
+    $ persistent.written_works = int(persistent.written_works * 4.0)
+
+    $ persistent.performance_task = (persistent.lesson_1_act1 + persistent.lesson_2_act2 + persistent.lesson_3_act3)/30
+    $ persistent.performance_task = int(persistent.performance_task * 4.0)
+
+    #$ persistent.exam = int(exam_score * 7.0)
+    $ persistent.exam = exam_score
+
+    # For the bar graph #########################################################################################################
+
+
+
+
+    $ written_works_feedback = ""
+    if persistent.written_works >= 6:
+        $ written_works_feedback = "Excellent effort in Written Works, keep it up!"
+    else:
+        $ written_works_feedback = "Great job in Written Works. Your dedication is commendable!"
+
+    $ performance_task_feedback = ""
+    if persistent.performance_task >= 6:
+        $ performance_task_feedback = "Outstanding performance in the Performance Task! Your skills are truly impressive."
+    else:
+        $ performance_task_feedback = "Great job on the Performance Task. Your efforts are making a positive impact!"
+
+    $ exam_feedback = ""
+    if persistent.exam >= 6:
+        $ exam_feedback = "Congratulations on acing the exam! Your dedication to studying is evident."
+    else:
+        $ exam_feedback = "Great job on the exam! Your hard work is paying off."
+
+
+
+
+
+
+
+
+    # Calculate behavior score
+    $ behavior_score = persistent.ast1_recitation + persistent.ast1_participation + persistent.ast1_accuracy + persistent.ast1_kindness - persistent.ast1_rudeness
+
+    $ behavior_fb_result = ""
+
+    # Initialize additional grade
+    $ additional_grade = 0
+
+    # Determine if the player gets an additional grade based on Rudeness and Kindness
+    if persistent.ast1_kindness > persistent.ast1_rudeness:
+        $ additional_grade = 2
+        $ behavior_fb_result = "Your kindness surpasses your rudeness, you receive an \nadditional 2 points!"
+    elif persistent.ast1_rudeness > persistent.ast1_kindness:
+        $ behavior_fb_result = "Work on improving your kindness. Unfortunately, you \ndon't receive an additional points"
+        $ additional_grade = 0
+    elif persistent.ast1_recitation > persistent.ast1_rudeness and persistent.ast1_participation > persistent.ast1_rudeness:
+        $ behavior_fb_result = "You participated really well. You got an additional 5 points" 
+    else:
+        $ behavior_fb_result = "No Additional grade"
+
+    # Calculate overall grade with additional behavior score
+    #$ overall_2_grade -= additional_grade
+    $ persistent.overall_grade += additional_grade
 
     call screen q1_assesment
-
-    "wow"
     
     hide screen q1_assesment
     return

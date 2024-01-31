@@ -1,22 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 365, in script
-    "Work on improving your kindness. Unfortunately, you don't receive an additional grade, and 3% is deducted from your total grade."
-TypeError: %i format: a number is required, not TagQuotingDict
+  File "game/player_assessment.rpy", line 329, in script
+    $ persistent.written_works = (lesson_1_quiz1 + lesson_2_quiz2 + lesson_3_quiz3)/30
+  File "game/player_assessment.rpy", line 329, in <module>
+    $ persistent.written_works = (lesson_1_quiz1 + lesson_2_quiz2 + lesson_3_quiz3)/30
+NameError: name 'lesson_1_quiz1' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 365, in script
-    "Work on improving your kindness. Unfortunately, you don't receive an additional grade, and 3% is deducted from your total grade."
-  File "D:\installedApps\Ren'py\renpy-8.1.3-sdk\renpy\ast.py", line 930, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "D:\installedApps\Ren'py\renpy-8.1.3-sdk\renpy\exports.py", line 1463, in say
-    what = what % tag_quoting_dict
-TypeError: %i format: a number is required, not TagQuotingDict
+  File "game/player_assessment.rpy", line 329, in script
+    $ persistent.written_works = (lesson_1_quiz1 + lesson_2_quiz2 + lesson_3_quiz3)/30
+  File "D:\installedApps\Ren'py\renpy-8.1.3-sdk\renpy\ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\installedApps\Ren'py\renpy-8.1.3-sdk\renpy\python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/player_assessment.rpy", line 329, in <module>
+    $ persistent.written_works = (lesson_1_quiz1 + lesson_2_quiz2 + lesson_3_quiz3)/30
+NameError: name 'lesson_1_quiz1' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.3.23091805
 CodeDreams 1.0
-Wed Jan 31 21:11:08 2024
+Thu Feb  1 04:52:51 2024
