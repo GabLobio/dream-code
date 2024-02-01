@@ -88,8 +88,9 @@ screen chp_one_assessment():
 
 label lesson_one:
 
+
     $ persistent.ast1_kindness = 10
-    $ persistent.ast1_rudeness = 0
+    $ persistent.ast1_rudeness = 10
     $ persistent.ast1_recitation = 0
     $ persistent.ast1_participation = 0
     $ persistent.ast1_accuracy = 0

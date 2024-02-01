@@ -184,7 +184,102 @@ default persistent.exam_score = 0 # Exam 20%
 
 default persistent.overall_grade = 0
 default persistent.previous_overall_grade = 0
-    
+
+
+
+# 2nd Quarter ######################################
+
+default persistent.ast2_kindness = 5
+default persistent.ast2_rudeness = 5 
+default persistent.ast2_recitation = 0
+default persistent.ast2_participation = 0
+default persistent.ast2_accuracy = 0
+
+
+default persistent.q2_written_works = 0 
+default persistent.q2_performance_task = 0 #10 Screen 10 Problem
+default persistent.q2_exam = 0
+
+# lesson 4
+default persistent.lesson_4_quiz4 = 0
+default persistent.lesson_4_act4 = 0
+
+# Lesson 5 
+default persistent.lesson_5_quiz5 = 0  # Written Works 10%
+default persistent.lesson_5_act5 = 0  # Performance Task 10%
+
+# Lesson 6 
+default persistent.lesson_6_quiz6 = 0  # Written Works 10%
+default persistent.lesson_6_act6 = 0  # Performance Task 10%
+
+default persistent.q2_exam_score = 0 # Exam 20%
+
+#default persistent.lesson_4_weighted_score = 0
+#default persistent.lesson_5_weighted_score = 0
+#default persistent.lesson_6_weighted_score = 0
+
+default persistent.q2_overall_grade = 0
+default persistent.q2_previous_overall_grade = 0
+
+
+
+# 3rd Quarter ######################################
+
+default persistent.ast3_kindness = 0
+default persistent.ast3_rudeness = 0 
+default persistent.ast3_recitation = 0
+default persistent.ast3_participation = 0
+default persistent.ast3_accuracy = 0
+
+
+default persistent.q3_written_works = 0 
+default persistent.q3_performance_task = 0 #10 Screen 10 Problem
+default persistent.q3_exam = 0
+
+# lesson 7
+default persistent.lesson_7_quiz7 = 0
+default persistent.lesson_7_act7 = 0
+
+# Lesson 8 
+default persistent.lesson_8_quiz8 = 0  # Written Works 10%
+default persistent.lesson_8_act8 = 0  # Performance Task 10%
+
+# Lesson 9 
+default persistent.lesson_9_quiz9 = 0  # Written Works 10%
+default persistent.lesson_9_act9 = 0  # Performance Task 10%
+
+default persistent.q3_exam_score = 0 # Exam 20%
+
+#default persistent.lesson_4_weighted_score = 0
+#default persistent.lesson_5_weighted_score = 0
+#default persistent.lesson_6_weighted_score = 0
+
+default persistent.q3_overall_grade = 0
+default persistent.q3_previous_overall_grade = 0 
+
+
+
+# 4th Quarter ######################################
+
+default persistent.ast4_kindness = 0
+default persistent.ast4_rudeness = 0 
+default persistent.ast4_recitation = 0
+default persistent.ast4_participation = 0
+default persistent.ast4_accuracy = 0
+
+
+default persistent.q4_written_works = 0 
+default persistent.q4_performance_task = 0 #10 Screen 10 Problem
+default persistent.q4_exam = 0
+
+# lesson 7
+default persistent.lesson_10_quiz10 = 0
+default persistent.lesson_10_act10 = 0
+
+default persistent.q4_exam_score = 0 # Exam 20%
+
+default persistent.q4_overall_grade = 0
+default persistent.q4_previous_overall_grade = 0 
 
 ###################################### New Computation ######################################
 
@@ -272,86 +367,9 @@ label start:
     ## ║ temporary please erase ║
     ## ╚════════════════════════╝ 
 
-    $ persistent.ast1_kindness = 0
-    $ persistent.ast1_rudeness = 0
-    $ persistent.ast1_recitation = 0
-    $ persistent.ast1_participation = 0
-    $ persistent.ast1_accuracy = 0
+    jump assessment_three
 
-
-    #jump assessment_one 
-    #jump lesson_two
     jump chapter_1_01
-
-
-    # Lesson 4 
-    $ lesson_4_quiz4 = 8  # Written Works 20%
-    $ lesson_4_act4 = 8  # Performance Task 20%
-
-    # Lesson 5 
-    $ lesson_5_quiz5 = 8  # Written Works 10%
-    $ lesson_5_act5 = 8  # Performance Task 10%
-
-    # Lesson 6 
-    $ lesson_6_quiz6 = 8  # Written Works 10%
-    $ lesson_6_act6 = 8  # Performance Task 10%
-
-    $ exam_2_score = 8 # Exam 20%
-
-    # Calculate weighted scores for each lesson
-    $ lesson_4_weighted_score = (lesson_4_quiz4/10 * 0.2) + (lesson_4_act4/10 * 0.2)
-    $ lesson_5_weighted_score = (lesson_5_quiz5/10 * 0.1) + (lesson_5_act5/10 * 0.1)
-    $ lesson_6_weighted_score = (lesson_6_quiz6/10 * 0.1) + (lesson_6_act6/10 * 0.1)
-
-    $ lesson_4_weighted_score = lesson_4_weighted_score * 100
-    $ lesson_5_weighted_score = lesson_5_weighted_score * 100
-    $ lesson_6_weighted_score = lesson_6_weighted_score * 100
-
-    $ exam_2_weighted_score = (exam_2_score/10 * 0.2)
-    $ exam_2_weighted_score = exam_2_weighted_score * 100
-
-    # Calculate overall grade
-    $ overall_2_grade = int(lesson_4_weighted_score + lesson_5_weighted_score + lesson_6_weighted_score + exam_2_weighted_score)
-    
-
-    # Display the results
-    blank "Lesson 4 Weighted Score: [lesson_4_weighted_score]"
-    blank "Lesson 5 Weighted Score: [lesson_5_weighted_score]"
-    blank "Lesson 6 Weighted Score: [lesson_6_weighted_score]"
-    blank "Exam 2 Weighted Score: [exam_2_weighted_score]"
-    blank "2nd Overall Grade: [overall_2_grade]"
-
-
-    # Rudeness and Kindness scores initialization
-    $ persistent.ast1_kindness = 10
-    $ persistent.ast1_rudeness = 50
-    $ persistent.ast1_recitation = 30
-    $ persistent.ast1_participation = 30
-    $ persistent.ast1_accuracy = 30
-
-    # Calculate behavior score
-    $ behavior_score = persistent.ast1_recitation + persistent.ast1_participation + persistent.ast1_accuracy + persistent.ast1_kindness - persistent.ast1_rudeness
-
-    # Initialize additional grade
-    $ additional_grade = 0
-
-    # Determine if the player gets an additional grade based on Rudeness and Kindness
-    if persistent.ast1_kindness > persistent.ast1_rudeness:
-        blank "Your kindness surpasses your rudeness. You receive an additional 8 grade!"
-        $ additional_grade = 0.08
-    elif persistent.ast1_rudeness > persistent.ast1_kindness:
-        blank "Work on improving your kindness. Unfortunately, you don't receive an additional grade, and 3 is deducted from your total grade."
-        $ additional_grade = 0.03
-    else:
-        blank "No Additional grade"
-
-    # Calculate overall grade with additional behavior score
-    $ additional_grade = additional_grade * 100
-    $ overall_2_grade -= additional_grade
-    # Display the results
-    blank "Behavior Score: [behavior_score]"
-    blank "Additional Grade: [additional_grade]"
-    blank "Overall Grade: [overall_2_grade]"
 
 
 
