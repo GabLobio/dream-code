@@ -8,6 +8,9 @@
 
 label lesson_six:
     scene bg_classroom
+    $ persistent.rude_lesson = "six"
+
+
 
 
     if lesson_five_finish:
@@ -16,6 +19,9 @@ label lesson_six:
         Tech "Please finish lesson 5"
         call screen lesson_ui
 
+
+    $ persistent.lesson_6_quiz6 = 0  # Written Works 10%
+    $ persistent.lesson_6_act6 = 0  # Performance Task 10%
 
     label lessonDropDownIntro:
 
@@ -906,9 +912,22 @@ label lesson_six:
     
     play music "audio/quiz.mp3" volume 0.5
 
+    $ persistent.ast2_participation += 25
+    label skipped_l6:
+
+    e "Let's Start the Quiz for lesson 6"
     jump start_quiz_05
 
     label pagtapos_ng_quiz_5:
+
+
+
+    $ persistent.lesson_6_quiz6 = persistent_quiz_05_q_counter_correct_answer
+    $ persistent.lesson_6_act6 = 7  # Performance Task 10%
+
+
+
+
 
     stop music fadeout 1.0
 

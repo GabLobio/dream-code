@@ -33,11 +33,21 @@ screen chp_four_assessment():
 
 label lesson_four:
     scene bg_classroom
+    $ persistent.rude_lesson = "four"
 
     $ ls4_numhc = 0
     $ ls4_numc = 0
     $ ls4_numic = 0
     $ l4_takes += 1
+
+    $ persistent.ast2_kindness = 10
+    $ persistent.ast2_rudeness = 10
+    $ persistent.ast2_recitation = 5
+    $ persistent.ast2_participation = 5
+    $ persistent.ast2_accuracy = 5
+
+    $ persistent.lesson_4_quiz4 = 0
+    $ persistent.lesson_4_act4 = 0
 
     # Start ng Time ###############
     $ save_total_run()
@@ -45,11 +55,11 @@ label lesson_four:
     show screen timeplayedbutton
     # Start ng Time ###############
 
-    if lesson_three_finish:
-        jump lessonFourFillOne
-    else:
-        Tech "Please finish lesson 3"
-        call screen lesson_ui  
+    #if lesson_three_finish:
+        #jump lessonFourFillOne
+    #else:
+    #    Tech "Please finish lesson 3"
+    #    call screen lesson_ui  
 
     
     label lessonFourFillOne:
@@ -78,12 +88,31 @@ label lesson_four:
             call screen lesson_four_ls2_fill
 
 
+
     label lessonFourFillThree:
         $ ls4_numc += 1
         $ ans_ff_th01_was_dropped = False
         $ ans_ff_th02_was_dropped = False
         scene l4f3
         Tech"Formatting tags are container tags. This means that both opening and closing tags are required."
+
+        label l4Int4:
+            menu:
+                "Talk to classmate":
+                    jump start_hitting_teach3
+                    label opsl4_1:
+                        $ persistent.ast1_rudeness += 50
+                        jump skipped_l4
+                "Play with your classmate":
+                    jump begin_ho_mg4
+                    label opsl4_2:
+                        $ persistent.ast1_rudeness += 50
+                        jump skipped_l4
+                "Raise Hand":
+                    pass
+                "Ignore":
+                    jump lessonThreeFillThree
+
         call screen lesson_four_ls3_fill
 
         label call_fr3:
@@ -806,9 +835,17 @@ label lesson_four:
     
     play music "audio/quiz.mp3" volume 0.5
 
+    $ persistent.ast2_participation += 50
+    label skipped_l4:
+
     jump start_quiz_03
 
     label pagtapos_ng_quiz_3:
+
+
+    $ persistent.lesson_4_quiz4 = persistent_quiz_03_q_counter_correct_answer
+    $ persistent.lesson_4_act4 = 6
+
 
     stop music fadeout 1.0
 
@@ -836,12 +873,12 @@ label lesson_four:
 
 
     label chp_four_end:
-        $ persistent.f_numhc += ls4_numhc
-        $ persistent.f_numc += ls4_numc
-        $ persistent.f_numic += ls4_numic
+        #$ persistent.f_numhc += ls4_numhc
+        #$ persistent.f_numc += ls4_numc
+        #$ persistent.f_numic += ls4_numic
         $ save_total_run()
         $ reset_timer()
-        call screen chp_four_assessment()
+        #call screen chp_four_assessment()
         
         
 
@@ -849,11 +886,11 @@ label lesson_four:
     ######### Time save ######################################
     
     stop music fadeout 1.0
-    jump behavior_four
+    #jump behavior_four
     label chp_four_ending:
-        $ persistent.chp_prev_four_time = persistent.chp_four_time
-        $ persistent.chp_four_prev_score = persistent_quiz_03_q_counter_correct_answer
-        $ persistent.chp_four_prev_date = persistent.date_today
+        #$ persistent.chp_prev_four_time = persistent.chp_four_time
+        #$ persistent.chp_four_prev_score = persistent_quiz_03_q_counter_correct_answer
+        #$ persistent.chp_four_prev_date = persistent.date_today
         scene bg_4
         blank "End of chapter 4"
 

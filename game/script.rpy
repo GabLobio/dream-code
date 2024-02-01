@@ -151,6 +151,7 @@ default persistent.seconds = 0
 
 ###################################### New Computation ######################################
 
+default persistent.rude_lesson = ""
 
 
 default persistent.ast1_kindness = 0
@@ -367,7 +368,7 @@ label start:
     ## ║ temporary please erase ║
     ## ╚════════════════════════╝ 
 
-    jump assessment_three
+    jump lesson_four
 
     jump chapter_1_01
 

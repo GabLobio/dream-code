@@ -34,7 +34,7 @@ screen chp_five_assessment():
 
 
 label lesson_five:
-
+    $ persistent.rude_lesson = "five"
     scene bg_classroom
 
     $ ls5_numhc = 0
@@ -50,6 +50,8 @@ label lesson_five:
 
     #jump lessonFiveFillFourtyseven
 
+    $ persistent.lesson_5_quiz5 = 0
+    $ persistent.lesson_5_act5 = 0
 
     label lessonAttributeIntro:
 
@@ -1092,9 +1094,27 @@ label lesson_five:
     
     play music "audio/quiz.mp3" volume 0.5
 
+
+    
+
+    $ persistent.ast2_participation += 25
+    label skipped_l5:
+
+    e "Let's Start the Quiz 5"
     jump start_quiz_04
 
     label pagtapos_ng_quiz_4:
+
+    $ persistent.lesson_5_quiz5 = persistent_quiz_04_q_counter_correct_answer
+    $ persistent.lesson_5_act5 = 5
+
+
+
+
+
+
+
+
 
     stop music fadeout 1.0
 
@@ -1122,12 +1142,12 @@ label lesson_five:
 
 
     label chp_five_end:
-        $ persistent.f_numhc += ls5_numhc
-        $ persistent.f_numc += ls5_numc
-        $ persistent.f_numic += ls5_numic
+        #$ persistent.f_numhc += ls5_numhc
+        #$ persistent.f_numc += ls5_numc
+        #$ persistent.f_numic += ls5_numic
         $ save_total_run()
         $ reset_timer()
-        call screen chp_five_assessment()
+        #call screen chp_five_assessment()
         
         
 
@@ -1135,11 +1155,11 @@ label lesson_five:
     ######### Time save ######################################
 
     stop music fadeout 1.0
-    jump behavior_five
+    #jump behavior_five
     label chp_five_ending:
-        $ persistent.chp_prev_five_time = persistent.chp_five_time
-        $ persistent.chp_five_prev_score = persistent_quiz_04_q_counter_correct_answer
-        $ persistent.chp_five_prev_date = persistent.date_today
+        #$ persistent.chp_prev_five_time = persistent.chp_five_time
+        #$ persistent.chp_five_prev_score = persistent_quiz_04_q_counter_correct_answer
+        #$ persistent.chp_five_prev_date = persistent.date_today
         scene bg_5
         blank "End of chapter 5"
 

@@ -95,7 +95,24 @@ label start_hitting_teach3:
         "Let's go!":
             pass
         "Refuse":
-            jump l3Int3
+            if persistent.rude_lesson == "three":
+                jump l3Int3
+            elif persistent.rude_lesson == "four":
+                jump l4Int4
+            elif persistent.rude_lesson == "five":
+                jump l5Int5
+            elif persistent.rude_lesson == "six":
+                jump l6Int6
+            elif persistent.rude_lesson == "seven":
+                jump l7Int7
+            elif persistent.rude_lesson == "eight":
+                jump l8Int8
+            elif persistent.rude_lesson == "nine":
+                jump l9Int9
+            elif persistent.rude_lesson == "ten":
+                jump l10Int10
+            else:
+                pass
 
     call begin_hunt3 from _call_begin_hunt3
     
@@ -118,22 +135,78 @@ label start_hitting_teach3:
 
     blank "You will be back to the class for the quiz"
 
-    jump opsl3_1
+    if persistent.rude_lesson == "three":
+        jump opsl3_1
+    elif persistent.rude_lesson == "four":
+        jump opsl4_1
+    elif persistent.rude_lesson == "five":
+        jump opsl5_1
+    elif persistent.rude_lesson == "six":
+        jump opsl6_1
+    elif persistent.rude_lesson == "seven":
+        jump opsl7_1
+    elif persistent.rude_lesson == "eight":
+        jump opsl8_1
+    elif persistent.rude_lesson == "nine":
+        jump opsl9_1
+    elif persistent.rude_lesson == "ten":
+        jump opsl10_1
+    else:
+        pass
+    
+    return
+
+
+
+
+label start_hitting_teach4:
+
+    scene bg_classroom_
+    show teach_smile
+    blank "Wanna throw these 3 crumpled paper to out teacher?"
+    menu:
+        "Let's go!":
+            pass
+        "Refuse":
+            if persistent.rude_lesson == "four":
+                jump l4Int4
+            
+
+    call begin_hunt4 from _call_begin_hunt4
+    
+    
+    if targets_hit == 0: 
+        $ cursor() 
+        scene bg_classroom_ with dissolve
+        show teach_smile
+        blank "Let's do it some time"
+        scene bg_classroom_ with dissolve
+        show teach_smile
+        
+    if targets_hit > 0: 
+        $ cursor() 
+        blank "[targets_hit]/3 hit"
+        scene bg_classroom_ with dissolve
+        show teacher_crossarm_sad
+        blank "Ouch! You hit the teacher! You have to leave the class for a while."   
+ 
+
+    blank "You will be back to the class for the quiz"
+
+    if persistent.rude_lesson == "four":
+        jump opsl4_1
+    else:
+        pass
 
     
     return
 
 
 
-#blank "As you're concentrating on the current lesson, a classmate approaches you, looking a bit confused."
 
-   # menu:
-    #    "Talk to him":
-    #        "You missed several parts of the lesson as you help your classmate catch up. While you feel good about helping, you realize you've sacrificed your own understanding."
-     #   "Refuse and explain that you can teach him later; choose to focus on the current lesson":
-     #       $ kindness += 1
-     #       $ Participation += 1
-      #      "You politely refuse, explaining that you're trying to focus on the current lesson. You offer to help your classmate after class, emphasizing the importance of catching up together."
+
+
+
 
 
 
@@ -159,24 +232,5 @@ label classmate_interaction:
     return
 
 
-label recitation:
 
-    menu:
-        "Raise Hand":
-            "Bakit ang kulit ni sir Jes?"
-            menu: 
-                "True":
-                    $ Participation += 1
-                    return or jump 
-                "False":
-                    $ Participation += 1
-                    return or jump
-
-        "Talk to your rude classmate":
-            "Mapapalabas ka ng teacher then comeback sa activities na"
-            return or jump
-
-        "Play with your gamer classmate":
-            "Jump several part ng lesson"
-            return or jump
 

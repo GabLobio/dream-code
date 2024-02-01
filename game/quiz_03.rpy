@@ -2094,7 +2094,7 @@ screen quiz_03_question_16_imagemap:
         {b} Add the missing list item tag \n
             \" <li>Item 1</li> \"  \n
             \"  _____Item 2</li> \" \n 
-            \" <li>Item 3</li>{/b} \"{/b}
+            \" <li>Item 3</li>{/b} \"
         """) xpos 138 ypos 128 size 20 xsize 1603 color "#333333" 
 
     ## Place quiz 03 question 16 answer 01 here
