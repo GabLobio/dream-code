@@ -1,3 +1,7 @@
+init python:
+    def IncrementRecitation6():
+        persistent.ast2_recitation += 5
+        persistent.ast2_accuracy += 5
 
 default ans_fsx_o1_was_dropped = False
 screen lesson_six_ls0_fill():
@@ -10,7 +14,7 @@ screen lesson_six_ls0_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_fsx_o1_was_dropped:
-            action Jump("lessonSixFillOne") 
+            action [lambda: IncrementRecitation6(), Jump("lessonSixFillOne")]
         else:
             action Jump("if_lsx0_wrong")
 
@@ -582,7 +586,7 @@ screen lesson_six_ls12_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_fsx_twl1_was_dropped and ans_fsx_twl2_was_dropped and ans_fsx_twl3_was_dropped:
-            action Jump("lessonSixFillThirteen") 
+            action [lambda: IncrementRecitation6(), Jump("lessonSixFillThirteen")]
         else:
             action Jump("if_lsx12_wrong")
 
@@ -988,7 +992,7 @@ screen lesson_six_ls19_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_fsx_nt1_was_dropped:
-            action Jump("lessonSixFillTwenty") 
+            action [lambda: IncrementRecitation6(), Jump("lessonSixFillTwenty")]
         else:
             action Jump("if_lsx19_wrong")
 
@@ -1408,7 +1412,7 @@ screen lesson_six_ls26_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_fsx_twts1_was_dropped and ans_fsx_twts2_was_dropped:
-            action Jump("lessonSixFillTwentyseven") 
+            action [lambda: IncrementRecitation6(), Jump("lessonSixFillTwentyseven")]
         else:
             action Jump("if_lsx26_wrong")
 
@@ -1969,7 +1973,7 @@ screen lesson_six_ls35_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_fsx_ttyfv1_was_dropped and ans_fsx_ttyfv2_was_dropped:
-            action Jump("lessonSixFillThirtysix") 
+            action [lambda: IncrementRecitation6(), Jump("lessonSixFillThirtysix")]
         else:
             action Jump("if_lsx35_wrong")
 

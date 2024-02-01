@@ -72,6 +72,24 @@ label lesson_six:
         $ ans_fsx_two2_was_dropped = False
         $ ans_fsx_two3_was_dropped = False
         scene l6f2
+
+        label l6Int6:
+            menu:
+                "Talk to classmate":
+                    jump start_hitting_teach3
+                    label opsl6_1:
+                        $ persistent.ast1_rudeness += 50
+                        jump skipped_l6
+                "Play with your classmate":
+                    jump begin_ho_mg6
+                    label opsl6_2:
+                        $ persistent.ast1_rudeness += 50
+                        jump skipped_l6
+                "Raise Hand":
+                    pass
+                "Ignore":
+                    jump lessonSixFillThree
+
         call screen lesson_six_ls2_fill
 
         label call_sx2:
@@ -90,6 +108,15 @@ label lesson_six:
         $ ans_fsx_thr1_was_dropped = False
         scene l6f3
         Tech "Submitting a form sends information to a database. The {b}name{/b} attribute is needed to submit the form data."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonSixFillFour
+
         call screen lesson_six_ls3_fill
 
         label call_sx3:
@@ -177,6 +204,15 @@ label lesson_six:
         $ ans_fsx_et2_was_dropped = False
         scene l6f8
         Tech "Complete the code"
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonSixFillNine
+
         call screen lesson_six_ls8_fill
 
         label call_sx8:
@@ -196,6 +232,15 @@ label lesson_six:
         scene l6f9
         Tech "Labels and drop-down menus are connected with {b}for{/b} and {b}id{/b} attributes, just like any other form element."
         Tech "Correctly connecting labels and form fields will increase hit area and improve accessibility."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonSixFillTen
+
         call screen lesson_six_ls9_fill
 
         label call_sx9:
@@ -253,6 +298,15 @@ label lesson_six:
         $ ans_fsx_twl2_was_dropped = False
         $ ans_fsx_twl3_was_dropped = False
         scene l6f12
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonSixFillThirteen
+
         call screen lesson_six_ls12_fill
 
         label call_sx12:
@@ -273,6 +327,15 @@ label lesson_six:
         $ ans_fsx_tht3_was_dropped = False
         $ ans_fsx_tht4_was_dropped = False
         scene l6f13
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonSixFillFourteen
+
         call screen lesson_six_ls13_fill
 
         label call_sx13:
@@ -349,6 +412,15 @@ label lesson_six:
         $ ans_fsx_egt2_was_dropped = False
         scene l6f18
         Tech "You can add video files in different formats. Common video formats are: {b}MP4, OGG and WebM{/b}."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonSixFillNineteen
+
         call screen lesson_six_ls18_fill
 
         label call_sx18:
@@ -383,6 +455,16 @@ label lesson_six:
         $ ans_fsx_twt2was_dropped = False
         scene l6f20
         Tech "You can add video files in different formats. Common video formats are: {b}MP4, OGG and WebM{/b}."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonSixFillTwentyone
+
+
         call screen lesson_six_ls20_fill
 
         label call_sx20:
@@ -401,6 +483,15 @@ label lesson_six:
         $ ans_fsx_twto2_was_dropped = False
         scene l6f21
         Tech "The type attribute specifies the format of the video file."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonSixFillTwentytwo
+
         call screen lesson_six_ls21_fill
 
         label call_sx21:
@@ -434,6 +525,16 @@ label lesson_six:
         $ ans_fsx_twth2_was_dropped = False
         scene l6f23
         Tech "Different media formats are needed for compatibility with different browsers and devices."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonSixFillTwentyfour
+
+
         call screen lesson_six_ls23_fill
 
         label call_sx23:
@@ -491,6 +592,15 @@ label lesson_six:
         $ ans_fsx_twts1_was_dropped = False
         $ ans_fsx_twts2_was_dropped = False
         scene l6f26
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonSixFillTwentyseven
+
         call screen lesson_six_ls26_fill
 
         label call_sx26:
@@ -557,6 +667,15 @@ label lesson_six:
         $ ans_fsx_tty3_was_dropped = False
         $ ans_fsx_tty4_was_dropped = False
         scene l6f30
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonVideoTakeaways
+
         call screen lesson_six_ls30_fill
 
         label call_sx30:
@@ -588,6 +707,15 @@ label lesson_six:
         $ ans_fsx_ttyo1_was_dropped = False
         $ ans_fsx_ttyo2_was_dropped = False
         scene l6f31
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonSixFillThirtytwo
+
         call screen lesson_six_ls31_fill
 
         label call_sx31:
@@ -641,6 +769,15 @@ label lesson_six:
         $ ans_fsx_ttyfr2_was_dropped = False
         scene l6f34
         Tech "Just like video, the {b}src attribute{/b} adds the audio file URL. The {b}type attribute{/b} adds the format."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonSixFillThirtyfive
+
         call screen lesson_six_ls34_fill
 
         label call_sx34:
@@ -659,6 +796,15 @@ label lesson_six:
         $ ans_fsx_ttyfv2_was_dropped = False
         scene l6f35
         Tech "Just like video, you can add audio files in different formats. Common audio formats are: MP3, OGG and WAV."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonSixFillThirtysix
+
         call screen lesson_six_ls35_fill
 
         label call_sx35:
@@ -779,6 +925,15 @@ label lesson_six:
         $ ans_fsx_fttw4_was_dropped = False
         scene l6f42
         Tech "You can use {b}autoplay{/b}, {b}muted{/b} and {b}loop{/b} attributes to control the behavior of the multimedia element. Just like {b}controls{/b}, these attributes have their default values omitted."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonSixFillFortythree
+
         call screen lesson_six_ls42_fill
 
         label call_sx42:

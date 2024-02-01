@@ -1,4 +1,7 @@
-
+init python:
+    def IncrementRecitation4():
+        persistent.ast2_recitation += 10
+        persistent.ast2_accuracy += 10
 
 default ans_ff_o1_was_dropped = False
 screen lesson_four_ls2_fill():
@@ -89,7 +92,7 @@ screen lesson_four_ls3_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_ff_th01_was_dropped and ans_ff_th02_was_dropped:
-            action Jump("lessonFourFillFour") 
+            action [lambda: IncrementRecitation4(), Jump("lessonFourFillFour")]
         else:
             action Jump("if_lf3_wrong")
 
@@ -379,7 +382,7 @@ screen lesson_four_ls6_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_ff_sx01_was_dropped and ans_ff_sx02_was_dropped:
-            action Jump("lessonFourFillSeven") 
+            action [lambda: IncrementRecitation4(), Jump("lessonFourFillSeven")] 
         else:
             action Jump("if_lf6_wrong")
 
@@ -716,7 +719,7 @@ screen lesson_four_ls13_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_ff_tt01_was_dropped and ans_ff_tt02_was_dropped and ans_ff_tt03_was_dropped:
-            action Jump("lessonFourFillFourteen") 
+            action [lambda: IncrementRecitation4(), Jump("lessonFourFillFourteen")]
         else:
             action Jump("if_lf13_wrong")
 
@@ -1080,7 +1083,7 @@ screen lesson_four_ls19_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_ff_nt01_was_dropped:
-            action Jump("lessonFourFillTwenty") 
+            action [lambda: IncrementRecitation4(), Jump("lessonFourFillTwenty")]
         else:
             action Jump("if_lf19_wrong")
 
@@ -1718,7 +1721,7 @@ screen lesson_four_ls26_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if  ans_ff_ts01_was_dropped and ans_ff_ts02_was_dropped and ans_ff_ts03_was_dropped:
-            action Jump("lessonLinkTakeaways") 
+            action [lambda: IncrementRecitation4(), Jump("lessonLinkTakeaways")]
         else:
             action Jump("if_lf26_wrong")
 

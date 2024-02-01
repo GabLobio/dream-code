@@ -1,4 +1,7 @@
-
+init python:
+    def IncrementRecitation5():
+        persistent.ast2_recitation += 5
+        persistent.ast2_accuracy += 5
 
 
 
@@ -13,7 +16,7 @@ screen lesson_five_ls1_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_ffive_o1_was_dropped:
-            action Jump("lessonFiveFilltwo") 
+            action [lambda: IncrementRecitation5(), Jump("lessonFiveFilltwo")]
         else:
             action Jump("if_lfv1_wrong")
 
@@ -674,7 +677,7 @@ screen lesson_five_ls15_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_ffv_fft1_was_dropped and ans_ffv_fft2_was_dropped and ans_ffv_fft3_was_dropped:
-            action Jump("lessonFiveFillSixteen") 
+            action [lambda: IncrementRecitation5(), Jump("lessonFiveFillSixteen")]
         else:
             action Jump("if_lfv15_wrong")
 
@@ -1171,7 +1174,7 @@ screen lesson_five_ls23_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_ffv_twth1_was_dropped:
-            action Jump("lessonFiveFillTwentyFour") 
+            action [lambda: IncrementRecitation5(), Jump("lessonFiveFillTwentyFour")]
         else:
             action Jump("if_lfv23_wrong")
 
@@ -1821,7 +1824,7 @@ screen lesson_five_ls36_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_ffv_thtsx1_was_dropped and ans_ffv_thtsx2_was_dropped:
-            action Jump("lessonFiveFillThirtynine") 
+            action [lambda: IncrementRecitation5(), Jump("lessonFiveFillThirtynine")]
         else:
             action Jump("if_lfv36_wrong")
 
@@ -2431,7 +2434,7 @@ screen lesson_five_ls46_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_ffv_ftysix1_was_dropped and ans_ffv_ftysix2_was_dropped:
-            action Jump("lessonFiveFillFourtyeight") 
+            action [lambda: IncrementRecitation5(),Jump("lessonFiveFillFourtyeight")]
         else:
             action Jump("if_lfv46_wrong")
 

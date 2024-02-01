@@ -111,7 +111,7 @@ label lesson_four:
                 "Raise Hand":
                     pass
                 "Ignore":
-                    jump lessonThreeFillThree
+                    jump lessonFourFillFour
 
         call screen lesson_four_ls3_fill
 
@@ -132,6 +132,15 @@ label lesson_four:
         $ ans_ff_fr02_was_dropped = False
         scene l4f4
         Tech "The {b}italic tags <i>{/b} is used to display text in italics."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFourFillFive
+
         call screen lesson_four_ls4_fill
 
         label call_fr4:
@@ -151,6 +160,15 @@ label lesson_four:
         $ ans_ff_fv02_was_dropped = False
         scene l4f5
         Tech "The {b}underline tags <u>{/b} is used to underline text"
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFourFillSix
+
         call screen lesson_four_ls5_fill
 
         label call_fr5:
@@ -170,6 +188,16 @@ label lesson_four:
         $ ans_ff_sx02_was_dropped = False
         scene l4f6
         Tech "Formatting tags are applied to text and are {b}nested{/b} inside {b}elements{/b}."
+
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFourFillSeven
+
         call screen lesson_four_ls6_fill
 
         label call_fr6:
@@ -190,6 +218,15 @@ label lesson_four:
         Tech "The code above shows how the formatting tags are nested inside the paragraph element."
         Tech "Run the code to see what the web browser will display"
         hide teacher_crossarm_smile
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFourFillEight
+
         call screen lesson_four_ls7_fill
 
         label when_run_four_seven:
@@ -209,6 +246,15 @@ label lesson_four:
         $ ans_ff_nn02_was_dropped = False
         scene l4f9
         Tech "There are some HTML formatting tags that you can use to make your web pages more accessible."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFourFillTen
+
         call screen lesson_four_ls9_fill
 
         label call_fr9:
@@ -229,6 +275,15 @@ label lesson_four:
         Tech"{b}Strong{/b} text is displayed in bold, just like when you use the {b}<b>{/b} tag." 
         Tech"Run the code to see what the web browser will display"
         hide teacher_crossarm_happy
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFourFillEleven
+
         call screen lesson_four_ls10_fill
 
         label when_run_four_ten:
@@ -244,6 +299,14 @@ label lesson_four:
         
         Tech"The {b}emphasis tag <em>{/b} is used to define emphasized text."
         
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFourFillTwelve
+
         call screen lesson_four_ls11_fill
 
         label call_fr11:
@@ -264,6 +327,15 @@ label lesson_four:
         Tech"Emphasized text is displayed in Italic, just like when you use the <i> tag. The difference is that the screen reader will verbally stress the words."
         Tech"Run the code to see what the web browser will display"
         hide teacher_crossarm_happy
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFourFillThirteen
+
         call screen lesson_four_ls12_fill
 
         label when_run_four_twelve:
@@ -279,6 +351,15 @@ label lesson_four:
         scene l4f13
         Tech"The <strong> and <em> tags are considered {b}semantic formatting tags{/b} because they add meaning to the content."
         Tech"They can serve as an indication of emphasis to a screen reader."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFourFillFourteen
+
         call screen lesson_four_ls13_fill
 
         label call_fr13:
@@ -355,6 +436,15 @@ label lesson_four:
         $ ans_ff_st02_was_dropped = False
         scene l4f16
         Tech "{b}Hyperlinks{/b} allows users to…"
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFourFillSeventeen
+
         call screen lesson_four_ls16_fill
 
         label call_fr16:
@@ -402,6 +492,16 @@ label lesson_four:
         $ ans_ff_egt01_was_dropped = False
         scene l4f18
         Tech "Hyperlinks are used to link from one web page to others. To create a link, you need {b}'href'{/b} to add the destination URL ."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFourFillNineteen
+
+
         call screen lesson_four_ls18_fill
 
         label call_fr18:
@@ -435,6 +535,15 @@ label lesson_four:
         $ ans_ff_tw01_was_dropped = False
         $ ans_ff_tw02_was_dropped = False
         scene l4f20
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFourFillTwentyOne
+
         call screen lesson_four_ls20_fill
 
         label call_fr20:
@@ -454,6 +563,15 @@ label lesson_four:
         $ ans_ff_two02_was_dropped = False
         scene l4f21
         Tech "The URL needs to be enclosed in quotes to work without errors. If you forget to add {b}href{/b} or the {b}quotes{/b}, the <a> tag won't create a hyperlink ."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFourFillTwentyTwo
+
         call screen lesson_four_ls21_fill
 
         label call_fr21:
@@ -495,6 +613,16 @@ label lesson_four:
         Tech "Something is wrong with this code. Can you fix it?"
         Tech "Hint: Try checking each line or number"
         hide teacher_crossarm_smile
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFourFillTwentyFour
+
+
         call screen lesson_four_ls23_fill
         
 
@@ -512,6 +640,15 @@ label lesson_four:
         Tech "You can nest hyperlinks inside other text elements "
         Tech "Run the code to see what the web browser will display"
         hide teacher_crossarm_smile
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonIntrFor25
+
         call screen lesson_four_ls24_fill
 
         label when_run_four_TwentyFour:
@@ -532,6 +669,15 @@ label lesson_four:
         $ ans_ff_tf03_was_dropped = False
         scene l4f25
         Tech "HTML stands for {b}HyperText Markup Language{/b}."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFourFillTwentySix
+
         call screen lesson_four_ls25_fill
 
         label call_fr25:
@@ -629,7 +775,16 @@ label lesson_four:
         $ ls4_numc += 1
         $ ans_ff_twtn01_was_dropped = False
         scene l4f29
-        call screen lesson_four_ls29_fill
+        
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFourThirty
+
+        call screen lessonFourThirty
 
         label call_fr29:
             $ ans_ff_twtn01_was_dropped = False
@@ -672,6 +827,15 @@ label lesson_four:
         $ ans_ff_thto02_was_dropped = False
         scene l4f31
         Tech "Use {b}unordered lists <ul>{/b} when the order of the items is not important. They are shown with bullet points"
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFourThirtyTwo
+
         call screen lesson_four_ls31_fill
 
         label call_fr31:
@@ -691,6 +855,8 @@ label lesson_four:
         scene l4f32
         Tech "You can nest a list inside another list"
         Tech "Run the code to see what the web browser will display"
+
+        
         call screen lesson_four_ls32_fill
 
         label when_run_four_32:

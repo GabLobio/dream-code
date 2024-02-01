@@ -92,6 +92,24 @@ label lesson_five:
         $ ans_ffv_two1_was_dropped = False
         scene l5f2
         Tech "For container tags, the attributes always go in the opening tag. The anchor tag is another example of an HTML element that requires an attribute to work correctly."
+
+        label l5Int5:
+            menu:
+                "Talk to classmate":
+                    jump start_hitting_teach3
+                    label opsl5_1:
+                        $ persistent.ast1_rudeness += 50
+                        jump skipped_l5
+                "Play with your classmate":
+                    jump begin_ho_mg5
+                    label opsl5_2:
+                        $ persistent.ast1_rudeness += 50
+                        jump skipped_l5
+                "Raise Hand":
+                    pass
+                "Ignore":
+                    jump lessonFiveFillthree
+
         call screen lesson_five_ls2_fill
 
         label call_fv2:
@@ -201,6 +219,15 @@ label lesson_five:
         $ ans_ffv_svn1_was_dropped = False
         $ ans_ffv_svn2_was_dropped = False
         scene l5f7
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFiveFillEight
+
         call screen lesson_five_ls7_fill
 
         label call_fv7:
@@ -221,6 +248,15 @@ label lesson_five:
         $ ans_ffv_egt2_was_dropped = False
         $ ans_ffv_egt3_was_dropped = False
         scene l5f8
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFiveFillNine
+
         call screen lesson_five_ls8_fill
 
         label call_fv8:
@@ -252,6 +288,15 @@ label lesson_five:
         $ ans_ffv_ten1_was_dropped = False
         $ ans_ffv_ten2_was_dropped = False
         scene l5f10
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFiveFillEleven
+
         call screen lesson_five_ls10_fill
 
         label call_fv10:
@@ -352,6 +397,15 @@ label lesson_five:
         $ ans_ffv_fft2_was_dropped = False
         $ ans_ffv_fft3_was_dropped = False
         scene l5f15
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFiveFillSixteen
+
         call screen lesson_five_ls15_fill
 
         label call_fv15:
@@ -372,6 +426,15 @@ label lesson_five:
         $ ans_ffv_sixt1_was_dropped = False
         $ ans_ffv_sixt2_was_dropped = False
         scene l5f16
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFiveFillSeventeen
+
         call screen lesson_five_ls16_fill
 
         label call_fv16:
@@ -391,6 +454,15 @@ label lesson_five:
         $ ans_ffv_sevt1_was_dropped = False
         scene l5f17
         Tech "The {b}<nav>{/b} container tag defines a set of links that allows the user to navigate between pages of a website."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFiveFillEighteen
+
         call screen lesson_five_ls17_fill
 
         label call_fv17:
@@ -412,6 +484,15 @@ label lesson_five:
         $ ans_ffv_eght4_was_dropped = False
         scene l5f18
         Tech "Links to the different pages are added with the anchor tag <a> and nested inside the <nav> container tag."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFiveFillNineteen
+
         call screen lesson_five_ls18_fill
 
         label call_fv18:
@@ -433,6 +514,15 @@ label lesson_five:
         $ ans_ffv_nnt1_was_dropped = False
         scene l5f19
         Tech "The HTML project for a multi-page website is made of different HTML documents (or files)."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFiveFillTwenty
+
         call screen lesson_five_ls19_fill
 
         label call_fv19:
@@ -514,6 +604,15 @@ label lesson_five:
         $ ans_ffv_twtf1_was_dropped = False
         scene l5f24
         Tech "To jump to a specific part of a single-page website, first you need to mark the section with the {b}id (ID){/b} attribute."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFiveFillTwentyFive
+
         call screen lesson_five_ls24_fill
 
         label call_fv24:
@@ -533,6 +632,15 @@ label lesson_five:
         $ ans_ffv_twtfv2_was_dropped = False
         scene l5f25
         Tech "The {b}id{/b} attribute is used to identify the element you want to target with the navigation link."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFiveFillTwentySeven
+
         call screen lesson_five_ls25_fill
 
         label call_fv25:
@@ -553,6 +661,16 @@ label lesson_five:
         $ ans_ffv_twtsv1_was_dropped = False
         $ ans_ffv_twtsv2_was_dropped = False
         scene l5f27
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFiveFillTwentyEight
+
+
         call screen lesson_five_ls27_fill
 
         label call_fv27:
@@ -591,6 +709,16 @@ label lesson_five:
         $ ans_ffv_twtn1_was_dropped = False
         scene l5f29
         Tech "Forms are made of input elements like text fields, checkboxes, and submit buttons. These input elements are nested inside the <form> container tag."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFiveFillThirty
+
+
         call screen lesson_five_ls29_fill
 
         label call_fv29:
@@ -678,6 +806,15 @@ label lesson_five:
         $ ans_ffv_thtfv1_was_dropped = False
         scene l5f35
         Tech "The {b}id{/b} attribute is used to identify a unique input element. The {b}for{/b} attribute in a label targets (and matches!) an input`s id. "
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFiveFillThirtysix
+
         call screen lesson_five_ls35_fill
 
         label call_fv35:
@@ -697,6 +834,15 @@ label lesson_five:
         $ ans_ffv_thtsx2_was_dropped = False
         scene l5f36
         Tech "To connect labels and inputs, their {b}id{/b} and {b}for{/b} attribute values must match up exactly."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFiveFillThirtynine
+
         call screen lesson_five_ls36_fill
 
         label call_fv36:
@@ -760,6 +906,16 @@ label lesson_five:
         $ ans_ffv_ftyo3_was_dropped = False
         $ ans_ffv_ftyo4_was_dropped = False
         scene l5f41
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFiveFillFourtytwo
+
+
         call screen lesson_five_ls41_fill
 
         label call_fv41:
@@ -833,6 +989,15 @@ label lesson_five:
         $ ans_ffv_ftyfr2_was_dropped = False
         scene l5f44
         Tech "A {b}submit{/b} button is used to send the data in a form. The {b}submit{/b} type of input adds a button to the form."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFiveFillFourtyfive
+
         call screen lesson_five_ls44_fill
 
         label call_fv44:
@@ -876,6 +1041,15 @@ label lesson_five:
         $ ans_ffv_ftysix2_was_dropped = False
         scene l5f46
         Tech "The {b}name{/b} attribute is used to reference the data after submitting the form "
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFiveFillFourtyseven
+
         call screen lesson_five_ls46_fill
 
         label call_fv46:
@@ -957,6 +1131,15 @@ label lesson_five:
         $ ans_ffv_ffyo2_was_dropped = False
         scene l5f51
         Tech "Remember labels and input fields need to be correctly paired"
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFiveFillFiftytwo
+
         call screen lesson_five_ls51_fill
 
         label call_fv51:
@@ -997,6 +1180,15 @@ label lesson_five:
         $ ans_ffv_ffyth2_was_dropped = False
         scene l5f53
         Tech "Names and values are needed to correctly store information in the database. The HTML code needs to include where and what to put in the database."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonFiveFillFiftyfour
+
         call screen lesson_five_ls53_fill
 
         label call_fv53:
