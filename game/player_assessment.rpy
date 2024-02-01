@@ -586,23 +586,23 @@ label assessment_three:
             visible={"base":False}
         )
 
-    $ persistent.ast3_kindness = 80
-    $ persistent.ast3_rudeness = 90
-    $ persistent.ast3_recitation = 40
-    $ persistent.ast3_participation = 50
-    $ persistent.ast3_accuracy = 50
+    #$ persistent.ast3_kindness = 80
+    #$ persistent.ast3_rudeness = 90
+    #$ persistent.ast3_recitation = 40
+    #$ persistent.ast3_participation = 50
+    #$ persistent.ast3_accuracy = 50
 
     # lesson 7
-    $ persistent.lesson_7_quiz7 = 4
-    $ persistent.lesson_7_act7 = 9
+    #$ persistent.lesson_7_quiz7 = 4
+    #$ persistent.lesson_7_act7 = 9
 
     # Lesson 8
-    $ persistent.lesson_8_quiz8 = 4  # Written Works 10%
-    $ persistent.lesson_8_act8 = 9  # Performance Task 10%
+    #$ persistent.lesson_8_quiz8 = 4  # Written Works 10%
+    #$ persistent.lesson_8_act8 = 9  # Performance Task 10%
 
     # Lesson 9 
-    $ persistent.lesson_9_quiz9 = 4  # Written Works 10%
-    $ persistent.lesson_9_act9 = 9  # Performance Task 10%
+    #$ persistent.lesson_9_quiz9 = 4  # Written Works 10%
+    #$ persistent.lesson_9_act9 = 9  # Performance Task 10%
 
 
     $ persistent.q3_exam_score = 10 # Exam 20%
@@ -749,15 +749,15 @@ label assessment_four:
             visible={"base":False}
         )
 
-    $ persistent.ast4_kindness = 80
-    $ persistent.ast4_rudeness = 90
-    $ persistent.ast4_recitation = 40
-    $ persistent.ast4_participation = 50
-    $ persistent.ast4_accuracy = 50
+    #$ persistent.ast4_kindness = 80
+    #$ persistent.ast4_rudeness = 90
+    #$ persistent.ast4_recitation = 40
+    #$ persistent.ast4_participation = 50
+    #$ persistent.ast4_accuracy = 50
 
     # lesson 7
-    $ persistent.lesson_10_quiz10 = 4
-    $ persistent.lesson_10_act10 = 9
+    #$ persistent.lesson_10_quiz10 = 4
+    #$ persistent.lesson_10_act10 = 9
 
 
     $ persistent.q4_exam_score = 10 # Exam 20%

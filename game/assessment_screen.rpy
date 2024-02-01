@@ -225,6 +225,12 @@ screen q2_assesment():
     
     text "[behavior_fb_result]" size 20 color "#ffffff" xpos(90) ypos(875)
 
+    imagebutton:
+        xpos 1770
+        ypos 30
+        idle "images/interactive_button/next_button.png"
+        hover "images/interactive_button/next_button_hover.png"
+        action ShowMenu("lesson_ui")
 
     frame:
         background None
@@ -292,7 +298,13 @@ screen q3_assesment():
     
     text "[behavior_fb_result]" size 20 color "#ffffff" xpos(90) ypos(875)
 
-
+    imagebutton:
+        xpos 1770
+        ypos 30
+        idle "images/interactive_button/next_button.png"
+        hover "images/interactive_button/next_button_hover.png"
+        action ShowMenu("lesson_ui")
+        
     frame:
         background None
         xysize (300, 300)

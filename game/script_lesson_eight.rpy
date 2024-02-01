@@ -1,6 +1,7 @@
 
 
 label lesson_eight:
+    $ persistent.rude_lesson = "eight"
     scene bg_classroom
     if lesson_seven_finish:
         jump lessonStyleIntro
@@ -8,6 +9,8 @@ label lesson_eight:
         Tech "Please finish lesson 7"
         call screen lesson_ui
 
+    $ persistent.lesson_8_quiz8 = 0
+    $ persistent.lesson_8_act8 = 0
 
     label lessonStyleIntro:
 
@@ -59,6 +62,7 @@ label lesson_eight:
         scene l8f3
         Tech"The style attribute can make your life a whole lot easier when it comes to formatting. You can customize multiple properties at the same time."
         Tech"Just separate each property:value pair with a {b}semicolon (;){/b}"
+        
         call screen lesson_eight_ls3_fill
 
         label call_et3:
@@ -98,6 +102,23 @@ label lesson_eight:
         $ ans_fet_fv2_was_dropped = False
         scene l8f5
         Tech "You can control the font size with the {b}font-size{/b} property."
+
+        label l8Int8:
+            menu:
+                "Talk to classmate":
+                    jump start_hitting_teach3
+                    label opsl8_1:
+                        $ persistent.ast3_rudeness += 25
+                        jump skipped_l8
+                "Play with your classmate":
+                    jump begin_ho_mg8
+                    label opsl8_2:
+                        $ persistent.ast3_rudeness += 25
+                        jump skipped_l8
+                "Raise Hand":
+                    pass
+                "Ignore":
+                    jump lessonEightFillSix
 
         call screen lesson_eight_ls5_fill
 
@@ -157,6 +178,14 @@ label lesson_eight:
         $ ans_fet_et2_was_dropped = False
         scene l8f8
         e "The {b}background-color{/b} property is useful for styling elements like buttons."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonEightFillNine
 
         call screen lesson_eight_ls8_fill
 
@@ -234,6 +263,14 @@ label lesson_eight:
         $ ans_fet_twv2_was_dropped = False
         scene l8f12
         Tech"Some style properties require multiple values. The border property is an example of that"
+        
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonEightFillThirteen
 
         call screen lesson_eight_ls12_fill
 
@@ -254,6 +291,14 @@ label lesson_eight:
         $ ans_fet_tht3_was_dropped = False
         scene l8f13
         Tech "The {b}border property{/b} is a short and simple way to refer to 3 different sub-properties. That’s why it can take 3 values."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonStyleTakeaways
 
         call screen lesson_eight_ls13_fill
 
@@ -284,6 +329,14 @@ label lesson_eight:
         $ ans_fet_ft2_was_dropped = False
         scene l8f14
         Tech "The {b}border{/b} property’s great for helping us see the difference between these 2 types of HTML element."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonEightFillFifteen
 
         call screen lesson_eight_ls14_fill
 
@@ -316,6 +369,14 @@ label lesson_eight:
         scene l8f16
         Tech"Block-level elements always start on a new line.\nInline elements don't start on a new line."
 
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonEightFillSeventeen
+
         call screen lesson_eight_ls16_fill
 
         label call_et16:
@@ -334,6 +395,14 @@ label lesson_eight:
         $ ans_fet_svt2_was_dropped = False
         scene l8f17
         Tech"Block-level elements take up the full width available.\nInline elements only take up as much width as necessary."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonEightFillEightteen
 
         call screen lesson_eight_ls17_fill
 
@@ -371,6 +440,14 @@ label lesson_eight:
         $ ans_fet_nt3_was_dropped = False
         scene l8f19
         Tech"Format tags are inline elements."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonEightFillTwenty
 
         call screen lesson_eight_ls19_fill
 
@@ -411,6 +488,14 @@ label lesson_eight:
         $ ans_fet_twto3_was_dropped = False
         scene l8f21
         Tech "Format tags are inline elements."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonEightFillTwentytwo
 
         call screen lesson_eight_ls21_fill
 
@@ -569,9 +654,17 @@ label lesson_eight:
     
     play music "audio/quiz.mp3" volume 0.5
 
+    $ persistent.ast3_participation += 25
+    label skipped_l8:
+
     jump start_quiz_07
 
     label pagtapos_ng_quiz_7:
+
+    $ persistent.lesson_8_quiz8 = persistent_quiz_07_q_counter_correct_answer
+    $ persistent.lesson_8_act8 = 3
+
+
 
     stop music fadeout 1.0
 

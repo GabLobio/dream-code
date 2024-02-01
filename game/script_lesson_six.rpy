@@ -1106,6 +1106,7 @@ label lesson_six:
     blank "End of chapter 6"
     
     $ lesson_six_finish = True
+    jump assessment_two
     call screen lesson_ui
 
 

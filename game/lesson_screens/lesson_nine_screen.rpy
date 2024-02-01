@@ -7,7 +7,10 @@
 
 
 
-
+init python:
+    def IncrementRecitation9():
+        persistent.ast3_recitation += 5
+        persistent.ast3_accuracy += 5
 
 
 default ans_fnn_o1_was_dropped = False
@@ -21,7 +24,7 @@ screen lesson_nine_ls1_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_fnn_o1_was_dropped:
-            action Jump("lessonNineFillTwo") 
+            action [lambda: IncrementRecitation9(), Jump("lessonNineFillTwo")]
         else:
             action Jump("if_lnn1_wrong")
         
@@ -134,7 +137,7 @@ screen lesson_nine_ls5_fill():
         if input_1_value == "" and input_2_value == "" and input_3_value == "" and input_4_value == "" and input_5_value == "":
             action ShowMenu("error_msg_nine")
         elif input_1_value == "<div>" and input_2_value == "<h2>" and input_3_value == "</h2>" and input_4_value == "<p>" and input_5_value == "src":
-            action Jump("if_ln5_correct")
+            action [lambda: IncrementRecitation9(), Jump("if_ln5_correct")]
         else:
             action ShowMenu("error_msg_nine")
 
@@ -313,7 +316,7 @@ screen lesson_nine_ls9_fill():
         if input_1_value == "" and input_2_value == "" and input_3_value == "" and input_4_value == "" and input_5_value == "":
             action ShowMenu("error_msg_nine")
         elif input_1_value == "<div>" and input_2_value == "<h2>" and input_3_value == "</h2>" and input_4_value == "<p>" and input_5_value == "src":
-            action Jump("if_ln5_correct")
+            action [lambda: IncrementRecitation9(), Jump("if_ln5_correct")]
         else:
             action ShowMenu("error_msg_nine")
 
@@ -485,7 +488,7 @@ screen lesson_nine_ls12_fill():
         hover "images/interactive_button/next_button_hover.png"
 
         if ans_fnn_twv1_was_dropped and ans_fnn_twv2_was_dropped:
-            action Jump("lessonNineFillThirteen") 
+            action [lambda: IncrementRecitation9(), Jump("lessonNineFillThirteen")]
         else:
             action Jump("if_nnt12_wrong")
         
@@ -572,7 +575,7 @@ screen lesson_nine_ls17_fill():
         if input_1_value == "" and input_2_value == "":
             action ShowMenu("error_msg_nine")
         elif input_1_value == "style" and input_2_value == "</div>":
-            action Jump("if_ln17_correct")
+            action [lambda: IncrementRecitation9(), Jump("if_ln17_correct")]
         else:
             action ShowMenu("error_msg_nine")
 

@@ -5,7 +5,10 @@
 
 
 
-
+init python:
+    def IncrementRecitation10():
+        persistent.ast4_recitation += 20
+        persistent.ast4_accuracy += 20
 
 
 default ans_ften_o1_was_dropped = False
@@ -19,7 +22,7 @@ screen lesson_ten_ls1_fill():
         idle "images/interactive_button/next_button.png"
         hover "images/interactive_button/next_button_hover.png"
         if ans_ften_o1_was_dropped and ans_ften_o2_was_dropped:
-            action Jump("lessonTenFillTwo") 
+            action [lambda: IncrementRecitation10(), Jump("lessonTenFillTwo")]
         else:
             action Jump("if_lten1_wrong")
         
@@ -204,7 +207,7 @@ screen lesson_ten_ls4_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_ften_fr1_was_dropped and ans_ften_fr2_was_dropped and ans_ften_fr3_was_dropped and ans_ften_fr4_was_dropped:
-            action Jump("lessonTenFillFive") 
+            action [lambda: IncrementRecitation10(), Jump("lessonTenFillFive")]
         else:
             action Jump("if_lten4_wrong")
         
@@ -436,7 +439,7 @@ screen lesson_ten_ls10_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_ften_t1_was_dropped and ans_ften_t2_was_dropped:
-            action Jump("lessonTenFillEleven") 
+            action [lambda: IncrementRecitation10(), Jump("lessonTenFillEleven")]
         else:
             action Jump("if_lten10_wrong")
         
@@ -616,7 +619,7 @@ screen lesson_ten_ls13_fill():
         idle "images/interactive_button/next_button.png"
         hover "images/interactive_button/next_button_hover.png"
         if ans_ften_thtt1_was_dropped and ans_ften_thtt2_was_dropped:
-            action Jump("lessonTenFillFourteen") 
+            action [lambda: IncrementRecitation10(), Jump("lessonTenFillFourteen")]
         else:
             action Jump("if_lten13_wrong")
         
@@ -738,7 +741,7 @@ screen lesson_nine_ls19_fill():
         if input_1_value == "" and input_2_value == "" and input_3_value == "" and input_4_value == "" and input_5_value == "" and input_6_value == "":
             action ShowMenu("error_msg_nine")
         elif input_1_value == "<table>" and input_2_value == "<th>" and input_3_value == "</th>" and input_4_value == "</tr>" and input_5_value == "</td>" and input_6_value == "<tr>":
-            action Jump("if_ln19_correct")
+            action [lambda: IncrementRecitation10(), Jump("if_ln19_correct")]
         else:
             action ShowMenu("error_msg_nine")
 

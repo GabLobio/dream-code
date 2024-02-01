@@ -1,5 +1,8 @@
 
-
+init python:
+    def IncrementRecitation7():
+        persistent.ast3_recitation += 10
+        persistent.ast3_accuracy += 10
 
 
 
@@ -16,7 +19,7 @@ screen lesson_seven_ls1_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_fsv_o1_was_dropped and ans_fsv_o2_was_dropped and ans_fsv_o3_was_dropped:
-            action Jump("lessonSevenFillTwo") 
+            action [lambda: IncrementRecitation7(), Jump("lessonSevenFillTwo")]
         else:
             action Jump("if_lsv1_wrong")
 
@@ -287,7 +290,7 @@ screen lesson_seven_ls4_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_fsv_fr1_was_dropped and ans_fsv_fr2_was_dropped:
-            action Jump("lessonSevenFillFive") 
+            action [lambda: IncrementRecitation7(), Jump("lessonSevenFillFive")]
         else:
             action Jump("if_lsv4_wrong")
 
@@ -557,7 +560,7 @@ screen lesson_seven_ls14_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_fsv_ft1_was_dropped:
-            action Jump("lessonSevenFillFifteen") 
+            action [lambda: IncrementRecitation7(), Jump("lessonSevenFillFifteen")]
         else:
             action Jump("if_lsv14_wrong")
 
@@ -719,7 +722,7 @@ screen lesson_seven_ls18_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_fsv_et1_was_dropped:
-            action Jump("lessonSevenFillNineteen") 
+            action [lambda: IncrementRecitation7(), Jump("lessonSevenFillNineteen")]
         else:
             action Jump("if_lsv18_wrong")
 
@@ -884,7 +887,7 @@ screen lesson_seven_ls22_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_fsv_twtt1_was_dropped and ans_fsv_twtt2_was_dropped:
-            action Jump("lessonSevenFillTwentythree") 
+            action [lambda: IncrementRecitation7(), Jump("lessonSevenFillTwentythree")]
         else:
             action Jump("if_lsv22_wrong")
 

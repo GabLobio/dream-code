@@ -16,6 +16,14 @@ label lesson_ten:
         e"Please finish lesson 9"
         call screen lesson_ui
 
+    $ persistent.ast4_kindness = 10
+    $ persistent.ast4_rudeness = 10
+    $ persistent.ast4_recitation = 5
+    $ persistent.ast4_participation = 5
+    $ persistent.ast4_accuracy = 5
+
+    $ persistent.lesson_10_quiz10 = 0
+    $ persistent.lesson_10_act10 = 0
 
     label lessonTableIntro:
         $ show_quick_menu = False
@@ -70,6 +78,24 @@ label lesson_ten:
         $ ans_ften_thr3_was_dropped = False
         scene l10f3
         e"You can add rows to a table with the {b}<tr>{/b} (table row) container tag. Rows are nested inside the <table> tag."
+
+        label l10Int10:
+            menu:
+                "Talk to classmate":
+                    jump start_hitting_teach3
+                    label opsl10_1:
+                        $ persistent.ast4_rudeness += 100
+                        jump skipped_l10
+                "Play with your classmate":
+                    jump begin_ho_mg10
+                    label opsl10_2:
+                        $ persistent.ast4_rudeness += 100
+                        jump skipped_l10
+                "Raise Hand":
+                    pass
+                "Ignore":
+                    jump lessonTenFillFour
+
         call screen lesson_ten_ls3_fill
 
         label call_ten3:
@@ -363,9 +389,15 @@ label lesson_ten:
     
     play music "audio/quiz.mp3" volume 0.5
 
+    $ persistent.ast4_participation += 100
+    label skipped_l10:
+
     jump start_quiz_09
 
     label pagtapos_ng_quiz_9:
+
+    $ persistent.lesson_10_quiz10 = persistent_quiz_09_q_counter_correct_answer
+    $ persistent.lesson_10_act10 = 6
 
     stop music fadeout 1.0
 
@@ -389,6 +421,7 @@ label lesson_ten:
 
 
     $ lesson_ten_finish = True
+    jump assessment_four
     call screen lesson_ui
 
 

@@ -15,6 +15,7 @@
 
 
 label lesson_nine:
+    $ persistent.rude_lesson = "nine"
     scene bg_classroom
     if lesson_eight_finish:
         jump lessonDivideIntro
@@ -22,6 +23,8 @@ label lesson_nine:
         e "Please finish lesson 8"
         call screen lesson_ui
 
+    $ persistent.lesson_9_quiz9 = 0
+    $ persistent.lesson_9_act9 = 0
 
     label lessonDivideIntro:
 
@@ -104,6 +107,24 @@ label lesson_nine:
     label lessonNineFillFive:
         scene l9f5
         e"Let's practice again"
+
+        label l9Int9:
+            menu:
+                "Talk to classmate":
+                    jump start_hitting_teach3
+                    label opsl9_1:
+                        $ persistent.ast3_rudeness += 25
+                        jump skipped_l9
+                "Play with your classmate":
+                    jump begin_ho_mg9
+                    label opsl9_2:
+                        $ persistent.ast3_rudeness += 25
+                        jump skipped_l9
+                "Raise Hand":
+                    pass
+                "Ignore":
+                    jump lessonNineFillSix
+
         call screen lesson_nine_ls5_fill
 
         label if_ln5_correct:
@@ -199,6 +220,15 @@ label lesson_nine:
         $ ans_fnn_twv2_was_dropped = False
         scene l9f12
         e"Complete the code to make the text in the paragraph blue"
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonNineFillThirteen
+
         call screen lesson_nine_ls12_fill
 
         label call_nn12:
@@ -311,9 +341,15 @@ label lesson_nine:
     
     play music "audio/quiz.mp3" volume 0.5
 
+    $ persistent.ast3_participation += 25
+    label skipped_l9:
+
     jump start_quiz_08
 
     label pagtapos_ng_quiz_8:
+
+    $ persistent.lesson_9_quiz9 = persistent_quiz_08_q_counter_correct_answer
+    $ persistent.lesson_9_act9 = 8
 
     stop music fadeout 1.0
 
@@ -338,6 +374,7 @@ label lesson_nine:
 
 
     $ lesson_nine_finish = True
+    jump assessment_three
     call screen lesson_ui
 
 

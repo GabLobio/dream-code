@@ -55,11 +55,11 @@ label lesson_four:
     show screen timeplayedbutton
     # Start ng Time ###############
 
-    #if lesson_three_finish:
-        #jump lessonFourFillOne
-    #else:
-    #    Tech "Please finish lesson 3"
-    #    call screen lesson_ui  
+    if lesson_three_finish:
+        jump lessonFourFillOne
+    else:
+        Tech "Please finish lesson 3"
+        call screen lesson_ui  
 
     
     label lessonFourFillOne:
@@ -101,12 +101,12 @@ label lesson_four:
                 "Talk to classmate":
                     jump start_hitting_teach3
                     label opsl4_1:
-                        $ persistent.ast1_rudeness += 50
+                        $ persistent.ast2_rudeness += 50
                         jump skipped_l4
                 "Play with your classmate":
                     jump begin_ho_mg4
                     label opsl4_2:
-                        $ persistent.ast1_rudeness += 50
+                        $ persistent.ast2_rudeness += 50
                         jump skipped_l4
                 "Raise Hand":
                     pass

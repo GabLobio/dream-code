@@ -368,7 +368,6 @@ label start:
     ## ║ temporary please erase ║
     ## ╚════════════════════════╝ 
 
-    jump lesson_four
 
     jump chapter_1_01
 

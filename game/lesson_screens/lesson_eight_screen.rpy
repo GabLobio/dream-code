@@ -1,4 +1,7 @@
-
+init python:
+    def IncrementRecitation8():
+        persistent.ast3_recitation += 5
+        persistent.ast3_accuracy += 5
 
 
 
@@ -14,7 +17,7 @@ screen lesson_eight_ls1_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_fet_o1_was_dropped:
-            action Jump("lessonEightFillTwo") 
+            action [lambda: IncrementRecitation8(), Jump("lessonEightFillTwo")]
         else:
             action Jump("if_let1_wrong")
 
@@ -350,7 +353,7 @@ screen lesson_eight_ls8_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_fet_et1_was_dropped and ans_fet_et2_was_dropped:
-            action Jump("lessonEightFillNine") 
+            action [lambda: IncrementRecitation8(), Jump("lessonEightFillNine")]
         else:
             action Jump("if_let8_wrong")
 
@@ -542,7 +545,7 @@ screen lesson_eight_ls11_fill():
         if input_one_value == "" and input_two_value == "" and input_three_value == "":
             action ShowMenu("error_msg_et")
         elif input_one_value == "style" and input_two_value == "black" and input_three_value == "color":
-            action Jump("if_le11_correct")
+            action [lambda: IncrementRecitation8(), Jump("if_le11_correct")]
         else:
             action ShowMenu("error_msg_et")
 
@@ -828,7 +831,7 @@ screen lesson_eight_ls14_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_fet_ft1_was_dropped and ans_fet_ft2_was_dropped:
-            action Jump("lessonEightFillFifteen") 
+            action [lambda: IncrementRecitation8(), Jump("lessonEightFillFifteen")]
         else:
             action Jump("if_let14_wrong")
 
@@ -1091,7 +1094,7 @@ screen lesson_eight_ls19_fill():
         hover "images/interactive_button/next_button_hover.png"
         
         if ans_fet_nt1_was_dropped and ans_fet_nt2_was_dropped and ans_fet_nt3_was_dropped:
-            action Jump("lessonEightFillTwenty") 
+            action [lambda: IncrementRecitation8(), Jump("lessonEightFillTwenty")]
         else:
             action Jump("if_let19_wrong")
 

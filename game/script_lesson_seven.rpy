@@ -9,6 +9,9 @@
 
 
 label lesson_seven:
+    $ persistent.rude_lesson = "seven"
+
+
     scene bg_classroom
     if lesson_six_finish:
         jump lessonPageIntro
@@ -16,6 +19,14 @@ label lesson_seven:
         Tech "Please finish lesson 6"
         call screen lesson_ui
 
+    $ persistent.ast3_kindness = 10
+    $ persistent.ast3_rudeness = 10
+    $ persistent.ast3_recitation = 5
+    $ persistent.ast3_participation = 5
+    $ persistent.ast3_accuracy = 5
+
+    $ persistent.lesson_7_quiz7 = 0
+    $ persistent.lesson_7_act7 = 0
 
     label lessonPageIntro:
 
@@ -70,6 +81,24 @@ label lesson_seven:
         $ ans_fsv_thr2_was_dropped = False
         scene l7f3 
         Tech"The {b}header{/b} often contains navigation links, a menu and/or a search bar. Brand elements like logos are usually found in the header too."
+
+        label l7Int7:
+            menu:
+                "Talk to classmate":
+                    jump start_hitting_teach3
+                    label opsl7_1:
+                        $ persistent.ast3_rudeness += 50
+                        jump skipped_l7
+                "Play with your classmate":
+                    jump begin_ho_mg7
+                    label opsl7_2:
+                        $ persistent.ast3_rudeness += 50
+                        jump skipped_l7
+                "Raise Hand":
+                    pass
+                "Ignore":
+                    jump lessonSevenFillFour
+
         call screen lesson_seven_ls3_fill
 
         label call_sv3:
@@ -107,6 +136,15 @@ label lesson_seven:
         scene l7f5
         Tech"The {b}<footer>{/b} container tag often contains contact and legal information and links."
         Tech"You can have several {b}<footer>{/b} elements in one document."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonSevenFillSix
+
         call screen lesson_seven_ls5_fill
 
         label call_sv5:
@@ -194,6 +232,15 @@ label lesson_seven:
         $ ans_fsv_ten2_was_dropped = False
         $ ans_fsv_ten3_was_dropped = False
         scene l7f10 
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonSevenFillEleven
+
         call screen lesson_seven_ls10_fill
 
         label call_sv10:
@@ -261,6 +308,15 @@ label lesson_seven:
         $ ans_fsv_fft2_was_dropped = False
         scene l7f15 
         Tech "An article is content that would make sense on its own."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonSevenFillSixteen
+
         call screen lesson_seven_ls15_fill
 
         label call_sv15:
@@ -338,6 +394,15 @@ label lesson_seven:
         $ ans_fsv_nt2_was_dropped = False
         scene l7f19 
         Tech "{b}<section>{/b} helps to break down the content into parts."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonSevenFillTwenty
+
         call screen lesson_seven_ls19_fill
 
         label call_sv19:
@@ -400,6 +465,15 @@ label lesson_seven:
         $ ans_fsv_twtt2_was_dropped = False
         scene l7f22
         Tech"{b}<aside>{/b} is used for secondary, additional or somehow related content."
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonSevenFillTwentythree
+
         call screen lesson_seven_ls22_fill
 
         label call_sv22:
@@ -474,6 +548,15 @@ label lesson_seven:
         $ ans_fsv_twts1_was_dropped = False
         $ ans_fsv_twts2_was_dropped = False
         $ ans_fsv_twts3_was_dropped = False
+
+        e "Anyone wants to answer this problem?"
+        menu:
+            "Raise Hand":
+                pass
+
+            "Ignore":
+                jump lessonLayoutTakeaways
+
         call screen lesson_seven_ls27_fill
 
         label call_sv27:
@@ -496,9 +579,15 @@ label lesson_seven:
     
     play music "audio/quiz.mp3" volume 0.5
 
+    $ persistent.ast3_participation += 50
+    label skipped_l7:
+
     jump start_quiz_06
 
     label pagtapos_ng_quiz_6:
+
+    $ persistent.lesson_7_quiz7 = persistent_quiz_06_q_counter_correct_answer
+    $ persistent.lesson_7_act7 = 6
 
     stop music fadeout 1.0
 
