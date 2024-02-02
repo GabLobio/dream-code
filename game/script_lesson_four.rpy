@@ -32,6 +32,7 @@ screen chp_four_assessment():
 
 
 label lesson_four:
+    $ persistent.previous_overall_grade = persistent.overall_grade
     scene bg_classroom
     $ persistent.rude_lesson = "four"
 

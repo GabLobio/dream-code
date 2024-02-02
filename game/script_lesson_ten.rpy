@@ -8,13 +8,15 @@
 
 
 label lesson_ten:
+    #$ persistent.q3_previous_overall_grade = q3_overall_grade
+    $ persistent.rude_lesson = "ten"
     scene bg_classroom
 
-    if lesson_nine_finish:
-        jump lessonTableIntro
-    else:
-        e"Please finish lesson 9"
-        call screen lesson_ui
+    #if lesson_nine_finish:
+    #    jump lessonTableIntro
+    #else:
+    #    e"Please finish lesson 9"
+    #    call screen lesson_ui
 
     $ persistent.ast4_kindness = 10
     $ persistent.ast4_rudeness = 10

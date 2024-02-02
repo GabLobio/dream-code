@@ -9,6 +9,7 @@
 
 
 label lesson_seven:
+    $ persistent.q2_previous_overall_grade = persistent.q2_overall_grade
     $ persistent.rude_lesson = "seven"
 
 

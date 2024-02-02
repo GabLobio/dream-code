@@ -198,7 +198,7 @@ screen input(prompt):
     frame:
         background Frame("assets_gui/quiz_mini_window.png", Borders (25,25,25,25))
         xalign 0.5
-        yalign 0.5
+        ypos 0.5
         xpadding 30
         ypadding 30
         vbox:
