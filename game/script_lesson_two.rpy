@@ -535,7 +535,14 @@ label lesson_two:
 
         # Lesson 2 
     $ persistent.lesson_2_quiz2 = persistent_quiz_01_q_counter_correct_answer  # Written Works 10%
-    $ persistent.lesson_2_act2 = 4  # Performance Task 10%
+
+
+    Tech "Great job on the quiz, class! You all did fantastic."
+
+    Tech "Now, let's move on to our next activity. Today, we'll be diving into an exciting project related to what you've just learned."
+    jump l2_act2
+    label pagtapos_ng_act_2:
+        
 
     stop music fadeout 1.0
 

@@ -268,18 +268,18 @@ label assessment_one:
     
     
     # Lesson 1 
-    $ persistent.lesson_1_quiz1 = 5  # Written Works 20%
-    $ persistent.lesson_1_act1 = 6  # Performance Task 20%
+    #$ persistent.lesson_1_quiz1 = 5  # Written Works 20%
+    #$ persistent.lesson_1_act1 = 6  # Performance Task 20%
 
     # Lesson 2 
-    $ persistent.lesson_2_quiz2 = 8  # Written Works 10%
-    $ persistent.lesson_2_act2 = 4  # Performance Task 10%
+    #$ persistent.lesson_2_quiz2 = 8  # Written Works 10%
+    #$ persistent.lesson_2_act2 = 4  # Performance Task 10%
 
     # Lesson 3 
-    $ persistent.lesson_3_quiz3 = 10  # Written Works 10%
-    $ persistent.lesson_3_act3 = 7  # Performance Task 10%
+    #$ persistent.lesson_3_quiz3 = 10  # Written Works 10%
+    #$ persistent.lesson_3_act3 = 7  # Performance Task 10%
 
-    $ exam_score = 10 # Exam 20%
+    #$ epersistent.exam_scorexam_score = 10 # Exam 20%
 
 
 
@@ -293,7 +293,7 @@ label assessment_one:
     $ lesson_2_weighted_score = lesson_2_weighted_score * 100
     $ lesson_3_weighted_score = lesson_3_weighted_score * 100
 
-    $ exam_weighted_score = (exam_score/10 * 0.2)
+    $ exam_weighted_score = (epersistent.exam_scorexam_score/10 * 0.2)
     $ exam_weighted_score = exam_weighted_score * 100
 
     # Calculate weighted scores for each lesson ###############################################################################
@@ -315,7 +315,7 @@ label assessment_one:
         $ quarter_result_feedback = "While your overall grade is still good, it has decreased from the previous quarter. \nReflect on what might have caused this decline and consider adjustments for the \nnext quarter."
 
     else:
-        $ quarter_result_feedback = "While your current result is commendable, strive for continuous improvement \nin the next quarter."
+        $ quarter_result_feedback = "While your current result is commendable, strive for \ncontinuous improvement in the next quarter."
 
 
     # Calculate overall grade ###################################################################################################
@@ -333,7 +333,7 @@ label assessment_one:
     $ persistent.performance_task = int(persistent.performance_task * 100)
 
     #$ persistent.exam = int(exam_score * 7.0)
-    $ persistent.exam = exam_score
+    $ persistent.exam = epersistent.exam_scorexam_score
 
     # For the bar graph #########################################################################################################
 
@@ -421,23 +421,23 @@ label assessment_two:
             visible={"base":False}
         )
 
-    $ persistent.ast2_kindness = 80
-    $ persistent.ast2_rudeness = 30
-    $ persistent.ast2_recitation = 40
-    $ persistent.ast2_participation = 50
-    $ persistent.ast2_accuracy = 50
+    #$ persistent.ast2_kindness = 80
+    #$ persistent.ast2_rudeness = 30
+    #$ persistent.ast2_recitation = 40
+    #$ persistent.ast2_participation = 50
+    #$ persistent.ast2_accuracy = 50
 
     # lesson 4 2
-    $ persistent.lesson_4_quiz4 = 10
-    $ persistent.lesson_4_act4 = 6
+    #$ persistent.lesson_4_quiz4 = 10
+    #$ persistent.lesson_4_act4 = 6
 
     # Lesson 5 
-    $ persistent.lesson_5_quiz5 = 10 # Written Works 10%
-    $ persistent.lesson_5_act5 = 9  # Performance Task 10%
+    #$ persistent.lesson_5_quiz5 = 10 # Written Works 10%
+    #$ persistent.lesson_5_act5 = 9  # Performance Task 10%
 
     # Lesson 6 
-    $ persistent.lesson_6_quiz6 = 10  # Written Works 10%
-    $ persistent.lesson_6_act6 = 7  # Performance Task 10%
+    #$ persistent.lesson_6_quiz6 = 10  # Written Works 10%
+    #$ persistent.lesson_6_act6 = 7  # Performance Task 10%
 
 
     $ persistent.q2_exam_score = 10 # Exam 20%

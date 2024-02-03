@@ -90,6 +90,7 @@ label l1_act1:
     label l1_act1_f:
 
         blank "Your Lesson 1 activity score is [persistent.lesson_1_act1]"
+        jump pagtapos_ng_act_1
 
     return
 
@@ -102,6 +103,7 @@ label l2_act2:
     label l2_act2_f:
 
         blank "Your Lesson 2 activity score is [persistent.lesson_2_act2]"
+        jump pagtapos_ng_act_2
 
     return
 
@@ -114,6 +116,7 @@ label l3_act3:
     label l3_act3_f:
 
         blank "Your Lesson 3 activity score is [persistent.lesson_3_act3]"
+        jump pagtapos_ng_act_3
 
     return
 
@@ -126,6 +129,7 @@ label l4_act4:
     label l4_act4_f:
 
         blank "Your Lesson 4 activity score is [persistent.lesson_4_act4]"
+        jump pagtapos_ng_act_4
 
     return
 
@@ -139,6 +143,7 @@ label l5_act5:
     label l5_act5_f:
 
         blank "Your Lesson 5 activity score is [persistent.lesson_5_act5]"
+        jump pagtapos_ng_act_5
 
     return
 
@@ -152,6 +157,7 @@ label l6_act6:
     label l6_act6_f:
 
         blank "Your Lesson 6 activity score is [persistent.lesson_6_act6]"
+        jump pagtapos_ng_act_6
 
     return
 
@@ -164,6 +170,7 @@ label l7_act7:
     label l7_act7_f:
 
         blank "Your Lesson 7 activity score is [persistent.lesson_7_act7]"
+        jump pagtapos_ng_act_7
 
     return
 
@@ -177,6 +184,7 @@ label l8_act8:
     label l8_act8_f:
 
         blank "Your Lesson 8 activity score is [persistent.lesson_8_act8]"
+        jump pagtapos_ng_act_8
 
     return
 
@@ -188,6 +196,7 @@ label l9_act9:
     label l9_act9_f:
 
         blank "Your Lesson 9 activity score is [persistent.lesson_9_act9]"
+        jump pagtapos_ng_act_9
 
     return
 
@@ -200,5 +209,6 @@ label l10_act10:
     label l10_act10_f:
 
         blank "Your Lesson 10 activity score is [persistent.lesson_10_act10]"
+        jump pagtapos_ng_act_10
 
     return

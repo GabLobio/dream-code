@@ -1078,7 +1078,12 @@ label lesson_six:
 
 
     $ persistent.lesson_6_quiz6 = persistent_quiz_05_q_counter_correct_answer
-    $ persistent.lesson_6_act6 = 7  # Performance Task 10%
+    
+    Tech "Great job on the quiz, class! You all did fantastic."
+
+    Tech "Now, let's move on to our next activity. Today, we'll be diving into an exciting project related to what you've just learned."
+    jump l6_act6
+    label pagtapos_ng_act_6:
 
 
 

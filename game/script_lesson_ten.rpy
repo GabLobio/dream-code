@@ -399,7 +399,12 @@ label lesson_ten:
     label pagtapos_ng_quiz_9:
 
     $ persistent.lesson_10_quiz10 = persistent_quiz_09_q_counter_correct_answer
-    $ persistent.lesson_10_act10 = 6
+    
+    Tech "Great job on the quiz, class! You all did fantastic."
+
+    Tech "Now, let's move on to our next activity. Today, we'll be diving into an exciting project related to what you've just learned."
+    jump l10_act10
+    label pagtapos_ng_act_10:
 
     stop music fadeout 1.0
 

@@ -2,9 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/test.rpy", line 64: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    call screen quiz_menu_screen_debug_imagemap
-    ^
+The label pagtapos_ng_act_2 is defined twice, at File "game/script_lesson_three.rpy", line 740:
+    label pagtapos_ng_act_2:
+and File "game/script_lesson_two.rpy", line 544:
+    label pagtapos_ng_act_2:
+
 
 Ren'Py Version: Ren'Py 8.1.3.23091805
-Sat Feb  3 07:27:23 2024
+Sat Feb  3 20:23:48 2024

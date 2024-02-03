@@ -732,8 +732,12 @@ label lesson_three:
 
     # Lesson 3 
     $ persistent.lesson_3_quiz3 = persistent_quiz_02_q_counter_correct_answer
-    $ persistent.lesson_3_act3 = 7  # Performance Task 10%
+    
+    Tech "Great job on the quiz, class! You all did fantastic."
 
+    Tech "Now, let's move on to our next activity. Today, we'll be diving into an exciting project related to what you've just learned."
+    jump l3_act3
+    label pagtapos_ng_act_3:
 
     stop music fadeout 1.0
 

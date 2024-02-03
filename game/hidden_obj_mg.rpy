@@ -66,10 +66,11 @@ label begin_ho_mg:
         "Enough":
             pass
 
+    blank "Teacher Rodriguez caught you playing with your classmate. You will be back for the Quiz"
+
     $ hf_hide()
     with dissolve
-    jump lessonOneFillTwo
-
+    jump opsl1_2
     return()
 
 
@@ -135,7 +136,8 @@ label begin_ho_mg2:
 
         "Enough":
             pass
-
+    
+    blank "Teacher Rodriguez caught you playing with your classmate. You will be back for the Quiz"
     $ hf_hide()
     with dissolve
     jump opsl2_2
@@ -206,6 +208,7 @@ label begin_ho_mg3:
         "Enough":
             pass
 
+    blank "Teacher Rodriguez caught you playing with your classmate. You will be back for the Quiz"
     $ hf_hide()
     with dissolve
     jump opsl3_2
@@ -276,6 +279,7 @@ label begin_ho_mg4:
         "Enough":
             pass
 
+    blank "Teacher Rodriguez caught you playing with your classmate. You will be back for the Quiz"
     $ hf_hide()
     with dissolve
     jump opsl4_2
@@ -346,7 +350,8 @@ label begin_ho_mg5:
 
         "Enough":
             pass
-
+    
+    blank "Teacher Rodriguez caught you playing with your classmate. You will be back for the Quiz"
     $ hf_hide()
     with dissolve
     jump opsl5_2
@@ -420,6 +425,7 @@ label begin_ho_mg6:
         "Enough":
             pass
 
+    blank "Teacher Rodriguez caught you playing with your classmate. You will be back for the Quiz"
     $ hf_hide()
     with dissolve
     jump opsl6_2
@@ -492,6 +498,7 @@ label begin_ho_mg7:
         "Enough":
             pass
 
+    blank "Teacher Rodriguez caught you playing with your classmate. You will be back for the Quiz"
     $ hf_hide()
     with dissolve
     jump opsl7_2
@@ -561,7 +568,8 @@ label begin_ho_mg8:
 
         "Enough":
             pass
-
+    
+    blank "Teacher Rodriguez caught you playing with your classmate. You will be back for the Quiz"
     $ hf_hide()
     with dissolve
     jump opsl8_2
@@ -633,7 +641,8 @@ label begin_ho_mg9:
 
         "Enough":
             pass
-
+    
+    blank "Teacher Rodriguez caught you playing with your classmate. You will be back for the Quiz"
     $ hf_hide()
     with dissolve
     jump opsl9_2
@@ -706,6 +715,7 @@ label begin_ho_mg10:
         "Enough":
             pass
 
+    blank "Teacher Rodriguez caught you playing with your classmate. You will be back for the Quiz"
     $ hf_hide()
     with dissolve
     jump opsl10_2

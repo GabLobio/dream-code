@@ -1298,7 +1298,13 @@ label lesson_five:
     label pagtapos_ng_quiz_4:
 
     $ persistent.lesson_5_quiz5 = persistent_quiz_04_q_counter_correct_answer
-    $ persistent.lesson_5_act5 = 5
+    
+    
+    Tech "Great job on the quiz, class! You all did fantastic."
+
+    Tech "Now, let's move on to our next activity. Today, we'll be diving into an exciting project related to what you've just learned."
+    jump l5_act5
+    label pagtapos_ng_act_5:
 
 
 

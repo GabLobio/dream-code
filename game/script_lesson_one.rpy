@@ -91,9 +91,9 @@ label lesson_one:
 
     $ persistent.ast1_kindness = 10
     $ persistent.ast1_rudeness = 10
-    $ persistent.ast1_recitation = 0
-    $ persistent.ast1_participation = 0
-    $ persistent.ast1_accuracy = 0
+    $ persistent.ast1_recitation = 5
+    $ persistent.ast1_participation = 5
+    $ persistent.ast1_accuracy = 5
 
     $ persistent.lesson_1_quiz1 = 0
     $ persistent.lesson_1_act1 = 0
@@ -733,8 +733,7 @@ label lesson_one:
 
     Tech "Now that we finish the lesson lets start the quiz 1"
 
-    hide teacher smile
-
+    
     $ show_quick_menu = False
     
     stop music fadeout 1.0
@@ -748,7 +747,18 @@ label lesson_one:
 
     # Lesson 1
     $ persistent.lesson_1_quiz1 = persistent_quiz_00_q_counter_correct_answer  # Written Works 20%
-    $ persistent.lesson_1_act1 = 6  # Performance Task 20%
+
+
+    Tech "Great job on the quiz, class! You all did fantastic."
+
+    Tech "Now, let's move on to our next activity. Today, we'll be diving into an exciting project related to what you've just learned."
+    
+    jump l1_act1
+
+    label pagtapos_ng_act_1:
+    
+
+    hide teacher smile
 
     stop music fadeout 1.0
 
