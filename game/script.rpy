@@ -368,7 +368,7 @@ label start:
     ## ║ temporary please erase ║
     ## ╚════════════════════════╝ 
 
-    jump l3_act3
+    jump l10_act10
 
     #jump lesson_ten
 

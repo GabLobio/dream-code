@@ -16,48 +16,7 @@ label debug:
 
 
 
-label quiz_menu_screen_debug:
-    #----------------------------------------------------------
-    #Note: Delete or comment the lines below once finalize. Debug use only
-    $ persistent_quiz_00_q_counter_correct_answer = 10
-    $ persistent_quiz_01_q_counter_correct_answer = 6
-    $ persistent_quiz_02_q_counter_correct_answer = 8
-    $ persistent_quiz_03_q_counter_correct_answer = 10
-    $ persistent_quiz_04_q_counter_correct_answer = 7
-    $ persistent_quiz_05_q_counter_correct_answer = 6
-    $ persistent_quiz_06_q_counter_correct_answer = 7
-    $ persistent_quiz_07_q_counter_correct_answer = 9
-    $ persistent_quiz_08_q_counter_correct_answer = 10
-    $ persistent_quiz_08_q_counter_correct_answer = 7
-    $ persistent_quiz_09_q_counter_correct_answer = 7
 
-    $ persistent_quiz_total_points_counter_correct_answer = 80
-
-    #$ final_test_undertaken = True #set to true then copy to line before quiz start in script
-
-    $ whole_quiz_00_seen = True
-    $ whole_quiz_01_seen = True
-    $ whole_quiz_02_seen = True
-    $ whole_quiz_03_seen = True
-    $ whole_quiz_04_seen = True
-    $ whole_quiz_05_seen = True
-    $ whole_quiz_06_seen = True
-    $ whole_quiz_07_seen = True
-    $ whole_quiz_08_seen = True
-    $ whole_quiz_09_seen = True
-
-
-
-
-
-
-
-
-
-
-
-    #Note: Delete or comment lines above once finalize. Debug use only
-    #----------------------------------------------------------
 
     
 
