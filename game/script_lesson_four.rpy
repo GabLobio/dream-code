@@ -255,6 +255,21 @@ label lesson_four:
 
             "Ignore":
                 jump lessonFourFillTen
+        
+        # Classmate Confused Interaction
+        blank "As you're concentrating on the current lesson, a classmate approaches you, looking a bit confused."
+        # Dialogue to nung kaklaseng nyang boy
+        "Hey, mind lending a hand? I'm a bit lost with some of the words the teacher just used. Could you help me catch up on what I missed? I'd appreciate it, and maybe we can quickly go through it together so we don't fall too behind."
+
+        menu:
+            "Talk to him":
+                blank "You missed several parts of the lesson as you help your classmate catch up. While you feel good about helping, you realize you've sacrificed your own understanding."
+                $ persistent.ast2_kindness = 50
+                jump lessonFourFillThirteen
+            "Refuse and explain that you can teach him later; choose to focus on the current lesson":
+                blank "You politely refuse, explaining that you're trying to focus on the current lesson. You offer to help your classmate after class, emphasizing the importance of catching up together."
+                $ persistent.ast2_kindness = 50
+                pass
 
         call screen lesson_four_ls9_fill
 

@@ -13,7 +13,9 @@ label start_hitting_teach:
 
     scene bg_classroom_
     show teach_smile
-    blank "Wanna throw these 3 crumpled paper to out teacher?"
+
+    # Ito inaaya nya yung player 
+    blank "Wanna throw these 3 crumpled paper to our teacher?"
     menu:
         "Let's go!":
             pass
@@ -27,7 +29,7 @@ label start_hitting_teach:
         $ cursor() 
         scene bg_classroom_ with dissolve
         show teach_smile
-        blank "Let's do it some time"
+        blank "Let's do it again some time"
         scene bg_classroom_ with dissolve
         show teach_smile
         
@@ -36,6 +38,8 @@ label start_hitting_teach:
         blank "[targets_hit]/3 hit"
         scene bg_classroom_ with dissolve
         show teacher_crossarm_sad
+
+        # T
         blank "Ouch! You hit the teacher! You have to leave the class for a while."   
  
 
@@ -52,6 +56,7 @@ label start_hitting_teach2:
 
     scene bg_classroom_
     show teach_smile
+    # Ito inaaya nya yung player 
     blank "Wanna throw these 3 crumpled paper to out teacher?"
     menu:
         "Let's go!":
@@ -90,6 +95,7 @@ label start_hitting_teach3:
 
     scene bg_classroom_
     show teach_smile
+    # Ito inaaya nya yung player 
     blank "Wanna throw these 3 crumpled paper to out teacher?"
     menu:
         "Let's go!":
@@ -159,48 +165,6 @@ label start_hitting_teach3:
 
 
 
-label start_hitting_teach4:
-
-    scene bg_classroom_
-    show teach_smile
-    blank "Wanna throw these 3 crumpled paper to out teacher?"
-    menu:
-        "Let's go!":
-            pass
-        "Refuse":
-            if persistent.rude_lesson == "four":
-                jump l4Int4
-            
-
-    call begin_hunt4 from _call_begin_hunt4
-    
-    
-    if targets_hit == 0: 
-        $ cursor() 
-        scene bg_classroom_ with dissolve
-        show teach_smile
-        blank "Let's do it some time"
-        scene bg_classroom_ with dissolve
-        show teach_smile
-        
-    if targets_hit > 0: 
-        $ cursor() 
-        blank "[targets_hit]/3 hit"
-        scene bg_classroom_ with dissolve
-        show teacher_crossarm_sad
-        blank "Ouch! You hit the teacher! You have to leave the class for a while."   
- 
-
-    blank "You will be back to the class for the quiz"
-
-    if persistent.rude_lesson == "four":
-        jump opsl4_1
-    else:
-        pass
-
-    
-    return
-
 
 
 
@@ -214,22 +178,20 @@ label start_hitting_teach4:
 
 label classmate_interaction:
     blank "As you're concentrating on the current lesson, a classmate approaches you, looking a bit confused."
+    # Dialogue to nung kaklaseng nyang boy
+    "Hey, mind lending a hand? I'm a bit lost with some of the words the teacher just used. Could you help me catch up on what I missed? I'd appreciate it, and maybe we can quickly go through it together so we don't fall too behind."
 
     menu:
         "Talk to him":
-            "You missed several parts of the lesson as you help your classmate catch up. While you feel good about helping, you realize you've sacrificed your own understanding."
+            blank "You missed several parts of the lesson as you help your classmate catch up. While you feel good about helping, you realize you've sacrificed your own understanding."
+            $ persistent.ast1_kindness = 50
             jump aftermath
         "Refuse and explain that you can teach him later; choose to focus on the current lesson":
-            $ kindness += 1
-            $ Participation += 1
-            "You politely refuse, explaining that you're trying to focus on the current lesson. You offer to help your classmate after class, emphasizing the importance of catching up together."
+            blank "You politely refuse, explaining that you're trying to focus on the current lesson. You offer to help your classmate after class, emphasizing the importance of catching up together."
+            $ persistent.ast1_kindness = 50
             jump aftermath
 
-    label aftermath:
-    # Additional code for the aftermath or consequences of the player's choice can go here.
-    # This label can be used to handle any specific outcomes or events resulting from the player's decision.
 
-    return
 
 
 
