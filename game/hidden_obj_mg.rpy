@@ -45,6 +45,14 @@ label begin_ho_mg:
     $ hf_bg()
     with dissolve
 
+
+    # Dialogue nung babae
+    "Hey! How about we take a break from studying for a bit?"
+
+    "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
+
+    "It's just a quick break. Trust me, it'll be worth it!"
+
     centered "{size=+24}{color=#ffa600}You need to collect all the items in 10 seconds.\nLet's start!" 
 
     # let's start the game
@@ -115,6 +123,13 @@ label begin_ho_mg2:
     # we will show the figures on it along with the background
     $ hf_bg()
     with dissolve
+
+    # Dialogue nung babae
+    "Hey! How about we take a break from studying for a bit?"
+
+    "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
+
+    "It's just a quick break. Trust me, it'll be worth it!"
 
     centered "{size=+24}{color=#ffa600}You need to collect all the items in 10 seconds.\nLet's start!" 
 
@@ -187,6 +202,13 @@ label begin_ho_mg3:
     $ hf_bg()
     with dissolve
 
+    # Dialogue nung babae
+    "Hey! How about we take a break from studying for a bit?"
+
+    "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
+
+    "It's just a quick break. Trust me, it'll be worth it!"
+
     centered "{size=+24}{color=#ffa600}You need to collect all the items in 10 seconds.\nLet's start!" 
 
     # let's start the game
@@ -257,6 +279,13 @@ label begin_ho_mg4:
     # we will show the figures on it along with the background
     $ hf_bg()
     with dissolve
+
+    # Dialogue nung babae
+    "Hey! How about we take a break from studying for a bit?"
+
+    "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
+
+    "It's just a quick break. Trust me, it'll be worth it!"
 
     centered "{size=+24}{color=#ffa600}You need to collect all the items in 10 seconds.\nLet's start!" 
 
@@ -329,6 +358,13 @@ label begin_ho_mg5:
     # we will show the figures on it along with the background
     $ hf_bg()
     with dissolve
+
+    # Dialogue nung babae
+    "Hey! How about we take a break from studying for a bit?"
+
+    "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
+
+    "It's just a quick break. Trust me, it'll be worth it!"
 
     centered "{size=+24}{color=#ffa600}You need to collect all the items in 10 seconds.\nLet's start!" 
 
@@ -404,6 +440,13 @@ label begin_ho_mg6:
     $ hf_bg()
     with dissolve
 
+    # Dialogue nung babae
+    "Hey! How about we take a break from studying for a bit?"
+
+    "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
+
+    "It's just a quick break. Trust me, it'll be worth it!"
+
     centered "{size=+24}{color=#ffa600}You need to collect all the items in 10 seconds.\nLet's start!" 
 
     # let's start the game
@@ -477,6 +520,13 @@ label begin_ho_mg7:
     $ hf_bg()
     with dissolve
 
+    # Dialogue nung babae
+    "Hey! How about we take a break from studying for a bit?"
+
+    "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
+
+    "It's just a quick break. Trust me, it'll be worth it!"
+
     centered "{size=+24}{color=#ffa600}You need to collect all the items in 10 seconds.\nLet's start!" 
 
     # let's start the game
@@ -547,6 +597,13 @@ label begin_ho_mg8:
     # we will show the figures on it along with the background
     $ hf_bg()
     with dissolve
+
+    # Dialogue nung babae
+    "Hey! How about we take a break from studying for a bit?"
+
+    "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
+
+    "It's just a quick break. Trust me, it'll be worth it!"
 
     centered "{size=+24}{color=#ffa600}You need to collect all the items in 10 seconds.\nLet's start!" 
 
@@ -623,6 +680,13 @@ label begin_ho_mg9:
 
     centered "{size=+24}{color=#ffa600}You need to collect all the items in 10 seconds.\nLet's start!" 
 
+    # Dialogue nung babae
+    "Hey! How about we take a break from studying for a bit?"
+
+    "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
+
+    "It's just a quick break. Trust me, it'll be worth it!"
+
     # let's start the game
     $ hf_start()
 
@@ -695,6 +759,13 @@ label begin_ho_mg10:
     with dissolve
 
     centered "{size=+24}{color=#ffa600}You need to collect all the items in 10 seconds.\nLet's start!" 
+
+    # Dialogue nung babae
+    "Hey! How about we take a break from studying for a bit?"
+
+    "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
+
+    "It's just a quick break. Trust me, it'll be worth it!"
 
     # let's start the game
     $ hf_start()

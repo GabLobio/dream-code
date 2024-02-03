@@ -370,7 +370,7 @@ label start:
 
     #jump l10_act10
 
-    #jump lesson_ten
+    #jump begin_ho_mg
 
 
 
