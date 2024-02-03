@@ -735,9 +735,20 @@ label lesson_three:
     
     Tech "Great job on the quiz, class! You all did fantastic."
 
-    Tech "Now, let's move on to our next activity. Today, we'll be diving into an exciting project related to what you've just learned."
+    Tech "Now, let's move on to our next activity. Today, we'll be diving into an exciting activity related to what you've just learned."
     jump l3_act3
     label pagtapos_ng_act_3:
+
+    Tech "I hope you're all doing well. Today, I have an important announcement to make."
+
+    Tech "We've covered a lot of material in lessons 1 to 3, and I've been impressed with your engagement and dedication."
+
+    Tech "As a way to assess your understanding and progress, we'll be having an exam next"
+
+    Tech "Ok! Let's start the examination"
+    jump First_one
+    label tapos_exam1:
+
 
     stop music fadeout 1.0
 
@@ -748,10 +759,12 @@ label lesson_three:
     scene bg_classroom
 
     show teacher_crossarm_smile
+    e "I want to acknowledge your hard work and dedication in preparing for this exam. It's a crucial part of our learning journey."
     e"Well done young coders. Let's end our class here."
     hide teacher_crossarm_smile
     show teacher_closed_happy
     e"Good bye class"
+    e"You can now veiw your lesson 1 to 3 assessment"
     hide teacher_closed_happy
 
     ######### Time save ######################################

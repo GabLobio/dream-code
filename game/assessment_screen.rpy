@@ -123,8 +123,8 @@ screen q1_assesment():
     text "{b}Performance Task [persistent.performance_task] % {/b}" size 24 color "#ffffff" xoffset 6 yoffset 6 xpos(80) ypos(257)
 
     # Exam
-    image Solid("#006eff") xsize(persistent.exam * 70) ysize(45) xpos 80 ypos 352
-    text "{b}Exam [persistent.exam] % {/b}" size 24 color "#ffffff" xoffset 6 yoffset 6 xpos(80) ypos(352)
+    image Solid("#006eff") xsize(persistent.exam_score * 70) ysize(45) xpos 80 ypos 352
+    text "{b}Exam [persistent.exam_score] % {/b}" size 24 color "#ffffff" xoffset 6 yoffset 6 xpos(80) ypos(352)
 
     # Overall Grade
     image Solid("#006eff") xsize(persistent.overall_grade * 10) ysize(45) xpos 841 ypos 212

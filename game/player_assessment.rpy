@@ -279,7 +279,7 @@ label assessment_one:
     #$ persistent.lesson_3_quiz3 = 10  # Written Works 10%
     #$ persistent.lesson_3_act3 = 7  # Performance Task 10%
 
-    #$ epersistent.exam_scorexam_score = 10 # Exam 20%
+    #$ persistent.exam_score = 10 # Exam 20%
 
 
 
@@ -293,7 +293,7 @@ label assessment_one:
     $ lesson_2_weighted_score = lesson_2_weighted_score * 100
     $ lesson_3_weighted_score = lesson_3_weighted_score * 100
 
-    $ exam_weighted_score = (epersistent.exam_scorexam_score/10 * 0.2)
+    $ exam_weighted_score = (persistent.exam_score/10 * 0.2)
     $ exam_weighted_score = exam_weighted_score * 100
 
     # Calculate weighted scores for each lesson ###############################################################################
@@ -333,7 +333,7 @@ label assessment_one:
     $ persistent.performance_task = int(persistent.performance_task * 100)
 
     #$ persistent.exam = int(exam_score * 7.0)
-    $ persistent.exam = epersistent.exam_scorexam_score
+    $ persistent.exam = persistent.exam_scorexam_score
 
     # For the bar graph #########################################################################################################
 
@@ -353,7 +353,7 @@ label assessment_one:
         $ performance_task_feedback = "Great job on the Performance Task. Your efforts are \nmaking a positive impact!"
 
     $ exam_feedback = ""
-    if persistent.exam >= 6:
+    if persistent.exam_score >= 6:
         $ exam_feedback = "Congratulations on acing the exam! Your dedication to \nstudying is evident."
     else:
         $ exam_feedback = "Great job on the exam! Your hard work is paying off."
@@ -440,7 +440,7 @@ label assessment_two:
     #$ persistent.lesson_6_act6 = 7  # Performance Task 10%
 
 
-    $ persistent.q2_exam_score = 10 # Exam 20%
+    #$ persistent.q2_exam_score = 10 # Exam 20%
 
 
 
@@ -605,7 +605,7 @@ label assessment_three:
     #$ persistent.lesson_9_act9 = 9  # Performance Task 10%
 
 
-    $ persistent.q3_exam_score = 10 # Exam 20%
+    #$ persistent.q3_exam_score = 10 # Exam 20%
 
 
 
@@ -760,7 +760,7 @@ label assessment_four:
     #$ persistent.lesson_10_act10 = 9
 
 
-    $ persistent.q4_exam_score = 10 # Exam 20%
+    #$ persistent.q4_exam_score = 10 # Exam 20%
 
 
 

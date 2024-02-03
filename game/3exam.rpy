@@ -16,7 +16,7 @@ default correct3 = 0
 
 
 label Third_one:
-
+    $ persistent.q3_exam_score = 0
     scene bg_quiz
 
     
@@ -303,9 +303,9 @@ label Third_ten:
 
 
 label Finish_exam3:
-
+    $ persistent.q3_exam_score = correct3
     e "Tapos na ang exam"
-    e "Ang score mo ay [correct3] "
+    e "Your score for this exam is [correct3] "
 
     jump tapos_exam3
 

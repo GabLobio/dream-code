@@ -319,7 +319,7 @@ label First_ten:
 label Finish_exam1:
     $ persistent.exam_score = correct1
     e "Tapos na ang exam"
-    e "Ang score mo ay [correct1] "
+    e "Your score for this exam is [correct1] "
 
     jump tapos_exam1
 

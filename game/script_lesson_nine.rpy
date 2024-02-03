@@ -356,6 +356,17 @@ label lesson_nine:
     jump l9_act9
     label pagtapos_ng_act_9:
 
+    Tech "I hope you're all doing well. Today, I have an important announcement to make."
+
+    Tech "We've covered a lot of material in lessons 7 to 9, and I've been impressed with your engagement and dedication."
+
+    Tech "As a way to assess your understanding and progress, we'll be having an exam next"
+
+    Tech "Ok! Let's start the examination"
+
+    jump Third_one
+    label tapos_exam3:
+
     stop music fadeout 1.0
 
     play music "audio/sa_tech.mp3" volume 0.5
@@ -363,10 +374,12 @@ label lesson_nine:
     scene bg_classroom
 
     show teacher_crossarm_smile
+    e "I want to acknowledge your hard work and dedication in preparing for this exam. It's a crucial part of our learning journey."
     e"Well done young coders. Let's end our class here."
     hide tea
     show teacher_closed_happy
     e"Good bye class"
+    e"You can now veiw your lesson 7 to 9 assessment"
     hide teacher_closed_happy
 
     stop music fadeout 1.0

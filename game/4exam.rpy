@@ -13,7 +13,7 @@ image top_text50 = ParameterizedText(ypos=250, xpos=1030 ,size =50)
 default correct4 = 0
 
 label Fourth_one:
-
+    $ persistent.q4_exam_score = 0
     scene bg_quiz
 
 
@@ -292,7 +292,7 @@ label Fourth_ten:
 label Finish_exam4:
     
 
-
+    $ persistent.q4_exam_score = correct4
     e "Tapos na ang exam"
     e "Ang score mo ay [correct4] "
 
