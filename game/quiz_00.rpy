@@ -16,6 +16,10 @@ label start_quiz_00_initialization:
 
 # You place any dialogue or declare image here before quiz starts
 label start_quiz_00:
+    play music "audio/quiz.mp3" volume 0.5
+    
+    
+
     ## ╔════════════════════════╗
     ## ║ temporary please erase ║
     ## ╚════════════════════════╝ 

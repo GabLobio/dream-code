@@ -70,6 +70,8 @@ label lesson_four:
 
         scene lesson_text_intro
         Tech "Ready to start Text Formatting Lesson?"
+        Tech "Read the lesson plan for 4 to 6"
+        call screen lesson_plan_q2
         jump lessonFourFillTwo
 
 

@@ -16,7 +16,50 @@ label debug:
 
 
 
+label quiz_menu_screen_debug:
+    #----------------------------------------------------------
+    #Note: Delete or comment the lines below once finalize. Debug use only
+    $ persistent_quiz_00_q_counter_correct_answer = 10
+    $ persistent_quiz_01_q_counter_correct_answer = 6
+    $ persistent_quiz_02_q_counter_correct_answer = 8
+    $ persistent_quiz_03_q_counter_correct_answer = 10
+    $ persistent_quiz_04_q_counter_correct_answer = 7
+    $ persistent_quiz_05_q_counter_correct_answer = 6
+    $ persistent_quiz_06_q_counter_correct_answer = 7
+    $ persistent_quiz_07_q_counter_correct_answer = 9
+    $ persistent_quiz_08_q_counter_correct_answer = 10
+    $ persistent_quiz_08_q_counter_correct_answer = 7
+    $ persistent_quiz_09_q_counter_correct_answer = 7
 
+    $ persistent_quiz_total_points_counter_correct_answer = 80
+
+    #$ final_test_undertaken = True #set to true then copy to line before quiz start in script
+
+    $ whole_quiz_00_seen = True
+    $ whole_quiz_01_seen = True
+    $ whole_quiz_02_seen = True
+    $ whole_quiz_03_seen = True
+    $ whole_quiz_04_seen = True
+    $ whole_quiz_05_seen = True
+    $ whole_quiz_06_seen = True
+    $ whole_quiz_07_seen = True
+    $ whole_quiz_08_seen = True
+    $ whole_quiz_09_seen = True
+
+
+
+
+
+
+
+
+
+
+
+    #Note: Delete or comment lines above once finalize. Debug use only
+    #----------------------------------------------------------
+
+    
 
     
 
@@ -167,7 +210,50 @@ screen quiz_total_overall_tally_imagemap:
     
         
 
-        
+label lessons_done:
+    scene bg_classroom_
+    
+
+    $ persistent.total_kind = ast1_kindness + ast2_kindness + ast3_kindness + ast4_kindness
+    $ persistent.total_rude = ast1_rudeness + ast2_rudeness + ast3_rudeness + ast4_rudeness
+
+    $ persistent.gwa = (persistent.overall_grade + persistent.q2_overall_grade + persistent.q3_overall_grade + persistent.q4_overall_grade)/4
+    $ persistent.gwa = int(persistent.gwa) 
+
+    Tech "Congratulations, everyone!"
+    Tech "You've conquered all 10 exciting HTML lessons, including mastering the magic of <div> elements."
+    Tech "It's time to celebrate your awesome achievement, and guess what?"
+    Tech "Great news, everyone! You're all set to receive certificates for completing every lesson and acing each quarter."
+    Tech "Your hard work and success are truly commendable!"
+    
+    if persistent.total_kind > persistent.total_rude:
+        Tech "Hey [persistent.POV], your positive attitude and active participation throughout the class have truly stood out."
+        Tech "Your kindness and engagement make our learning environment even more vibrant and enjoyable."
+
+    else:
+        Tech "Hey [persistent.POV], I've noticed there have been instances of rudeness that disrupt our learning environment."
+        Tech "I believe in your ability to contribute positively, so let's work together to encourage a more kind and considerate approach."
+        Tech "Your efforts to be more thoughtful will benefit both you and your classmates."
+
+
+    Tech "Anyways, here's your certificate for completing the 10 lessons."
+
+    if persistent.gwa >= 70:
+        Tech "Congratulations [persistent.POV]! Anyways, here's your certificate for completing the 10 lessons. You have passed—great job!"
+        Tech "Your GWA is [persistent.gwa]"
+        call screen diploma_imagemap
+        $ result = _return
+
+    else:
+        Tech "[persistent.POV], you may not have passed this time, but finishing all 10 lessons is a significant achievement. Remember, you can always try again and continue to improve. Keep up the good work!"
+        Tech "Anyways, here is your certification congrats"
+        Tech "Your GWA is [persistent.gwa]"
+        call screen diploma_imagemap
+        $ result = _return
+
+    return
+
+
 
 
         
@@ -175,10 +261,12 @@ screen quiz_total_overall_tally_imagemap:
          
 
 label diploma:
+    scene bg_classroom_
     call screen diploma_imagemap
     $ result = _return
 
 screen diploma_imagemap:
+    image "images/bg_classroom_.png"
     viewport:
         draggable True
         imagemap:

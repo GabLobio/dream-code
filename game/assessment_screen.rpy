@@ -373,7 +373,7 @@ screen q4_assesment():
         ypos 30
         idle "images/interactive_button/next_button.png"
         hover "images/interactive_button/next_button_hover.png"
-        action ShowMenu("lesson_ui")
+        action Jump("well_done")
 
     frame:
         background None

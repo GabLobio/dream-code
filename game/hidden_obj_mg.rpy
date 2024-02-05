@@ -47,11 +47,17 @@ label begin_ho_mg:
 
 
     # Dialogue nung babae
-    "Hey! How about we take a break from studying for a bit?"
 
-    "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
+    show girl1
+    girl "Hey! How about we take a break from studying for a bit?"
+    hide girl1
 
-    "It's just a quick break. Trust me, it'll be worth it!"
+    show girl14
+    girl "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
+
+
+    girl "It's just a quick break. Trust me, it'll be worth it!"
+    hide girl14
 
     centered "{size=+24}{color=#ffa600}You need to collect all the items in 10 seconds.\nLet's start!" 
 
@@ -74,7 +80,9 @@ label begin_ho_mg:
         "Enough":
             pass
 
+    show teacher_crossarm_sad
     blank "Teacher Rodriguez caught you playing with your classmate. You will be back for the Quiz"
+    hide teacher_crossarm_sad
 
     $ hf_hide()
     with dissolve
@@ -125,11 +133,16 @@ label begin_ho_mg2:
     with dissolve
 
     # Dialogue nung babae
-    "Hey! How about we take a break from studying for a bit?"
+    show girl1
+    girl "Hey! How about we take a break from studying for a bit?"
+    hide girl1
 
-    "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
+    show girl14
+    girl "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
 
-    "It's just a quick break. Trust me, it'll be worth it!"
+
+    girl "It's just a quick break. Trust me, it'll be worth it!"
+    hide girl14
 
     centered "{size=+24}{color=#ffa600}You need to collect all the items in 10 seconds.\nLet's start!" 
 
@@ -203,11 +216,16 @@ label begin_ho_mg3:
     with dissolve
 
     # Dialogue nung babae
-    "Hey! How about we take a break from studying for a bit?"
+    show girl1
+    girl "Hey! How about we take a break from studying for a bit?"
+    hide girl1
 
-    "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
+    show girl14
+    girl "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
 
-    "It's just a quick break. Trust me, it'll be worth it!"
+
+    girl "It's just a quick break. Trust me, it'll be worth it!"
+    hide girl14
 
     centered "{size=+24}{color=#ffa600}You need to collect all the items in 10 seconds.\nLet's start!" 
 
@@ -281,11 +299,16 @@ label begin_ho_mg4:
     with dissolve
 
     # Dialogue nung babae
-    "Hey! How about we take a break from studying for a bit?"
+    show girl1
+    girl "Hey! How about we take a break from studying for a bit?"
+    hide girl1
 
-    "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
+    show girl14
+    girl "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
 
-    "It's just a quick break. Trust me, it'll be worth it!"
+
+    girl "It's just a quick break. Trust me, it'll be worth it!"
+    hide girl14
 
     centered "{size=+24}{color=#ffa600}You need to collect all the items in 10 seconds.\nLet's start!" 
 
@@ -360,11 +383,16 @@ label begin_ho_mg5:
     with dissolve
 
     # Dialogue nung babae
-    "Hey! How about we take a break from studying for a bit?"
+    show girl1
+    girl "Hey! How about we take a break from studying for a bit?"
+    hide girl1
 
-    "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
+    show girl14
+    girl "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
 
-    "It's just a quick break. Trust me, it'll be worth it!"
+
+    girl "It's just a quick break. Trust me, it'll be worth it!"
+    hide girl14
 
     centered "{size=+24}{color=#ffa600}You need to collect all the items in 10 seconds.\nLet's start!" 
 
@@ -441,11 +469,16 @@ label begin_ho_mg6:
     with dissolve
 
     # Dialogue nung babae
-    "Hey! How about we take a break from studying for a bit?"
+    show girl1
+    girl "Hey! How about we take a break from studying for a bit?"
+    hide girl1
 
-    "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
+    show girl14
+    girl "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
 
-    "It's just a quick break. Trust me, it'll be worth it!"
+
+    girl "It's just a quick break. Trust me, it'll be worth it!"
+    hide girl14
 
     centered "{size=+24}{color=#ffa600}You need to collect all the items in 10 seconds.\nLet's start!" 
 
@@ -521,11 +554,16 @@ label begin_ho_mg7:
     with dissolve
 
     # Dialogue nung babae
-    "Hey! How about we take a break from studying for a bit?"
+    show girl1
+    girl "Hey! How about we take a break from studying for a bit?"
+    hide girl1
 
-    "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
+    show girl14
+    girl "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
 
-    "It's just a quick break. Trust me, it'll be worth it!"
+
+    girl "It's just a quick break. Trust me, it'll be worth it!"
+    hide girl14
 
     centered "{size=+24}{color=#ffa600}You need to collect all the items in 10 seconds.\nLet's start!" 
 
@@ -599,11 +637,16 @@ label begin_ho_mg8:
     with dissolve
 
     # Dialogue nung babae
-    "Hey! How about we take a break from studying for a bit?"
+    show girl1
+    girl "Hey! How about we take a break from studying for a bit?"
+    hide girl1
 
-    "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
+    show girl14
+    girl "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
 
-    "It's just a quick break. Trust me, it'll be worth it!"
+
+    girl "It's just a quick break. Trust me, it'll be worth it!"
+    hide girl14
 
     centered "{size=+24}{color=#ffa600}You need to collect all the items in 10 seconds.\nLet's start!" 
 
@@ -681,11 +724,16 @@ label begin_ho_mg9:
     centered "{size=+24}{color=#ffa600}You need to collect all the items in 10 seconds.\nLet's start!" 
 
     # Dialogue nung babae
-    "Hey! How about we take a break from studying for a bit?"
+    show girl1
+    girl "Hey! How about we take a break from studying for a bit?"
+    hide girl1
 
-    "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
+    show girl14
+    girl "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
 
-    "It's just a quick break. Trust me, it'll be worth it!"
+
+    girl "It's just a quick break. Trust me, it'll be worth it!"
+    hide girl14
 
     # let's start the game
     $ hf_start()
@@ -761,11 +809,16 @@ label begin_ho_mg10:
     centered "{size=+24}{color=#ffa600}You need to collect all the items in 10 seconds.\nLet's start!" 
 
     # Dialogue nung babae
-    "Hey! How about we take a break from studying for a bit?"
+    show girl1
+    girl "Hey! How about we take a break from studying for a bit?"
+    hide girl1
 
-    "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
+    show girl14
+    girl "I was thinking we could play a fun hidden object game on my smartphone! It's a great way to relax and have some fun."
 
-    "It's just a quick break. Trust me, it'll be worth it!"
+
+    girl "It's just a quick break. Trust me, it'll be worth it!"
+    hide girl14
 
     # let's start the game
     $ hf_start()

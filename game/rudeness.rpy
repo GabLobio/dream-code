@@ -12,10 +12,13 @@ init python:
 label start_hitting_teach:
 
     scene bg_classroom_
-    show teach_smile
+    
 
     # Ito inaaya nya yung player 
-    blank "Wanna throw these 3 crumpled paper to our teacher?"
+
+    show boy1 
+    boy "Wanna throw these 3 crumpled paper to our teacher?"
+    hide boy1
     menu:
         "Let's go!":
             pass
@@ -28,10 +31,10 @@ label start_hitting_teach:
     if targets_hit == 0: 
         $ cursor() 
         scene bg_classroom_ with dissolve
-        show teach_smile
+        show boy1
         blank "Let's do it again some time"
         scene bg_classroom_ with dissolve
-        show teach_smile
+
         
     if targets_hit > 0: 
         $ cursor() 
@@ -42,8 +45,9 @@ label start_hitting_teach:
         # T
         blank "Ouch! You hit the teacher! You have to leave the class for a while."   
  
-
-    blank "You will be back to the class for the quiz"
+    show teacher_crossarm_sad
+    e "You will be back to the class for the quiz"
+    hide teacher_crossarm_sad
 
     jump opsl1_1
 
@@ -55,9 +59,11 @@ label start_hitting_teach:
 label start_hitting_teach2:
 
     scene bg_classroom_
-    show teach_smile
+
     # Ito inaaya nya yung player 
-    blank "Wanna throw these 3 crumpled paper to out teacher?"
+    show boy1 
+    boy "Wanna throw these 3 crumpled paper to our teacher?"
+    hide boy1
     menu:
         "Let's go!":
             pass
@@ -70,10 +76,10 @@ label start_hitting_teach2:
     if targets_hit == 0: 
         $ cursor() 
         scene bg_classroom_ with dissolve
-        show teach_smile
+        show boy1
         blank "Let's do it some time"
         scene bg_classroom_ with dissolve
-        show teach_smile
+
         
     if targets_hit > 0: 
         $ cursor() 
@@ -82,8 +88,10 @@ label start_hitting_teach2:
         show teacher_crossarm_sad
         blank "Ouch! You hit the teacher! You have to leave the class for a while."   
  
+    show teacher_crossarm_sad
+    e "You will be back to the class for the quiz"
+    hide teacher_crossarm_sad
 
-    blank "You will be back to the class for the quiz"
 
     jump opsl2_1
 
@@ -94,9 +102,11 @@ label start_hitting_teach2:
 label start_hitting_teach3:
 
     scene bg_classroom_
-    show teach_smile
+
     # Ito inaaya nya yung player 
-    blank "Wanna throw these 3 crumpled paper to out teacher?"
+    show boy1 
+    boy "Wanna throw these 3 crumpled paper to our teacher?"
+    hide boy1
     menu:
         "Let's go!":
             pass
@@ -126,10 +136,10 @@ label start_hitting_teach3:
     if targets_hit == 0: 
         $ cursor() 
         scene bg_classroom_ with dissolve
-        show teach_smile
+        show boy1
         blank "Let's do it some time"
         scene bg_classroom_ with dissolve
-        show teach_smile
+
         
     if targets_hit > 0: 
         $ cursor() 
@@ -139,7 +149,9 @@ label start_hitting_teach3:
         blank "Ouch! You hit the teacher! You have to leave the class for a while."   
  
 
-    blank "You will be back to the class for the quiz"
+    show teacher_crossarm_sad
+    e "You will be back to the class for the quiz"
+    hide teacher_crossarm_sad
 
     if persistent.rude_lesson == "three":
         jump opsl3_1
@@ -177,10 +189,11 @@ label start_hitting_teach3:
 
 
 label classmate_interaction:
-    blank "As you're concentrating on the current lesson, a classmate approaches you, looking a bit confused."
+    show boy2
+    boy "As you're concentrating on the current lesson, a classmate approaches you, looking a bit confused."
     # Dialogue to nung kaklaseng nyang boy
     "Hey, mind lending a hand? I'm a bit lost with some of the words the teacher just used. Could you help me catch up on what I missed? I'd appreciate it, and maybe we can quickly go through it together so we don't fall too behind."
-
+    hide boy2
     menu:
         "Talk to him":
             blank "You missed several parts of the lesson as you help your classmate catch up. While you feel good about helping, you realize you've sacrificed your own understanding."

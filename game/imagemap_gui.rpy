@@ -158,29 +158,7 @@ screen about_credits:
 
 
 
-    text _p("""
-        {color=#ca4700}{b}Arajane Dimaunahan{/b}{/color}{p}
-        {color=#ca4700}Project Manager │ Programmer │ Writer{/color}{p}{p}
-        {color=#ca4700}{b}Gab Emmanuel Lobio{/b}{/color}{p}
-        {color=#ca4700}Project Manager │ Programmer{/color}{p}{p}
-        {color=#ca4700}{b}Jeanne Mesa{/b}{/color}{p}
-        {color=#ca4700}Writer{/color}{p}{p}
-        {color=#ca4700}{b}Maricar Murcia{/b}{/color}{p}
-        {color=#ca4700}Writer{/color}{p}{p}
 
-        """) xpos 450 ypos 224 size 50 color "#000000" text_align 0.5
-
-    text _p("""
-        {color=#ffffff}{b}Arajane Dimaunahan{/b}{/color}{p}
-        {color=#ffffff}Project Manager │ Programmer │ Writer{/color}{p}{p}
-        {color=#ffffff}{b}Gab Emmanuel Lobio{/b}{/color}{p}
-        {color=#ffffff}Project Manager │ Programmer{/color}{p}{p}
-        {color=#ffffff}{b}Jeanne Mesa{/b}{/color}{p}
-        {color=#ffffff}Writer{/color}{p}{p}
-        {color=#ffffff}{b}Maricar Murcia{/b}{/color}{p}
-        {color=#ffffff}Writer{/color}{p}{p}
-
-        """) xpos 450 ypos 220 size 50 color "#000000" text_align 0.5
         
 
 

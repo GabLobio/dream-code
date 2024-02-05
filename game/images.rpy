@@ -68,3 +68,10 @@ image four = "images/lesson_one/bg_drawbacks.png"
 image five = "images/lesson_one/bg_ide.png"
 
 
+##boy pasaway
+image boy1 = "images/boy16.png"
+image boy2 = "images/boy15.png"
+
+## aklang girla
+image girl1 = "images/girl1.png"
+image girl2 = "images/girl14.png"

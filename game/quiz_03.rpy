@@ -464,7 +464,7 @@ screen quiz_03_question_01_imagemap:
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_03_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_03_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    
 
     timer 30.0 action Jump("quiz_03_q_01_time_up")   
 
@@ -573,7 +573,7 @@ screen quiz_03_question_02_imagemap:
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_03_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_03_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    
 
     timer 30.0 action Jump("quiz_03_q_02_time_up")    
 
@@ -683,7 +683,7 @@ screen quiz_03_question_03_imagemap:
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_03_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_03_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    
 
     timer 30.0 action Jump("quiz_03_q_03_time_up")    
 
@@ -793,7 +793,7 @@ screen quiz_03_question_04_imagemap:
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_03_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_03_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    
 
     timer 30.0 action Jump("quiz_03_q_04_time_up")    
 
@@ -905,7 +905,7 @@ screen quiz_03_question_05_imagemap:
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_03_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_03_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    
 
     timer 30.0 action Jump("quiz_03_q_05_time_up")    
 
@@ -1016,7 +1016,7 @@ screen quiz_03_question_06_imagemap:
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_03_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_03_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    
 
     timer 30.0 action Jump("quiz_03_q_06_time_up")    
 
@@ -1126,7 +1126,7 @@ screen quiz_03_question_07_imagemap:
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_03_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_03_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    
 
     timer 30.0 action Jump("quiz_03_q_07_time_up")    
 
@@ -1236,7 +1236,7 @@ screen quiz_03_question_08_imagemap:
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_03_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_03_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    
 
     timer 30.0 action Jump("quiz_03_q_08_time_up")    
 
@@ -1346,7 +1346,7 @@ screen quiz_03_question_09_imagemap:
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_03_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_03_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    
 
     timer 30.0 action Jump("quiz_03_q_09_time_up")    
 
@@ -1456,7 +1456,7 @@ screen quiz_03_question_10_imagemap:
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_03_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_03_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    
 
     timer 30.0 action Jump("quiz_03_q_10_time_up")    
 
@@ -1566,7 +1566,7 @@ screen quiz_03_question_11_imagemap:
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_03_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_03_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    
 
     timer 30.0 action Jump("quiz_03_q_11_time_up")    
 
@@ -1676,7 +1676,7 @@ screen quiz_03_question_12_imagemap:
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_03_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_03_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    
 
     timer 30.0 action Jump("quiz_03_q_12_time_up")    
 
@@ -1788,7 +1788,7 @@ screen quiz_03_question_13_imagemap:
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_03_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_03_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    
 
     timer 30.0 action Jump("quiz_03_q_13_time_up")    
 
@@ -1897,7 +1897,7 @@ screen quiz_03_question_14_imagemap:
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_03_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_03_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    
 
     timer 30.0 action Jump("quiz_03_q_14_time_up")    
 
@@ -2008,7 +2008,7 @@ screen quiz_03_question_15_imagemap:
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_03_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_03_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    
 
     timer 30.0 action Jump("quiz_03_q_15_time_up")    
 
@@ -2120,7 +2120,7 @@ screen quiz_03_question_16_imagemap:
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_03_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_03_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    
 
     timer 30.0 action Jump("quiz_03_q_16_time_up")    
 
@@ -2231,7 +2231,7 @@ screen quiz_03_question_17_imagemap:
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_03_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_03_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    
 
     timer 30.0 action Jump("quiz_03_q_17_time_up")    
 
@@ -2342,7 +2342,7 @@ screen quiz_03_question_18_imagemap:
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_03_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_03_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    
 
     timer 30.0 action Jump("quiz_03_q_18_time_up")    
 
@@ -2453,7 +2453,7 @@ screen quiz_03_question_19_imagemap:
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_03_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_03_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    
 
     timer 30.0 action Jump("quiz_03_q_19_time_up")    
 
@@ -2562,7 +2562,7 @@ screen quiz_03_question_20_imagemap:
 ##  ╔═════════════════════════════════════════════════════════════════════════════╗ 
 ##  ║ ███  DEBUG MODE COUNTER         ███████████████████████████████████████████ ║ 
 ##  ╚═════════════════════════════════════════════════════════════════════════════╝
-    text "{b}DEBUG COUNTER MODE{/b}{p}{b}{size=23}{color=#666666}Quiz Count [persistent_quiz_03_q_counter]{/color}{/size}{/b}{p}{b}{size=23}{color=#666666}Correct Answers [persistent_quiz_03_q_counter_correct_answer]{/color}{/size}{/b}" xpos 20 ypos 20 size 20 xsize 270 color "#333333"
+    
 
     timer 30.0 action Jump("quiz_03_q_20_time_up")    
 

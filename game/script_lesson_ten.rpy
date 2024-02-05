@@ -8,7 +8,7 @@
 
 
 label lesson_ten:
-    #$ persistent.q3_previous_overall_grade = q3_overall_grade
+    $ persistent.q3_previous_overall_grade = q3_overall_grade
     $ persistent.rude_lesson = "ten"
     scene bg_classroom
 
@@ -33,6 +33,8 @@ label lesson_ten:
 
         scene lesson_table_intro
         e"In this lesson, you’ll learn to add tables to your web page."
+        Tech "Read the lesson plan for 7 to 9"
+        call screen lesson_plan_q4
         jump lessonTenFillOne
 
 
@@ -441,24 +443,23 @@ label lesson_ten:
 
     show teacher_crossarm_smile
     e "I want to acknowledge your hard work and dedication in preparing for this exam. It's a crucial part of our learning journey."
-    e"Well done young coders. Let's end our class here."
     hide tea
     show teacher_closed_happy
-    e"Good bye class"
     e"You can now veiw your lesson 10 assessment"
+    e"and receive your certification since you finished the lesson 1 to 10"
     hide teacher_closed_happy
 
     stop music fadeout 1.0
 
-        
-    scene bg_10
-    blank "End of chapter 10"
 
 
-
+    $ persistent.q4_previous_overall_grade = q4_overall_grade
     $ lesson_ten_finish = True
+
     jump assessment_four
-    call screen lesson_ui
+
+    label well_done:
+        jump lessons_done
 
 
 

@@ -46,6 +46,8 @@ init:
     $ Maria = Character("{b}Maria{/b}",window_top_padding=50, window_left_padding=150, window_right_padding=150)
     $ MomAndDad = Character("{b}Mom and Dad{/b}",window_top_padding=50, window_left_padding=150, window_right_padding=150)
     $ e = Character("{b} Mrs. Rodriguez {/b}",window_top_padding=50, window_left_padding=150, window_right_padding=150)
+    $ boy = Character("{b} Boy {/b}",window_top_padding=50, window_left_padding=150, window_right_padding=150)
+    $ girl = Character("{b} Girly {/b}",window_top_padding=50, window_left_padding=150, window_right_padding=150)
 
     #$ persistent.final_test_undertaken = False
 
@@ -282,6 +284,15 @@ default persistent.q4_exam_score = 0 # Exam 20%
 default persistent.q4_overall_grade = 0
 default persistent.q4_previous_overall_grade = 0 
 
+
+########## ENDING GENERAL WEIGHTED AVERAGE #####
+
+default persistent.all_lesson_done = False
+default persistent.gwa = 0
+
+default persistent.total_kind = 0
+default persistent.total_rude = 0
+
 ###################################### New Computation ######################################
 
 
@@ -301,7 +312,7 @@ screen totaltimeplayedbutton():
 
 
 label start:
-    show screen totaltimeplayedbutton
+    #show screen totaltimeplayedbutton
     $ persistent.f_numhc = 5
     $ persistent.f_numc = 0
     $ persistent.f_numic = 5
@@ -367,12 +378,6 @@ label start:
     ## ╔════════════════════════╗
     ## ║ temporary please erase ║
     ## ╚════════════════════════╝ 
-
-    #jump l10_act10
-
-    #jump begin_ho_mg
-
-
 
 
     jump chapter_1_01

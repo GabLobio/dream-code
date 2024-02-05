@@ -37,6 +37,8 @@ label lesson_seven:
 
         scene lesson_page_intro
         Tech "In this lesson, you`ll learn to apply a layout to your web pages."
+        Tech "Read the lesson plan for 7 to 9"
+        call screen lesson_plan_q3
         jump lessonSevenFillOne
 
 

@@ -28,6 +28,7 @@ init python:
 ##### Lesson 1 Activity #######################################################################################
 
 screen l1act1():
+    
     image "images/activity1.png" 
     default active_input = 0
     default problem_1 = ""
